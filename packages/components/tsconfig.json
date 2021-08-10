@@ -1,13 +1,29 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "allowJs": true,
     "composite": true,
     "declaration": true,
     "isolatedModules": false,
     "jsx": "preserve",
     "outDir": "dist",
+    "noImplicitAny": false,
     "rootDir": "src",
-    "typeRoots": ["../../@types", "../../node_modules/@types"]
+    "typeRoots": ["../../@types", "../../node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "i18n": ["src/i18n"],
+      "i18n/*": ["src/i18n/*"],
+      "lib": ["src/lib"],
+      "lib/*": ["src/lib/*"],
+      "stores/*": ["src/stores/*"],
+      "stores": ["src/stores"],
+      "navigation": ["src/navigation"],
+      "services/*": ["src/services/*"],
+      "storybook": ["storybook"],
+      "storybook/*": ["storybook/*"],
+      "views/*": ["src/views/*"]
+    }
   },
   "include": ["src/"],
   "references": [{ "path": "../core" }]
