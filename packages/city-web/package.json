@@ -1,5 +1,5 @@
 {
-  "name": "@arcadecity/wallet-web",
+  "name": "@arcadecity/city-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
