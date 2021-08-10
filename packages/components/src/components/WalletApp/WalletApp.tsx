@@ -1,12 +1,22 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { View } from 'react-native'
-import { magic } from '@arcadecity/core'
+import { Ceramic, magic } from '@arcadecity/core'
 import { palette } from '../../theme'
 
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
+
+  useMemo(() => {
+    if (userMetadata) {
+      console.log('Now lets auth ceramic')
+      const ceramic = new Ceramic()
+      console.log(ceramic)
+      ceramic.setup()
+      ceramic.authenticate(null)
+    }
+  }, [userMetadata])
 
   useEffect(() => {
     magic.user.isLoggedIn().then((magicIsLoggedIn) => {

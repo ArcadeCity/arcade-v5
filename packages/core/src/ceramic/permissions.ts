@@ -88,13 +88,9 @@ export default class Permissions {
    */
   get(origin: Origin): Array<string> | null {
     if (!this.did) throw new Error('DID not set')
-    // throw new Error('HEY GET')
-    console.log('get', origin)
-    // return null
     const thing = store.get(
       storageKey(origin, this.did)
     ) as Array<string> | null
-    console.log('thing:', thing)
     return thing
   }
 

@@ -58,6 +58,7 @@
     "react-native-simple-store": "^2.0.2",
     "rpc-utils": "^0.4.0",
     "store": "^2.0.12",
+    "text-encoding-polyfill": "^0.6.7",
     "tweetnacl": "^1.0.3",
     "uint8arrays": "^2.1.10",
     "web3": "^1.2.11"
