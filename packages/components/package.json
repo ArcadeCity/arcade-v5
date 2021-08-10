@@ -6,6 +6,7 @@
   "main": "dist",
   "scripts": {
     "compile": "tsc -b --incremental",
+    "watch": "tsc -b --incremental -w",
     "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
   },
   "devDependencies": {
