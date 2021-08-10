@@ -182,6 +182,7 @@ export default class Keyring {
     kid?: string
   ): Promise<JWE> {
     const encrypter = x25519Encrypter(this.getEncryptionPublicKey(), kid)
+    // @ts-ignore
     return createJWE(prepareCleartext(cleartext), [encrypter])
   }
 

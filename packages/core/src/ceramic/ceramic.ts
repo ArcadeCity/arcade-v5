@@ -5,8 +5,8 @@ import { TileDocument } from '@ceramicnetwork/stream-tile'
 import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
 import ThreeIdProvider from './threeid-provider'
 import { DID } from 'dids'
-import { LightningWallet } from 'stores/wallet-store'
-import { display } from 'lib'
+// import { LightningWallet } from 'stores/wallet-store'
+// import { display } from 'lib'
 
 const API_URL = 'https://ceramic-clay.3boxlabs.com'
 const getPermission = async (request: any) => {
@@ -45,7 +45,7 @@ export class Ceramic {
     const did = new DID({ provider, resolver })
     ceramic.did = did
     await ceramic.did.authenticate()
-    display({
+    console.log({
       name: 'Ceramic authenticate',
       preview: `Authenticated: ${ceramic.did.authenticated.toString()} - ${
         ceramic.did.id
@@ -54,8 +54,8 @@ export class Ceramic {
   }
 
   // Encrypt the wallet's secret and persist to Ceramic
-  async saveWallet(wallet: LightningWallet) {
-    display({
+  async saveWallet(wallet: any) {
+    console.log({
       name: 'Ceramic saveWallet',
       preview: `Saving wallet ${wallet.label}`,
       value: wallet,
@@ -71,7 +71,7 @@ export class Ceramic {
     const doc = await TileDocument.create(this.client, { wallet: walletToSave })
     const streamId = doc.id.toString()
 
-    display({
+    console.log({
       name: 'Ceramic saveWallet',
       preview: `Saved wallet with streamId: ${streamId}`,
       value: wallet,

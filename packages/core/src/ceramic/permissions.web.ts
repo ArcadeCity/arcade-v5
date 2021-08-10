@@ -1,5 +1,4 @@
-// @ts-ignore
-import store from 'react-native-simple-store'
+import store from 'store'
 
 interface PermissionRequest {
   type: string

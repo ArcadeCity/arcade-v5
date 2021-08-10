@@ -94,21 +94,13 @@ export default class ThreeIdProvider {
     if (config.seed) {
       if (typeof config.seed === 'string')
         throw new Error('seed needs to be Uint8Array')
-      if (config.did) {
-        keychain = await Keychain.loadFromSeed(
-          threeIdx,
-          config.seed,
-          config.did,
-          makeTmpProvider
-        )
-      } else {
-        keychain = await Keychain.create(
-          threeIdx,
-          makeTmpProvider,
-          config.seed,
-          config.v03ID
-        )
-      }
+
+      keychain = await Keychain.create(
+        threeIdx,
+        makeTmpProvider,
+        config.seed,
+        config.v03ID
+      )
     } else if (config.authSecret) {
       keychain = await Keychain.load(
         threeIdx,
