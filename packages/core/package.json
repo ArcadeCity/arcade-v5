@@ -5,6 +5,7 @@
   "license": "AGPL-3.0",
   "main": "dist",
   "scripts": {
+    "compile": "tsc -b --incremental",
     "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {

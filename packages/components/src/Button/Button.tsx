@@ -1,5 +1,5 @@
 import React from 'react'
-import { hello } from '../../../core/src'
+import { hello } from '@arcadecity/core'
 
 export const Button = () => {
   return <button onClick={hello}>Test Button</button>
