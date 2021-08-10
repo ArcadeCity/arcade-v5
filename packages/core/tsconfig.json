@@ -4,11 +4,11 @@
     "composite": true,
     "declaration": true,
     "isolatedModules": false,
-    "jsx": "preserve",
-    "outDir": "dist",
+    "outDir": "dist/",
     "rootDir": "src",
-    "typeRoots": ["../../@types", "../../node_modules/@types"]
+    "typeRoots": ["../../@types", "../../node_modules/@types"],
+    "strict": false,
+    "noImplicitAny": false
   },
-  "include": ["src/"],
-  "references": [{ "path": "../core" }]
+  "include": ["src", "src/**/*.json"]
 }

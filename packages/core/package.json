@@ -1,0 +1,46 @@
+{
+  "name": "@arcadecity/neon-core",
+  "version": "0.1.0",
+  "private": false,
+  "license": "AGPL-3.0",
+  "main": "dist",
+  "scripts": {
+    "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
+  },
+  "dependencies": {
+    "@bonfida/spl-name-service": "^0.1.12",
+    "@ledgerhq/hw-transport-webhid": "^5.51.1",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@project-serum/anchor": "^0.7.0",
+    "@project-serum/serum": "^0.13.33",
+    "@project-serum/swap-ui": "^0.2.1",
+    "@project-serum/token": "^0.0.1-alpha.3",
+    "@solana/spl-token-registry": "^0.2.102",
+    "@solana/web3.js": "^1.17.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "@types/bn.js": "^4.11.6",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.4",
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.3",
+    "bn.js": "^5.1.2",
+    "bs58": "^4.0.1",
+    "buffer-layout": "^1.2.0",
+    "ed25519-hd-key": "^1.2.0",
+    "immutable-tuple": "^0.4.10",
+    "material-ui-popup-state": "^1.8.3",
+    "mdi-material-ui": "^6.21.0",
+    "notistack": "^1.0.2",
+    "qrcode.react": "^1.0.0",
+    "react-async-hook": "^3.6.2",
+    "tweetnacl": "^1.0.3",
+    "web3": "^1.2.11"
+  },
+  "devDependencies": {
+    "@types/bs58": "^4.0.1"
+  }
+}
