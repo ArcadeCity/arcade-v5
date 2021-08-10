@@ -1,11 +1,20 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { View } from 'react-native'
 import { magic } from '@arcadecity/core'
 import { palette } from '../../theme'
 
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
+  const [userMetadata, setUserMetadata] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
+
+  useEffect(() => {
+    magic.user.isLoggedIn().then((magicIsLoggedIn) => {
+      if (magicIsLoggedIn) {
+        magic.user.getMetadata().then(setUserMetadata)
+      }
+    })
+  }, [])
 
   /**
    * Perform login action via Magic's passwordless flow. Upon successuful
@@ -19,7 +28,7 @@ export const WalletApp = () => {
         email,
       })
       const user = await magic.user.getMetadata()
-      console.log('user:', user)
+      setUserMetadata(user)
     } catch {
       setIsLoggingIn(false)
     }
@@ -32,18 +41,27 @@ export const WalletApp = () => {
   return (
     <React.StrictMode>
       <View style={{ flex: 1, backgroundColor: palette.purple }}>
-        <h1>Please sign up or login</h1>
-        <input
-          type='email'
-          name='email'
-          required='required'
-          placeholder='Enter your email'
-          onChange={handleInputOnChange}
-          disabled={isLoggingIn}
-        />
-        <button onClick={login} disabled={isLoggingIn}>
-          Send
-        </button>
+        {userMetadata ? (
+          <>
+            <p style={{ color: 'white' }}>{userMetadata.email}</p>
+            <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
+          </>
+        ) : (
+          <div style={{ color: 'white' }}>
+            <h1>Please sign up or login</h1>
+            <input
+              type='email'
+              name='email'
+              required={true}
+              placeholder='Enter your email'
+              onChange={handleInputOnChange}
+              disabled={isLoggingIn}
+            />
+            <button onClick={login} disabled={isLoggingIn}>
+              Send
+            </button>
+          </div>
+        )}
       </View>
     </React.StrictMode>
   )
