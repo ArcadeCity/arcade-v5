@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Button } from '@arcadecity/components'
+import { Button } from '@arcadecity/components/src/Button'
 
 function App() {
   return (
