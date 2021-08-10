@@ -1,0 +1,10 @@
+*.jsbundle
+*.tsbuildinfo
+.DS_Store
+.vscode
+Pods
+node_modules/
+npm-debug.log
+yarn-error.log
+.yarn
+.yarnrc

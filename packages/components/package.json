@@ -1,0 +1,11 @@
+{
+  "name": "@arcadecity/components",
+  "version": "0.1.0",
+  "private": false,
+  "license": "AGPL-3.0",
+  "main": "dist",
+  "scripts": {
+    "compile": "tsc -b --incremental",
+    "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "isolatedModules": false,
+    "outDir": "dist/",
+    "rootDir": "src",
+    "typeRoots": ["../../@types", "../../node_modules/@types"],
+    "strict": false,
+    "noImplicitAny": false
+  },
+  "include": ["src", "src/**/*.json"]
+}

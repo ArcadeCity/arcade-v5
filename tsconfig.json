@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext"
+  },
+  "exclude": ["node_modules"],
+  "include": ["@types", "packages"]
+}
