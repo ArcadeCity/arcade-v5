@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@arcadecity/components": "^0.1.0",
+    "localforage": "1.7.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -13,7 +14,10 @@
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-native-web": "0.14.9",
     "react-scripts": "4.0.3",
+    "resize-observer-polyfill": "1.5.1",
+    "smoothscroll-polyfill": "0.4.4",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },

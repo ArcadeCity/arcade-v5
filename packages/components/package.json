@@ -7,5 +7,8 @@
   "scripts": {
     "compile": "tsc -b --incremental",
     "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
+  },
+  "devDependencies": {
+    "@types/react-native": "0.64.10"
   }
 }
