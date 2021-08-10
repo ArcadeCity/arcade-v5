@@ -1,0 +1,54 @@
+{
+  "name": "@arcadecity/wallet-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@arcadecity/components": "^0.1.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-react-native-web": "0.14.9",
+    "npm-run-all": "^4.1.5",
+    "react-app-rewired": "2.1.7",
+    "webpack-bundle-analyzer": "3.5.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "yarn compile && react-app-rewired build && shx rm -rf dist && mv build dist",
+    "compile": "tsc -b",
+    "test": "react-app-rewired test",
+    "format": "npm-run-all format:*",
+    "format:json": "prettier --write \"**/*.json\"",
+    "format:md": "prettier --write \"**/*.md\"",
+    "format:ts": "prettier --write \"src/**/*.ts{,x}\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
