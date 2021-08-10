@@ -46,7 +46,7 @@ export class Environment {
   /**
    * Reactotron is only available in dev.
    */
-  reactotron: typeof ReactotronDev
+  // reactotron: typeof ReactotronDev
 
   /**
    * Our api.
