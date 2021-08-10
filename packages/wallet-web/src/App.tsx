@@ -2,8 +2,12 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { Button } from '@arcadecity/components/src/Button'
+import { hello } from '@arcadecity/core'
 
 function App() {
+  React.useEffect(() => {
+    hello()
+  }, [])
   return (
     <div className='App'>
       <header className='App-header'>
