@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { View } from 'react-native'
+import { Button, Text, TextStyle, View } from 'react-native'
 import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
 import { palette } from '../../theme'
 import { ethers } from 'ethers'
@@ -8,19 +8,15 @@ const ceramic = new Ceramic()
 
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
-  const [userMetadata, setUserMetadata] = useState<any>()
-  const [lightningWallet, setLightningWallet] = useState<any>()
+  const [userMetadata, setUserMetadata] = useState<any>(null)
+  const [lightningWallet, setLightningWallet] = useState<any>(null)
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
-
-  const loadLightningWallet = async () => {
-    const doc: any = await ceramic.loadDoc(
-      'kjzl6cwe1jw1499lnplfmaq0yobnzxgctvz7ujo636co85h2m1sspisj16lb182'
-    )
-
-    const wallet = doc.content.wallet
-    console.log(wallet)
-    setLightningWallet(wallet)
+  const logout = () => {
+    magic.user.logout()
+    setUserMetadata('loggedout')
+    setLightningWallet('loggedout')
+    setIsCeramicAuthed(false)
   }
 
   const generateLightningWallet = async () => {
@@ -45,8 +41,13 @@ export const WalletApp = () => {
       ceramic.setup()
       const authed = await ceramic.authenticate(thearray.slice(0, 32))
       setIsCeramicAuthed(authed)
-      console.log('Checking for wallet:')
-      ceramic.checkForWallet()
+      console.log('Checking for wallet...')
+      const wallet: any = await ceramic.checkForWallet()
+      if (wallet) {
+        setLightningWallet({ ...wallet, fromCeramic: true })
+      } else {
+        setLightningWallet(false)
+      }
     }
   }, [userMetadata])
 
@@ -55,6 +56,8 @@ export const WalletApp = () => {
     magic.user.isLoggedIn().then((magicIsLoggedIn) => {
       if (magicIsLoggedIn) {
         magic.user.getMetadata().then(setUserMetadata)
+      } else {
+        setUserMetadata(false)
       }
     })
   }, [magic])
@@ -83,47 +86,110 @@ export const WalletApp = () => {
 
   return (
     <React.StrictMode>
-      <View style={{ flex: 1, backgroundColor: palette.purple }}>
-        {userMetadata ? (
-          <>
-            <p style={{ color: 'white' }}>{userMetadata.email}</p>
-            <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
-            <button onClick={loadLightningWallet} disabled={!isCeramicAuthed}>
-              Load Lightning wallet
-            </button>
-            {lightningWallet ? (
-              <>
-                <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
-                <button
-                  onClick={saveWalletToCeramic}
-                  disabled={!isCeramicAuthed}
-                >
-                  Save wallet to Ceramic
-                </button>
-              </>
-            ) : (
-              <button onClick={generateLightningWallet}>
-                Create Lightning wallet
-              </button>
-            )}
-          </>
-        ) : (
-          <div style={{ color: 'white' }}>
-            <h1>Please sign up or login</h1>
-            <input
-              type='email'
-              name='email'
-              required={true}
-              placeholder='Enter your email'
-              onChange={handleInputOnChange}
-              disabled={isLoggingIn}
-            />
-            <button onClick={login} disabled={isLoggingIn}>
-              Send
-            </button>
-          </div>
-        )}
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: palette.purple,
+          paddingTop: 150,
+          alignItems: 'center',
+        }}
+      >
+        <View style={{ width: 500 }}>
+          <Text style={{ ...TEXT, fontSize: 20 }}>
+            Wallet demo: Magic+Lightning+Ceramic
+          </Text>
+          <Text style={{ ...TEXT, marginVertical: 15 }}>
+            Log in with an email address via Magic, create a Lightning wallet
+            via LNDHub, store its secret on Ceramic testnet.
+          </Text>
+          <Text style={{ ...TEXT, marginBottom: 15, fontWeight: 'bold' }}>
+            ...enabling easy Lightning usage by non-technical users.
+          </Text>
+          <a href='https://github.com/ArcadeCity/arcade' target='_blank'>
+            <Text style={TEXT}>[Source]</Text>
+          </a>
+
+          {userMetadata === null && (
+            <Text style={{ ...TEXT, marginTop: 30, fontStyle: 'italic' }}>
+              Checking for Magic user...
+            </Text>
+          )}
+
+          {userMetadata ? (
+            <View style={{ marginVertical: 30 }}>
+              <Text style={TEXT}>Magic user:</Text>
+              <Text style={{ ...TEXT, fontWeight: '700' }}>
+                {userMetadata.email}
+              </Text>
+              {lightningWallet ? (
+                <View style={{ marginTop: 30 }}>
+                  <Text style={TEXT}>Lightning info:</Text>
+                  <Text style={{ ...TEXT, fontWeight: 'bold' }}>
+                    {lightningWallet.chain}
+                  </Text>
+                  <Text style={{ ...TEXT, fontWeight: 'bold' }}>
+                    LNDHub userid:{' '}
+                    {lightningWallet.secret.split(':')[1].slice(2)}
+                  </Text>
+                  {lightningWallet.fromCeramic && (
+                    <Text style={TEXT}>Loaded from Ceramic</Text>
+                  )}
+                  <View style={{ marginTop: 30 }} />
+                  {!lightningWallet.fromCeramic && (
+                    <Button
+                      onPress={saveWalletToCeramic}
+                      disabled={!isCeramicAuthed}
+                      color={palette.electricIndigo}
+                      title='Save wallet to Ceramic'
+                    />
+                  )}
+                </View>
+              ) : lightningWallet === false ? (
+                <Button
+                  onPress={generateLightningWallet}
+                  title='Create Lightning wallet'
+                  color={palette.electricIndigo}
+                />
+              ) : (
+                <Text style={{ ...TEXT, fontStyle: 'italic', marginTop: 30 }}>
+                  Checking for Lightning wallet...
+                </Text>
+              )}
+              <View style={{ marginTop: 30 }} />
+              <Button
+                onPress={logout}
+                title='Log out'
+                color={palette.electricIndigo}
+              />
+            </View>
+          ) : userMetadata === false ? (
+            <div style={{ color: 'white' }}>
+              <View style={{ marginVertical: 30 }}>
+                <input
+                  type='email'
+                  name='email'
+                  required={true}
+                  placeholder='Enter your email'
+                  onChange={handleInputOnChange}
+                  disabled={isLoggingIn}
+                />
+              </View>
+              <Button
+                onPress={login}
+                disabled={isLoggingIn}
+                title='Login'
+                color={palette.electricIndigo}
+              />
+            </div>
+          ) : null}
+        </View>
       </View>
     </React.StrictMode>
   )
+}
+
+const TEXT: TextStyle = {
+  color: 'white',
+  fontFamily: 'monospace',
+  marginVertical: 3,
 }
