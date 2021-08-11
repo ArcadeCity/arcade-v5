@@ -12,6 +12,12 @@ export const WalletApp = () => {
   const [lightningWallet, setLightningWallet] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
+  const logout = () => {
+    magic.user.logout()
+    setUserMetadata(null)
+    setLightningWallet(null)
+    setIsCeramicAuthed(false)
+  }
 
   const generateLightningWallet = async () => {
     const lightning = new Lightning()
@@ -35,7 +41,7 @@ export const WalletApp = () => {
       ceramic.setup()
       const authed = await ceramic.authenticate(thearray.slice(0, 32))
       setIsCeramicAuthed(authed)
-      console.log('Checking for wallet:')
+      console.log('Checking for wallet...')
       const wallet: any = await ceramic.checkForWallet()
       if (wallet) {
         setLightningWallet({ ...wallet, fromCeramic: true })
@@ -85,7 +91,16 @@ export const WalletApp = () => {
         }}
       >
         <View style={{ width: 500 }}>
-          <Text style={TEXT}>Demo: Magic+Ceramic+Lightning wallet</Text>
+          <Text style={{ ...TEXT, fontSize: 20 }}>
+            Wallet demo: Magic+Ceramic+Lightning
+          </Text>
+          <Text style={{ ...TEXT, marginVertical: 15 }}>
+            Log in with an email address via Magic, create a Lightning wallet
+            via LNDHub, store its secret on Ceramic testnet.
+          </Text>
+          <Text style={{ ...TEXT, marginBottom: 15, fontWeight: 'bold' }}>
+            ...enabling easy Lightning usage by non-technical users.
+          </Text>
           <a href='https://github.com/ArcadeCity/arcade' target='_blank'>
             <Text style={TEXT}>[Source]</Text>
           </a>
@@ -94,7 +109,6 @@ export const WalletApp = () => {
             <View style={{ marginVertical: 30 }}>
               <Text style={TEXT}>Magic info:</Text>
               <Text style={TEXT}>{userMetadata.email}</Text>
-              <Text style={TEXT}>{userMetadata.publicAddress}</Text>
               {lightningWallet ? (
                 <View style={{ marginTop: 30 }}>
                   <Text style={TEXT}>Lightning info:</Text>
@@ -125,6 +139,12 @@ export const WalletApp = () => {
                   color={palette.electricIndigo}
                 />
               )}
+              <View style={{ marginTop: 30 }} />
+              <Button
+                onPress={logout}
+                title='Log out'
+                color={palette.electricIndigo}
+              />
             </View>
           ) : (
             <div style={{ color: 'white' }}>
@@ -141,7 +161,7 @@ export const WalletApp = () => {
               <Button
                 onPress={login}
                 disabled={isLoggingIn}
-                title='Send'
+                title='Login'
                 color={palette.electricIndigo}
               />
             </div>
