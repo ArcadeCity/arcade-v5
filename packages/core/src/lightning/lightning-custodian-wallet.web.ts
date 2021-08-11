@@ -828,4 +828,4 @@ const getIsTorCapable = () => {
   // // }
   // return capable
 }
-isTorCapable = getIsTorCapable()
+// const isTorCapable = getIsTorCapable()
