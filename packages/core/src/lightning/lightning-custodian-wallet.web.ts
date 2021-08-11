@@ -22,7 +22,6 @@ export class LightningCustodianWallet extends LegacyWallet {
     this.info_raw = false
     this.preferredBalanceUnit = BitcoinUnit.SATS
     this.chain = Chain.OFFCHAIN
-    console.log('We are in the web version of lightning-custodian-wallet')
   }
 
   /**
@@ -85,14 +84,8 @@ export class LightningCustodianWallet extends LegacyWallet {
     ) // 7d
   }
 
-  generate() {
-    // nop
-  }
-
   async createAccount(isTest) {
-    console.log('are we HERE?')
     const response = await this._api.post('/create', {
-      // mode: 'no-cors',
       body: {
         partnerid: 'bluewallet',
         accounttype: (isTest && 'test') || 'common',
@@ -102,9 +95,7 @@ export class LightningCustodianWallet extends LegacyWallet {
         'Content-Type': 'application/json',
       },
     })
-    console.log('worked?', response)
     const json = response.body
-    console.log('json:', json)
     if (typeof json === 'undefined') {
       throw new Error(
         'API failure: ' + response.err + ' ' + JSON.stringify(response.body)

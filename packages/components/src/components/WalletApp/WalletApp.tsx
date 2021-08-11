@@ -11,51 +11,21 @@ export const WalletApp = () => {
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const generateLightningWallet = async () => {
     const lightning = new Lightning()
-    console.log('Lets generate a lightning wallet')
     const wallet = await lightning.createWallet()
-    console.log('wallet:', wallet)
+    console.log('Wallet created:', wallet)
     setLightningWallet(wallet)
   }
 
   useMemo(async () => {
     if (userMetadata) {
-      console.log('Now lets auth ceramic')
+      console.log('Authenticating with Ceramic...')
       const ceramic = new Ceramic()
-
       const signer = provider.getSigner()
-      // const address = await signer.getAddress()
       const originalMessage = ''
       const signedMessage = await signer.signMessage(originalMessage)
-
-      // const messageHash = ethers.utils.id('Hello World')
-      // console.log('messageHash:', messageHash)
-      const dis = ethers.utils.arrayify(signedMessage)
-      console.log('DIS', dis)
-
-      // let flatSig = await signer.signMessage(dis)
-      // console.log(flatSig)
-
-      // const wat = Buffer.from(flatSig)
-      // console.log(wat)
-
+      const thearray = ethers.utils.arrayify(signedMessage)
       ceramic.setup()
-      ceramic.authenticate(dis.slice(0, 32))
-
-      // console.log('signedMessage:', signedMessage)
-
-      // const encoder = new TextEncoder()
-      // const sha = await sha256(signedMessage)
-      // console.log('sha:', sha)
-      // const seed = encoder.encode(sha)
-      // console.log(seed)
-      // console.log(seed.length)
-
-      // const wat = Buffer.from(signedMessage)
-      // console.log(wat)
-      // console.log(wat.length)
-
-      // console.log('signedMessage:', signedMessage)
-      // console.log(ceramic)
+      ceramic.authenticate(thearray.slice(0, 32))
     }
   }, [userMetadata])
 
