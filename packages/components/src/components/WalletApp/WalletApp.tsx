@@ -4,6 +4,7 @@ import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
 import { palette } from '../../theme'
 import { ethers } from 'ethers'
 import { LightningCustodianWallet } from '@arcadecity/core'
+import useInterval from './useInterval'
 
 const ceramic = new Ceramic()
 let LightningWallet: any = null
@@ -16,6 +17,15 @@ export const WalletApp = () => {
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
   const [invoice, setInvoice] = useState<string>()
   const [balance, setBalance] = useState()
+
+  useInterval(async () => {
+    if (!LightningWallet) return
+    console.log('Fetching balance')
+    await LightningWallet.fetchBalance()
+    const getbalance = LightningWallet.getBalance()
+    setBalance(getbalance)
+    console.log('Set balance:', getbalance)
+  }, 2000)
 
   const createTestInvoice = async () => {
     if (!lightningWallet || !LightningWallet) return null
@@ -43,8 +53,6 @@ export const WalletApp = () => {
     console.log(streamId)
   }
 
-  console.log('balance:', balance)
-
   useMemo(async () => {
     if (userMetadata) {
       console.log('Authenticating with Ceramic...')
@@ -68,7 +76,6 @@ export const WalletApp = () => {
         await LightningWallet.fetchBalance()
         console.log('LightningCustodianWallet fetchBalance?', LightningWallet)
         const gotbalance = LightningWallet.getBalance()
-        console.log('NOW BALANCE:', gotbalance)
         setBalance(gotbalance)
       } else {
         setLightningWallet(false)
@@ -115,7 +122,7 @@ export const WalletApp = () => {
         style={{
           flex: 1,
           backgroundColor: palette.purple,
-          paddingTop: 100,
+          paddingTop: 80,
           alignItems: 'center',
         }}
       >
