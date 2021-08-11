@@ -47,6 +47,7 @@ export class Ceramic {
   // Encrypt the wallet's secret and persist to Ceramic
   async saveWallet(wallet: any) {
     const walletToSave = {
+      balance: wallet.balance,
       baseUri: wallet.baseURI,
       chain: wallet.label,
       // createdAt: wallet.createdAt,
