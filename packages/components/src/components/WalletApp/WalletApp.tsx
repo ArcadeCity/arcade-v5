@@ -12,6 +12,14 @@ export const WalletApp = () => {
   const [lightningWallet, setLightningWallet] = useState<any>(null)
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
+
+  const arcadeHubAuth = async () => {
+    console.log('AHAHAHAHAHAHA')
+    if (!lightningWallet) return null
+    const user = lightningWallet.secret.split(':')[1].slice(2)
+    console.log(user)
+  }
+
   const logout = () => {
     magic.user.logout()
     setUserMetadata('loggedout')
@@ -127,14 +135,43 @@ export const WalletApp = () => {
                   <Text style={{ ...TEXT, fontWeight: 'bold' }}>
                     {lightningWallet.chain}
                   </Text>
+                  {lightningWallet.fromCeramic && (
+                    <Text style={TEXT}>Loaded from Ceramic</Text>
+                  )}
                   <Text style={{ ...TEXT, fontWeight: 'bold' }}>
                     LNDHub userid:{' '}
                     {lightningWallet.secret.split(':')[1].slice(2)}
                   </Text>
-                  {lightningWallet.fromCeramic && (
-                    <Text style={TEXT}>Loaded from Ceramic</Text>
-                  )}
+
+                  <Text style={{ ...TEXT, marginTop: 30 }}>
+                    {`Secret: ${lightningWallet.secret}`}
+                  </Text>
+
+                  <Text style={{ ...TEXT }}>
+                    {`LNDHub baseUri: ${
+                      lightningWallet.baseUri ?? 'https://hub1.arcade.city'
+                    }`}
+                  </Text>
+
+                  <Text style={{ ...TEXT, marginTop: 30 }}>
+                    BACK UP YOUR SECRET. Your secret is only persisted on
+                    Ceramic's testnet which can be wiped anytime. This is needed
+                    in combination with the baseUri of our LNDHub fork.
+                  </Text>
+
+                  <Text style={{ ...TEXT }}>
+                    Also this wallet is in excruciatingly early alpha and you
+                    shouldn't put any funds here.
+                  </Text>
+
                   <View style={{ marginTop: 30 }} />
+                  <Button
+                    onPress={arcadeHubAuth}
+                    color={palette.electricIndigo}
+                    title='Auth with ArcadeHub'
+                  />
+
+                  <View style={{ marginTop: 20 }} />
                   {!lightningWallet.fromCeramic && (
                     <Button
                       onPress={saveWalletToCeramic}
@@ -155,7 +192,7 @@ export const WalletApp = () => {
                   Checking for Lightning wallet...
                 </Text>
               )}
-              <View style={{ marginTop: 30 }} />
+              <View style={{ marginTop: 10 }} />
               <Button
                 onPress={logout}
                 title='Log out'
