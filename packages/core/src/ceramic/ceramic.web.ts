@@ -5,8 +5,8 @@ import { Ed25519Provider } from 'key-did-provider-ed25519'
 import KeyDidResolver from 'key-did-resolver'
 import { IDX } from '@ceramicstudio/idx'
 
-const API_URL = 'http://localhost:7007'
-// const API_URL = 'https://ceramic-clay.3boxlabs.com'
+// const API_URL = 'http://localhost:7007'
+const API_URL = 'https://ceramic-clay.3boxlabs.com'
 const aliases = {
   lightning1: 'kjzl6cwe1jw149aape5q3th7m68g03ykpskw8za94sd5qoh9bdsqfjy888z68jz',
 }
