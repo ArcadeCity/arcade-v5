@@ -5,7 +5,7 @@ import { LightningCustodianWallet } from './lightning-custodian-wallet'
 export class Lightning {
   async createWallet() {
     let wallet = new LightningCustodianWallet({})
-    wallet.setLabel('Test LN wallet 2')
+    wallet.setLabel('Test LN Wallet')
 
     try {
       const lndhub = 'https://hub1.arcade.city'

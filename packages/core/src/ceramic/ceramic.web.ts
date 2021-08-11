@@ -30,6 +30,7 @@ export class Ceramic {
   async checkForWallet() {
     const existing = await this.downloadSecret()
     console.log('EXISTING:', existing)
+    return existing
   }
 
   async uploadSecret(payload: any) {

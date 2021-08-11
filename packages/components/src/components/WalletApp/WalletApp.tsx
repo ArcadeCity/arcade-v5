@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
-import { View } from 'react-native'
+import { Button, Text, TextStyle, View } from 'react-native'
 import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
 import { palette } from '../../theme'
 import { ethers } from 'ethers'
@@ -36,7 +36,10 @@ export const WalletApp = () => {
       const authed = await ceramic.authenticate(thearray.slice(0, 32))
       setIsCeramicAuthed(authed)
       console.log('Checking for wallet:')
-      ceramic.checkForWallet()
+      const wallet: any = await ceramic.checkForWallet()
+      if (wallet) {
+        setLightningWallet({ ...wallet, fromCeramic: true })
+      }
     }
   }, [userMetadata])
 
@@ -73,44 +76,84 @@ export const WalletApp = () => {
 
   return (
     <React.StrictMode>
-      <View style={{ flex: 1, backgroundColor: palette.purple }}>
-        {userMetadata ? (
-          <>
-            <p style={{ color: 'white' }}>{userMetadata.email}</p>
-            <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
-            {lightningWallet ? (
-              <>
-                <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
-                <button
-                  onClick={saveWalletToCeramic}
-                  disabled={!isCeramicAuthed}
-                >
-                  Save wallet to Ceramic
-                </button>
-              </>
-            ) : (
-              <button onClick={generateLightningWallet}>
-                Create Lightning wallet
-              </button>
-            )}
-          </>
-        ) : (
-          <div style={{ color: 'white' }}>
-            <h1>Please sign up or login</h1>
-            <input
-              type='email'
-              name='email'
-              required={true}
-              placeholder='Enter your email'
-              onChange={handleInputOnChange}
-              disabled={isLoggingIn}
-            />
-            <button onClick={login} disabled={isLoggingIn}>
-              Send
-            </button>
-          </div>
-        )}
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: palette.purple,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <View style={{ width: 500 }}>
+          <Text style={TEXT}>Demo: Magic+Ceramic+Lightning wallet</Text>
+          <a href='https://github.com/ArcadeCity/arcade' target='_blank'>
+            <Text style={TEXT}>[Source]</Text>
+          </a>
+
+          {userMetadata ? (
+            <View style={{ marginVertical: 30 }}>
+              <Text style={TEXT}>Magic info:</Text>
+              <Text style={TEXT}>{userMetadata.email}</Text>
+              <Text style={TEXT}>{userMetadata.publicAddress}</Text>
+              {lightningWallet ? (
+                <View style={{ marginTop: 30 }}>
+                  <Text style={TEXT}>Lightning info:</Text>
+                  <Text style={{ ...TEXT, fontWeight: 'bold' }}>
+                    {lightningWallet.chain}
+                  </Text>
+                  <Text style={{ ...TEXT, fontWeight: 'bold' }}>
+                    LNDHub userid:{' '}
+                    {lightningWallet.secret.split(':')[1].slice(2)}
+                  </Text>
+                  {lightningWallet.fromCeramic && (
+                    <Text style={TEXT}>Loaded from Ceramic</Text>
+                  )}
+                  <View style={{ marginTop: 30 }} />
+                  {!lightningWallet.fromCeramic && (
+                    <Button
+                      onPress={saveWalletToCeramic}
+                      disabled={!isCeramicAuthed}
+                      color={palette.electricIndigo}
+                      title='Save wallet to Ceramic'
+                    />
+                  )}
+                </View>
+              ) : (
+                <Button
+                  onPress={generateLightningWallet}
+                  title='Create Lightning wallet'
+                  color={palette.electricIndigo}
+                />
+              )}
+            </View>
+          ) : (
+            <div style={{ color: 'white' }}>
+              <View style={{ marginVertical: 30 }}>
+                <input
+                  type='email'
+                  name='email'
+                  required={true}
+                  placeholder='Enter your email'
+                  onChange={handleInputOnChange}
+                  disabled={isLoggingIn}
+                />
+              </View>
+              <Button
+                onPress={login}
+                disabled={isLoggingIn}
+                title='Send'
+                color={palette.electricIndigo}
+              />
+            </div>
+          )}
+        </View>
       </View>
     </React.StrictMode>
   )
+}
+
+const TEXT: TextStyle = {
+  color: 'white',
+  fontFamily: 'monospace',
+  marginVertical: 3,
 }
