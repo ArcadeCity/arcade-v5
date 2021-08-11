@@ -16,6 +16,7 @@
     "@ceramicnetwork/http-client": "^1.0.7",
     "@ceramicnetwork/stream-tile": "^1.0.7",
     "@ceramicnetwork/streamid": "^1.0.2",
+    "@ceramicstudio/idx": "^0.12.1",
     "@ceramicstudio/idx-constants": "^1.0.0",
     "@ethersproject/hdnode": "^5.4.0",
     "@ledgerhq/hw-transport-webhid": "^5.51.1",

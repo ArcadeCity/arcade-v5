@@ -3,19 +3,39 @@ import { TileDocument } from '@ceramicnetwork/stream-tile'
 import { DID } from 'dids'
 import { Ed25519Provider } from 'key-did-provider-ed25519'
 import KeyDidResolver from 'key-did-resolver'
+import { IDX } from '@ceramicstudio/idx'
 
 const API_URL = 'https://ceramic-clay.3boxlabs.com'
+const aliases = {
+  arweave: 'kjzl6cwe1jw1464kscnkfne9ui7bkv5qt1nzds9dmv09vetjs1qemvh3jzm1vxi',
+}
+const KEY = aliases.arweave
 
 export class Ceramic {
   client: any
+  idx: any
 
   constructor() {
     this.client = null
+    this.idx = null
   }
 
   async setup() {
     this.client = new CeramicClient(API_URL)
+    this.idx = new IDX({ ceramic: this.client, aliases })
     return true
+  }
+
+  async uploadSecret(payload: any) {
+    const jwe = await this.client.did?.createDagJWE(payload, [
+      this.client.did.id,
+    ])
+    await this.idx.set(KEY, jwe)
+  }
+
+  async downloadSecret() {
+    const jwe = await this.idx.get(KEY)
+    return jwe ? await this.client.did?.decryptDagJWE(jwe) : null
   }
 
   async loadDoc(streamId: string) {

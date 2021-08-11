@@ -48,8 +48,6 @@ export const WalletApp = () => {
     }
   }, [userMetadata])
 
-  console.log('isCeramicAuthed:', isCeramicAuthed)
-
   useEffect(() => {
     if (!magic) return
     magic.user.isLoggedIn().then((magicIsLoggedIn) => {
