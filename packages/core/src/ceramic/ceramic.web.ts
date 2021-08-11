@@ -6,6 +6,8 @@ import ThreeIdProvider from './threeid-provider'
 import { DID } from 'dids'
 // import { LightningWallet } from 'stores/wallet-store'
 // import { display } from 'lib'
+import { Ed25519Provider } from 'key-did-provider-ed25519'
+import KeyDidResolver from 'key-did-resolver'
 
 const API_URL = 'https://ceramic-clay.3boxlabs.com'
 const getPermission = async (request: any) => {
@@ -32,24 +34,25 @@ export class Ceramic {
         186, 42, 218, 155, 229, 175, 39, 16, 11, 50, 229, 114, 35, 130, 48, 63,
         165, 33, 183, 18, 45, 29, 81, 131, 65, 171, 43, 5, 58, 31, 246, 31,
       ])
-    const authId = 'TestMethod'
-    const threeId = await ThreeIdProvider.create({
-      ceramic,
-      getPermission,
-      authSecret,
-      authId,
-    })
-    const provider = threeId.getDidProvider()
-    const resolver = ThreeIdResolver.getResolver(ceramic)
+    // const authId = 'TestMethod1'
+    // const threeId = await ThreeIdProvider.create({
+    //   ceramic,
+    //   getPermission,
+    //   authSecret,
+    //   authId,
+    // })
+    const provider = new Ed25519Provider(authSecret)
+    // const provider = threeId.getDidProvider()
+    // const resolver = ThreeIdResolver.getResolver(ceramic)
+    const resolver = KeyDidResolver.getResolver()
     const did = new DID({ provider, resolver })
     ceramic.did = did
     await ceramic.did.authenticate()
-    console.log({
-      name: 'Ceramic authenticate',
-      preview: `Authenticated: ${ceramic.did.authenticated.toString()} - ${
+    console.log(
+      `Ceramic Authenticated: ${ceramic.did.authenticated.toString()} - ${
         ceramic.did.id
-      }`,
-    })
+      }`
+    )
   }
 
   // Encrypt the wallet's secret and persist to Ceramic

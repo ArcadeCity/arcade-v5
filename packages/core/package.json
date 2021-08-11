@@ -46,6 +46,7 @@
     "did-jwt": "^5.6.2",
     "dids": "^2.4.0",
     "ed25519-hd-key": "^1.2.0",
+    "ethers": "^5.4.4",
     "immutable-tuple": "^0.4.10",
     "key-did-provider-ed25519": "^1.1.0",
     "key-did-resolver": "^1.2.1",

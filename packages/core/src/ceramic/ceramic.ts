@@ -34,6 +34,7 @@ export class Ceramic {
         165, 33, 183, 18, 45, 29, 81, 131, 65, 171, 43, 5, 58, 31, 246, 31,
       ])
     const authId = 'TestMethod'
+    console.log('authSecret:', authSecret)
     const threeId = await ThreeIdProvider.create({
       ceramic,
       getPermission,
