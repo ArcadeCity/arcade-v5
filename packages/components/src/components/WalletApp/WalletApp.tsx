@@ -45,10 +45,10 @@ export const WalletApp = () => {
       ceramic.setup()
       const authed = await ceramic.authenticate(thearray.slice(0, 32))
       setIsCeramicAuthed(authed)
+      console.log('Checking for wallet:')
+      ceramic.checkForWallet()
     }
   }, [userMetadata])
-
-  console.log('isCeramicAuthed:', isCeramicAuthed)
 
   useEffect(() => {
     if (!magic) return
