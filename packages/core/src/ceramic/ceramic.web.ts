@@ -5,11 +5,12 @@ import { Ed25519Provider } from 'key-did-provider-ed25519'
 import KeyDidResolver from 'key-did-resolver'
 import { IDX } from '@ceramicstudio/idx'
 
-const API_URL = 'https://ceramic-clay.3boxlabs.com'
+const API_URL = 'http://localhost:7007'
+// const API_URL = 'https://ceramic-clay.3boxlabs.com'
 const aliases = {
-  arweave: 'kjzl6cwe1jw1464kscnkfne9ui7bkv5qt1nzds9dmv09vetjs1qemvh3jzm1vxi',
+  lightning1: 'kjzl6cwe1jw149aape5q3th7m68g03ykpskw8za94sd5qoh9bdsqfjy888z68jz',
 }
-const KEY = aliases.arweave
+const KEY = aliases.lightning1
 
 export class Ceramic {
   client: any
@@ -81,15 +82,18 @@ export class Ceramic {
 
     console.log('walletToSave:', walletToSave)
 
-    const doc = await TileDocument.create(this.client, { wallet: walletToSave })
-    const streamId = doc.id.toString()
+    await this.uploadSecret(walletToSave)
+    console.log('WORKED?')
 
-    console.log({
-      name: 'Ceramic saveWallet',
-      preview: `Saved wallet with streamId: ${streamId}`,
-      value: wallet,
-    })
+    // const doc = await TileDocument.create(this.client, { wallet: walletToSave })
+    // const streamId = doc.id.toString()
 
-    return streamId
+    // console.log({
+    //   name: 'Ceramic saveWallet',
+    //   preview: `Saved wallet with streamId: ${streamId}`,
+    //   value: wallet,
+    // })
+
+    // return streamId
   }
 }
