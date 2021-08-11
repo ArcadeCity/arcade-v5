@@ -11,6 +11,15 @@ export const WalletApp = () => {
   const [userMetadata, setUserMetadata] = useState<any>()
   const [lightningWallet, setLightningWallet] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
+
+  const loadLightningWallet = async () => {
+    const doc = await ceramic.loadDoc(
+      'kjzl6cwe1jw148hi89k8mdtlwbyqbqy4ta6vki96cvv8kklbfzkngkjxflxekk4'
+    )
+
+    console.log(doc.content)
+  }
+
   const generateLightningWallet = async () => {
     const lightning = new Lightning()
     const wallet = await lightning.createWallet()
@@ -73,6 +82,7 @@ export const WalletApp = () => {
           <>
             <p style={{ color: 'white' }}>{userMetadata.email}</p>
             <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
+            <button onClick={loadLightningWallet}>Load Lightning wallet</button>
             {lightningWallet ? (
               <>
                 <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>

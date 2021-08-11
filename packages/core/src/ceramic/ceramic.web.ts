@@ -18,6 +18,11 @@ export class Ceramic {
     return true
   }
 
+  async loadDoc(streamId: string) {
+    const doc = await TileDocument.load(this.client, streamId)
+    return doc
+  }
+
   async authenticate(secret: Uint8Array | null) {
     const ceramic = this.client
     const authSecret =
