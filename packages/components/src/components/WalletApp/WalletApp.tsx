@@ -6,7 +6,7 @@ import { ethers } from 'ethers'
 import { LightningCustodianWallet } from '@arcadecity/core'
 
 const ceramic = new Ceramic()
-let LightningWallet = null
+let LightningWallet: any = null
 
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
@@ -17,9 +17,8 @@ export const WalletApp = () => {
 
   const arcadeHubAuth = async () => {
     if (!lightningWallet || !LightningWallet) return null
-    // @ts-ignore
     await LightningWallet.authorize()
-    console.log('Authorized:', LightningWallet)
+    console.log('LightningCustodianWallet authorized:', LightningWallet)
   }
 
   const logout = () => {
@@ -58,7 +57,7 @@ export const WalletApp = () => {
         LightningWallet = new LightningCustodianWallet({
           secret: wallet.secret,
         })
-        console.log('So LightningWallet:', LightningWallet)
+        console.log('LightningCustodianWallet initialized:', LightningWallet)
       } else {
         setLightningWallet(false)
       }
@@ -104,7 +103,7 @@ export const WalletApp = () => {
         style={{
           flex: 1,
           backgroundColor: palette.purple,
-          paddingTop: 150,
+          paddingTop: 100,
           alignItems: 'center',
         }}
       >
