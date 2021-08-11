@@ -71,7 +71,7 @@ export class LightningCustodianWallet extends LegacyWallet {
   init() {
     this._api = new Frisbee({
       baseURI: this.baseURI,
-      mode: 'no-cors',
+      // mode: 'no-cors',
     })
   }
 
@@ -91,19 +91,23 @@ export class LightningCustodianWallet extends LegacyWallet {
 
   async createAccount(isTest) {
     console.log('are we HERE?')
-    const response = await this._api.post('/create', {
-      mode: 'no-cors',
-      body: {
+    console.log(this._api)
+    // const response = await this._api.post('/create', {
+    const response = await fetch(this.getBaseURI() + '/create', {
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify({
         partnerid: 'bluewallet',
         accounttype: (isTest && 'test') || 'common',
-      },
+      }),
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     })
     console.log('worked?', response)
-    const json = response.body
+    const json = await response.json()
+    // const json = response.body
     console.log('json:', json)
     if (typeof json === 'undefined') {
       throw new Error(
