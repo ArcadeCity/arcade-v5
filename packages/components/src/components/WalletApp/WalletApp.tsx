@@ -25,7 +25,7 @@ export const WalletApp = () => {
     const getbalance = LightningWallet.getBalance()
     setBalance(getbalance)
     console.log('Set balance:', getbalance)
-  }, 2000)
+  }, 3000)
 
   const createTestInvoice = async () => {
     if (!lightningWallet || !LightningWallet) return null
