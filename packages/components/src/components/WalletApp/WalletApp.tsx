@@ -14,10 +14,11 @@ export const WalletApp = () => {
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
 
   const arcadeHubAuth = async () => {
-    console.log('AHAHAHAHAHAHA')
     if (!lightningWallet) return null
     const user = lightningWallet.secret.split(':')[1].slice(2)
+    const pass = lightningWallet.secret.split(':')[2]
     console.log(user)
+    console.log(pass)
   }
 
   const logout = () => {
