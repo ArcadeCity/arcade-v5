@@ -14,8 +14,8 @@ export const WalletApp = () => {
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
   const logout = () => {
     magic.user.logout()
-    setUserMetadata(null)
-    setLightningWallet(null)
+    setUserMetadata('loggedout')
+    setLightningWallet('loggedout')
     setIsCeramicAuthed(false)
   }
 
@@ -110,7 +110,7 @@ export const WalletApp = () => {
           </a>
 
           {userMetadata === null && (
-            <Text style={{ ...TEXT, marginTop: 30 }}>
+            <Text style={{ ...TEXT, marginTop: 30, fontStyle: 'italic' }}>
               Checking for Magic user...
             </Text>
           )}
@@ -149,7 +149,9 @@ export const WalletApp = () => {
                   color={palette.electricIndigo}
                 />
               ) : (
-                <Text style={TEXT}>Checking for Lightning wallet...</Text>
+                <Text style={{ ...TEXT, fontStyle: 'italic', marginTop: 30 }}>
+                  Checking for Lightning wallet...
+                </Text>
               )}
               <View style={{ marginTop: 30 }} />
               <Button
