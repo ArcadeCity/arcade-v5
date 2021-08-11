@@ -10,7 +10,7 @@ export class LightningCustodianWallet extends LegacyWallet {
 
   constructor(props) {
     super(props)
-    this.setBaseURI() // no args to init with default value
+    this.setBaseURI('https://hub1.arcade.city') // no args to init with default value
     this.init()
     this.refresh_token = ''
     this.access_token = ''
