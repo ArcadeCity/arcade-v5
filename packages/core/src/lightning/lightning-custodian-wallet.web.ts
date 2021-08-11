@@ -71,7 +71,7 @@ export class LightningCustodianWallet extends LegacyWallet {
   init() {
     this._api = new Frisbee({
       baseURI: this.baseURI,
-      // mode: 'no-cors',
+      mode: 'cors',
     })
   }
 
@@ -91,23 +91,19 @@ export class LightningCustodianWallet extends LegacyWallet {
 
   async createAccount(isTest) {
     console.log('are we HERE?')
-    console.log(this._api)
-    // const response = await this._api.post('/create', {
-    const response = await fetch(this.getBaseURI() + '/create', {
-      method: 'POST',
-      mode: 'cors',
-      body: JSON.stringify({
+    const response = await this._api.post('/create', {
+      // mode: 'no-cors',
+      body: {
         partnerid: 'bluewallet',
         accounttype: (isTest && 'test') || 'common',
-      }),
+      },
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     })
     console.log('worked?', response)
-    const json = await response.json()
-    // const json = response.body
+    const json = response.body
     console.log('json:', json)
     if (typeof json === 'undefined') {
       throw new Error(
@@ -138,7 +134,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     const response = await this._api.post('/payinvoice', {
       body: { invoice: invoice, amount: freeAmount },
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -190,7 +186,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     if (limit) limitString = '?limit=' + parseInt(limit)
     const response = await this._api.get('/getuserinvoices' + limitString, {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -264,7 +260,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     const response = await this._api.post('/addinvoice', {
       body: { amt: amt + '', memo: memo },
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -312,7 +308,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     const response = await this._api.post('/auth?type=auth', {
       body: { login: login, password: password },
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     })
@@ -368,7 +364,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     const response = await this._api.post('/auth?type=refresh_token', {
       body: { refresh_token: this.refresh_token },
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     })
@@ -401,7 +397,7 @@ export class LightningCustodianWallet extends LegacyWallet {
   async fetchBtcAddress() {
     const response = await this._api.get('/getbtc', {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -493,7 +489,7 @@ export class LightningCustodianWallet extends LegacyWallet {
   async fetchPendingTransactions() {
     const response = await this._api.get('/getpending', {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -525,7 +521,7 @@ export class LightningCustodianWallet extends LegacyWallet {
 
     const response = await this._api.get('/gettxs' + queryRes, {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -563,7 +559,7 @@ export class LightningCustodianWallet extends LegacyWallet {
 
     const response = await this._api.get('/balance', {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -661,7 +657,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     const response = await this._api.get('/getinfo', {
       mode: 'no-cors',
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
@@ -698,7 +694,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     })
     const response = await apiCall.get('/getinfo', {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
       },
     })
@@ -747,7 +743,7 @@ export class LightningCustodianWallet extends LegacyWallet {
 
     const response = await this._api.get('/decodeinvoice?invoice=' + invoice, {
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         Authorization: 'Bearer' + ' ' + this.access_token,
       },
