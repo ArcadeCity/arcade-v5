@@ -14,11 +14,13 @@ export const WalletApp = () => {
   const [lightningWallet, setLightningWallet] = useState<any>(null)
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
+  const [invoice, setInvoice] = useState<string>()
 
   const createTestInvoice = async () => {
     if (!lightningWallet || !LightningWallet) return null
-    const invoice = await LightningWallet.addInvoice(10, 'Test 1')
-    console.log('INVOICE:', invoice)
+    const addedinvoice = await LightningWallet.addInvoice(10, 'Test 1')
+    console.log('INVOICE:', addedinvoice)
+    setInvoice(addedinvoice)
   }
 
   const logout = () => {
@@ -170,6 +172,9 @@ export const WalletApp = () => {
                     Also this wallet is in excruciatingly early alpha and you
                     shouldn't put any funds here.
                   </Text>
+
+                  <View style={{ marginTop: 30 }} />
+                  {invoice && <Text style={{ ...TEXT }}>{invoice}</Text>}
 
                   <View style={{ marginTop: 30 }} />
                   <Button
