@@ -3,6 +3,7 @@ import { Button, Text, TextStyle, View } from 'react-native'
 import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
 import { palette } from '../../theme'
 import { ethers } from 'ethers'
+import { LightningCustodianWallet } from '@arcadecity/core'
 
 const ceramic = new Ceramic()
 
@@ -54,6 +55,10 @@ export const WalletApp = () => {
       const wallet: any = await ceramic.checkForWallet()
       if (wallet) {
         setLightningWallet({ ...wallet, fromCeramic: true })
+        const LightningWallet = new LightningCustodianWallet({
+          secret: wallet.secret,
+        })
+        console.log('So LightningWallet:', LightningWallet)
       } else {
         setLightningWallet(false)
       }

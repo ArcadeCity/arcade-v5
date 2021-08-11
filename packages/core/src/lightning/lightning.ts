@@ -1,6 +1,8 @@
 import { Alert } from 'react-native'
 import { LightningCustodianWallet } from './lightning-custodian-wallet'
 
+export { LightningCustodianWallet }
+
 export class Lightning {
   async createWallet() {
     let wallet = new LightningCustodianWallet({})

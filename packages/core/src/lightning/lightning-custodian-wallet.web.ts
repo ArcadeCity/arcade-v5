@@ -22,6 +22,9 @@ export class LightningCustodianWallet extends LegacyWallet {
     this.info_raw = false
     this.preferredBalanceUnit = BitcoinUnit.SATS
     this.chain = Chain.OFFCHAIN
+    if (props.secret) {
+      this.secret = props.secret
+    }
   }
 
   /**
