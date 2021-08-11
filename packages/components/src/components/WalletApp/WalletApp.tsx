@@ -15,10 +15,10 @@ export const WalletApp = () => {
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
 
-  const arcadeHubAuth = async () => {
+  const createTestInvoice = async () => {
     if (!lightningWallet || !LightningWallet) return null
-    await LightningWallet.authorize()
-    console.log('LightningCustodianWallet authorized:', LightningWallet)
+    const invoice = await LightningWallet.addInvoice(10, 'Test 1')
+    console.log('INVOICE:', invoice)
   }
 
   const logout = () => {
@@ -58,6 +58,8 @@ export const WalletApp = () => {
           secret: wallet.secret,
         })
         console.log('LightningCustodianWallet initialized:', LightningWallet)
+        await LightningWallet.authorize()
+        console.log('LightningCustodianWallet authorized:', LightningWallet)
       } else {
         setLightningWallet(false)
       }
@@ -171,9 +173,9 @@ export const WalletApp = () => {
 
                   <View style={{ marginTop: 30 }} />
                   <Button
-                    onPress={arcadeHubAuth}
+                    onPress={createTestInvoice}
                     color={palette.electricIndigo}
-                    title='Auth with ArcadeHub'
+                    title='Create test invoice'
                   />
 
                   <View style={{ marginTop: 20 }} />
