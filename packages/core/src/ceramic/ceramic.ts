@@ -25,6 +25,11 @@ export class Ceramic {
     return true
   }
 
+  async checkForWallet() {
+    // const existing = await this.downloadSecret()
+    // console.log('EXISTING:', existing)
+  }
+
   async loadDoc(streamId: string) {
     const doc = await TileDocument.load(this.client, streamId)
     return doc

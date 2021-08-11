@@ -26,6 +26,11 @@ export class Ceramic {
     return true
   }
 
+  async checkForWallet() {
+    const existing = await this.downloadSecret()
+    console.log('EXISTING:', existing)
+  }
+
   async uploadSecret(payload: any) {
     const jwe = await this.client.did?.createDagJWE(payload, [
       this.client.did.id,
