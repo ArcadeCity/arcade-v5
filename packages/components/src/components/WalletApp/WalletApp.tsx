@@ -15,6 +15,7 @@ export const WalletApp = () => {
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
   const [invoice, setInvoice] = useState<string>()
+  const [balance, setBalance] = useState()
 
   const createTestInvoice = async () => {
     if (!lightningWallet || !LightningWallet) return null
@@ -42,6 +43,8 @@ export const WalletApp = () => {
     console.log(streamId)
   }
 
+  console.log('balance:', balance)
+
   useMemo(async () => {
     if (userMetadata) {
       console.log('Authenticating with Ceramic...')
@@ -62,6 +65,11 @@ export const WalletApp = () => {
         console.log('LightningCustodianWallet initialized:', LightningWallet)
         await LightningWallet.authorize()
         console.log('LightningCustodianWallet authorized:', LightningWallet)
+        await LightningWallet.fetchBalance()
+        console.log('LightningCustodianWallet fetchBalance?', LightningWallet)
+        const gotbalance = LightningWallet.getBalance()
+        console.log('NOW BALANCE:', gotbalance)
+        setBalance(gotbalance)
       } else {
         setLightningWallet(false)
       }
@@ -112,6 +120,17 @@ export const WalletApp = () => {
         }}
       >
         <View style={{ width: 500 }}>
+          {balance && (
+            <Text
+              style={{
+                ...TEXT,
+                fontSize: 40,
+                textAlign: 'center',
+                marginBottom: 25,
+              }}
+            >{`${balance} SATS`}</Text>
+          )}
+
           <Text style={{ ...TEXT, fontSize: 20 }}>
             Wallet demo: Magic+Lightning+Ceramic
           </Text>
@@ -180,7 +199,7 @@ export const WalletApp = () => {
                   <Button
                     onPress={createTestInvoice}
                     color={palette.electricIndigo}
-                    title='Create test invoice'
+                    title='Create test invoice (10 sats)'
                   />
 
                   <View style={{ marginTop: 20 }} />
