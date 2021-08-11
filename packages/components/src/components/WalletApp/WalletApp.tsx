@@ -90,13 +90,13 @@ export const WalletApp = () => {
         style={{
           flex: 1,
           backgroundColor: palette.purple,
-          justifyContent: 'center',
+          paddingTop: 150,
           alignItems: 'center',
         }}
       >
         <View style={{ width: 500 }}>
           <Text style={{ ...TEXT, fontSize: 20 }}>
-            Wallet demo: Magic+Ceramic+Lightning
+            Wallet demo: Magic+Lightning+Ceramic
           </Text>
           <Text style={{ ...TEXT, marginVertical: 15 }}>
             Log in with an email address via Magic, create a Lightning wallet
@@ -117,8 +117,10 @@ export const WalletApp = () => {
 
           {userMetadata ? (
             <View style={{ marginVertical: 30 }}>
-              <Text style={TEXT}>Magic info:</Text>
-              <Text style={TEXT}>{userMetadata.email}</Text>
+              <Text style={TEXT}>Magic user:</Text>
+              <Text style={{ ...TEXT, fontWeight: '700' }}>
+                {userMetadata.email}
+              </Text>
               {lightningWallet ? (
                 <View style={{ marginTop: 30 }}>
                   <Text style={TEXT}>Lightning info:</Text>
