@@ -122,11 +122,12 @@ export const WalletApp = () => {
         style={{
           flex: 1,
           backgroundColor: palette.purple,
-          paddingTop: 80,
+          paddingTop: 50,
           alignItems: 'center',
+          overflow: 'scroll',
         }}
       >
-        <View style={{ width: 500 }}>
+        <View style={{ width: '100%', maxWidth: 400 }}>
           {balance && (
             <Text
               style={{
