@@ -25,6 +25,11 @@ export class Ceramic {
     return true
   }
 
+  async loadDoc(streamId: string) {
+    const doc = await TileDocument.load(this.client, streamId)
+    return doc
+  }
+
   async authenticate(secret: Uint8Array | null) {
     const ceramic = this.client
     const authSecret =
@@ -52,6 +57,7 @@ export class Ceramic {
         ceramic.did.id
       }`,
     })
+    return ceramic.did.authenticated
   }
 
   // Encrypt the wallet's secret and persist to Ceramic

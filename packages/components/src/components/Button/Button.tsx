@@ -1,6 +1,6 @@
 import React from 'react'
-import { hello } from '@arcadecity/core'
+// import { hello } from '@arcadecity/core'
 
 export const Button = () => {
-  return <button onClick={hello}>Test Button</button>
+  return <button onClick={() => {}}>Test Button</button>
 }
