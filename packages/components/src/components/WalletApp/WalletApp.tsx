@@ -7,12 +7,14 @@ import { ethers } from 'ethers'
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>()
+  const [lightningWallet, setLightningWallet] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const generateLightningWallet = async () => {
     const lightning = new Lightning()
     console.log('Lets generate a lightning wallet')
     const wallet = await lightning.createWallet()
     console.log('wallet:', wallet)
+    setLightningWallet(wallet)
   }
 
   useMemo(async () => {
@@ -95,9 +97,13 @@ export const WalletApp = () => {
           <>
             <p style={{ color: 'white' }}>{userMetadata.email}</p>
             <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
-            <button onClick={generateLightningWallet} disabled={isLoggingIn}>
-              Create Lightning wallet
-            </button>
+            {lightningWallet ? (
+              <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
+            ) : (
+              <button onClick={generateLightningWallet} disabled={isLoggingIn}>
+                Create Lightning wallet
+              </button>
+            )}
           </>
         ) : (
           <div style={{ color: 'white' }}>
