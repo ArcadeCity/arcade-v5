@@ -4,6 +4,8 @@ import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
 import { palette } from '../../theme'
 import { ethers } from 'ethers'
 
+const ceramic = new Ceramic()
+
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>()
@@ -16,10 +18,14 @@ export const WalletApp = () => {
     setLightningWallet(wallet)
   }
 
+  const saveWalletToCeramic = async () => {
+    const streamId = await ceramic.saveWallet(lightningWallet)
+    console.log(streamId)
+  }
+
   useMemo(async () => {
     if (userMetadata) {
       console.log('Authenticating with Ceramic...')
-      const ceramic = new Ceramic()
       const signer = provider.getSigner()
       const originalMessage = ''
       const signedMessage = await signer.signMessage(originalMessage)
@@ -68,9 +74,14 @@ export const WalletApp = () => {
             <p style={{ color: 'white' }}>{userMetadata.email}</p>
             <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
             {lightningWallet ? (
-              <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
+              <>
+                <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
+                <button onClick={saveWalletToCeramic}>
+                  Save wallet to Ceramic
+                </button>
+              </>
             ) : (
-              <button onClick={generateLightningWallet} disabled={isLoggingIn}>
+              <button onClick={generateLightningWallet}>
                 Create Lightning wallet
               </button>
             )}

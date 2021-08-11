@@ -40,18 +40,14 @@ export class Ceramic {
 
   // Encrypt the wallet's secret and persist to Ceramic
   async saveWallet(wallet: any) {
-    console.log({
-      name: 'Ceramic saveWallet',
-      preview: `Saving wallet ${wallet.label}`,
-      value: wallet,
-    })
-
     const walletToSave = {
-      baseUri: wallet.baseUri,
+      baseUri: wallet.baseURI,
       chain: wallet.label,
-      createdAt: wallet.createdAt,
+      // createdAt: wallet.createdAt,
       secret: wallet.secret,
     }
+
+    console.log('walletToSave:', walletToSave)
 
     const doc = await TileDocument.create(this.client, { wallet: walletToSave })
     const streamId = doc.id.toString()
