@@ -13,16 +13,6 @@ export const WalletApp = () => {
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
 
-  const loadLightningWallet = async () => {
-    const doc: any = await ceramic.loadDoc(
-      'kjzl6cwe1jw1499lnplfmaq0yobnzxgctvz7ujo636co85h2m1sspisj16lb182'
-    )
-
-    const wallet = doc.content.wallet
-    console.log(wallet)
-    setLightningWallet(wallet)
-  }
-
   const generateLightningWallet = async () => {
     const lightning = new Lightning()
     const wallet = await lightning.createWallet()
@@ -88,9 +78,6 @@ export const WalletApp = () => {
           <>
             <p style={{ color: 'white' }}>{userMetadata.email}</p>
             <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
-            <button onClick={loadLightningWallet} disabled={!isCeramicAuthed}>
-              Load Lightning wallet
-            </button>
             {lightningWallet ? (
               <>
                 <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
