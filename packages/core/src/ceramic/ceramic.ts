@@ -57,6 +57,7 @@ export class Ceramic {
         ceramic.did.id
       }`,
     })
+    return ceramic.did.authenticated
   }
 
   // Encrypt the wallet's secret and persist to Ceramic

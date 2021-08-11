@@ -11,6 +11,7 @@ export const WalletApp = () => {
   const [userMetadata, setUserMetadata] = useState<any>()
   const [lightningWallet, setLightningWallet] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
+  const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
 
   const loadLightningWallet = async () => {
     const doc = await ceramic.loadDoc(
@@ -40,9 +41,12 @@ export const WalletApp = () => {
       const signedMessage = await signer.signMessage(originalMessage)
       const thearray = ethers.utils.arrayify(signedMessage)
       ceramic.setup()
-      ceramic.authenticate(thearray.slice(0, 32))
+      const authed = await ceramic.authenticate(thearray.slice(0, 32))
+      setIsCeramicAuthed(authed)
     }
   }, [userMetadata])
+
+  console.log('isCeramicAuthed:', isCeramicAuthed)
 
   useEffect(() => {
     if (!magic) return
@@ -82,7 +86,9 @@ export const WalletApp = () => {
           <>
             <p style={{ color: 'white' }}>{userMetadata.email}</p>
             <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
-            <button onClick={loadLightningWallet}>Load Lightning wallet</button>
+            <button onClick={loadLightningWallet} disabled={!isCeramicAuthed}>
+              Load Lightning wallet
+            </button>
             {lightningWallet ? (
               <>
                 <p style={{ color: 'white' }}>{lightningWallet.balance} sats</p>
