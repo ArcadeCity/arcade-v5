@@ -3,20 +3,9 @@ import { Alert } from 'react-native'
 import { LightningCustodianWallet } from './lightning-custodian-wallet'
 
 export class Lightning {
-  arcadehub: any
-
-  constructor() {
-    this.arcadehub = {}
-  }
-
-  async setup() {
-    console.log('Lightning setup')
-    return true
-  }
-
   async createWallet() {
-    let wallet = new LightningCustodianWallet()
-    wallet.setLabel('Test LN wallet 1')
+    let wallet = new LightningCustodianWallet({})
+    wallet.setLabel('Test LN wallet 2')
 
     try {
       const lndhub = 'https://hub1.arcade.city'
@@ -30,7 +19,7 @@ export class Lightning {
           throw new Error('The provided node address is not valid LNDHub node.')
         }
       }
-      await wallet.createAccount()
+      await wallet.createAccount(false)
       await wallet.authorize()
     } catch (Err) {
       // setIsLoading(false)
@@ -39,7 +28,7 @@ export class Lightning {
       // giving app, not adding anything
     }
     // A(A.ENUM.CREATED_LIGHTNING_WALLET)
-    await wallet.generate()
+    // await wallet.generate()
     // addWallet(wallet)
     // await saveToDisk()
 

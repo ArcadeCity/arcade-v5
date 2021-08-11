@@ -1,30 +1,19 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { View } from 'react-native'
-import { Ceramic, magic, provider } from '@arcadecity/core'
+import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
 import { palette } from '../../theme'
 import { ethers } from 'ethers'
-
-async function sha256(message: any) {
-  // encode as UTF-8
-  const msgBuffer = new TextEncoder().encode(message)
-
-  // hash the message
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer)
-
-  // convert ArrayBuffer to Array
-  const hashArray = Array.from(new Uint8Array(hashBuffer))
-
-  // convert bytes to hex string
-  const hashHex = hashArray
-    .map((b) => ('00' + b.toString(16)).slice(-2))
-    .join('')
-  return hashHex
-}
 
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
+  const generateLightningWallet = async () => {
+    const lightning = new Lightning()
+    console.log('Lets generate a lightning wallet')
+    const wallet = await lightning.createWallet()
+    console.log('wallet:', wallet)
+  }
 
   useMemo(async () => {
     if (userMetadata) {
@@ -69,12 +58,13 @@ export const WalletApp = () => {
   }, [userMetadata])
 
   useEffect(() => {
+    if (!magic) return
     magic.user.isLoggedIn().then((magicIsLoggedIn) => {
       if (magicIsLoggedIn) {
         magic.user.getMetadata().then(setUserMetadata)
       }
     })
-  }, [])
+  }, [magic])
 
   /**
    * Perform login action via Magic's passwordless flow. Upon successuful
@@ -105,6 +95,9 @@ export const WalletApp = () => {
           <>
             <p style={{ color: 'white' }}>{userMetadata.email}</p>
             <p style={{ color: 'white' }}>{userMetadata.publicAddress}</p>
+            <button onClick={generateLightningWallet} disabled={isLoggingIn}>
+              Create Lightning wallet
+            </button>
           </>
         ) : (
           <div style={{ color: 'white' }}>

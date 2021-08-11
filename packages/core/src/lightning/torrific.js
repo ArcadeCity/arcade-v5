@@ -7,7 +7,7 @@ const tor = Tor({
 /**
  * TOR wrapper mimicking Frisbee interface
  */
-export class Torsbee {
+class Torsbee {
   baseURI = ''
 
   static _testConn
@@ -333,3 +333,4 @@ export const testHttp = async () => {
 }
 
 export const Socket = TorSocket
+module.exports = { Torsbee }

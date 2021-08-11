@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { LegacyWallet } from './legacy-wallet'
 import Frisbee from 'frisbee'
 import bolt11 from 'bolt11'
@@ -8,7 +9,7 @@ export class LightningCustodianWallet extends LegacyWallet {
   static type = 'lightningCustodianWallet'
   static typeReadable = 'Lightning'
 
-  constructor(props) {
+  constructor(props: any) {
     super(props)
     this.setBaseURI() // no args to init with default value
     this.init()
@@ -22,6 +23,7 @@ export class LightningCustodianWallet extends LegacyWallet {
     this.info_raw = false
     this.preferredBalanceUnit = BitcoinUnit.SATS
     this.chain = Chain.OFFCHAIN
+    console.log('we are NOT in the web version')
   }
 
   /**
@@ -70,6 +72,7 @@ export class LightningCustodianWallet extends LegacyWallet {
   init() {
     this._api = new Frisbee({
       baseURI: this.baseURI,
+      mode: 'no-cors',
     })
 
     if (
