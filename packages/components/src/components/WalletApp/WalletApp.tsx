@@ -8,7 +8,7 @@ const ceramic = new Ceramic()
 
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
-  const [userMetadata, setUserMetadata] = useState<any>()
+  const [userMetadata, setUserMetadata] = useState<any>(null)
   const [lightningWallet, setLightningWallet] = useState<any>()
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
@@ -54,6 +54,8 @@ export const WalletApp = () => {
     magic.user.isLoggedIn().then((magicIsLoggedIn) => {
       if (magicIsLoggedIn) {
         magic.user.getMetadata().then(setUserMetadata)
+      } else {
+        setUserMetadata(false)
       }
     })
   }, [magic])
@@ -105,6 +107,10 @@ export const WalletApp = () => {
             <Text style={TEXT}>[Source]</Text>
           </a>
 
+          {userMetadata === null && (
+            <Text style={TEXT}>Checking for Magic user...</Text>
+          )}
+
           {userMetadata ? (
             <View style={{ marginVertical: 30 }}>
               <Text style={TEXT}>Magic info:</Text>
@@ -146,7 +152,7 @@ export const WalletApp = () => {
                 color={palette.electricIndigo}
               />
             </View>
-          ) : (
+          ) : userMetadata === false ? (
             <div style={{ color: 'white' }}>
               <View style={{ marginVertical: 30 }}>
                 <input
@@ -165,7 +171,7 @@ export const WalletApp = () => {
                 color={palette.electricIndigo}
               />
             </div>
-          )}
+          ) : null}
         </View>
       </View>
     </React.StrictMode>
