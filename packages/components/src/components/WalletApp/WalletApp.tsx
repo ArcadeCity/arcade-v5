@@ -9,7 +9,7 @@ const ceramic = new Ceramic()
 export const WalletApp = () => {
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>(null)
-  const [lightningWallet, setLightningWallet] = useState<any>()
+  const [lightningWallet, setLightningWallet] = useState<any>(null)
   const [isLoggingIn, setIsLoggingIn] = useState(false)
   const [isCeramicAuthed, setIsCeramicAuthed] = useState(false)
   const logout = () => {
@@ -45,6 +45,8 @@ export const WalletApp = () => {
       const wallet: any = await ceramic.checkForWallet()
       if (wallet) {
         setLightningWallet({ ...wallet, fromCeramic: true })
+      } else {
+        setLightningWallet(false)
       }
     }
   }, [userMetadata])
@@ -108,7 +110,9 @@ export const WalletApp = () => {
           </a>
 
           {userMetadata === null && (
-            <Text style={TEXT}>Checking for Magic user...</Text>
+            <Text style={{ ...TEXT, marginTop: 30 }}>
+              Checking for Magic user...
+            </Text>
           )}
 
           {userMetadata ? (
@@ -138,12 +142,14 @@ export const WalletApp = () => {
                     />
                   )}
                 </View>
-              ) : (
+              ) : lightningWallet === false ? (
                 <Button
                   onPress={generateLightningWallet}
                   title='Create Lightning wallet'
                   color={palette.electricIndigo}
                 />
+              ) : (
+                <Text style={TEXT}>Checking for Lightning wallet...</Text>
               )}
               <View style={{ marginTop: 30 }} />
               <Button
