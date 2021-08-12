@@ -24,6 +24,7 @@ export const authedPlayer: AuthedPlayer = {
   invited: true,
   invites: 3,
   level: 0,
+  locale: null,
   onboarded: true,
   profession: 'Driver',
   profilePicture: 'https://placekitten.com/200/300',
