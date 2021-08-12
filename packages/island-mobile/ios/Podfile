@@ -1,6 +1,8 @@
 require_relative '../../../node_modules/react-native/scripts/react_native_pods'
 require_relative '../../../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+pod 'react-native-mapbox-gl', :path => '../../../node_modules/@react-native-mapbox-gl/maps'
+
 platform :ios, '10.0'
 
 target 'island' do
@@ -23,7 +25,12 @@ target 'island' do
   # you should disable the next line.
   use_flipper!()
 
+  pre_install do |installer|
+    $RNMBGL.pre_install(installer)
+  end
+
   post_install do |installer|
+    $RNMBGL.post_install(installer)
     react_native_post_install(installer)
   end
 end
