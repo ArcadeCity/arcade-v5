@@ -1,6 +1,6 @@
 {
-  "name": "island",
-  "version": "0.0.1",
+  "name": "@arcadecity/island-mobile",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@arcadecity/components": "0.1.0",
+    "@arcadecity/core": "0.1.0",
     "react": "17.0.1",
     "react-native": "0.64.2"
   },

@@ -7,9 +7,10 @@
   "repository": "https://github.com/ArcadeCity/arcade",
   "scripts": {
     "clean": "yarn workspaces run clean",
-    "dev": "yarn run dev:city-mobile",
+    "dev": "yarn run dev:island-mobile",
     "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
+    "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "format": "yarn workspaces run format",
     "patch-package": "patch-package"
