@@ -51,7 +51,7 @@ export const Chatroom: React.FC<{}> = observer(() => {
   const chatroomId = activeChatroom.id
   messages = activeChatroom.messages
   prettyName = activeChatroom.prettyName
-  const id = authStore.player.id
+  const id = authStore.player?.id ?? 0
 
   const sendit = () => {
     chatStore.messageSend(state, chatroomId)
@@ -87,7 +87,12 @@ export const Chatroom: React.FC<{}> = observer(() => {
   )
 
   return (
-    <Screen key={`${id}-${authStore?.locale}`} preset='chatroom' dockHeight={0} dock={dock}>
+    <Screen
+      key={`${id}-${authStore?.locale}`}
+      preset='chatroom'
+      dockHeight={0}
+      dock={dock}
+    >
       <FlatList
         initialNumToRender={25}
         ref={(elm) => (flatList = elm)}

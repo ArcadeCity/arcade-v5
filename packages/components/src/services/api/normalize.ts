@@ -142,7 +142,7 @@ export const normalizeApiPlayer = (player: ApiPlayer) => {
     // identityVerified: player.identity_verified,
     level: 1, // TODO
     profession: player.profession,
-    profilePicture: player.profile_picture?.url ?? null,
+    profilePicture: player.profile_picture?.url ?? undefined,
     username: player.username,
   })
   return normalizedPlayer

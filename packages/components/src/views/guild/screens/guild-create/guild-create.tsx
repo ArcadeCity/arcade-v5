@@ -15,8 +15,8 @@ import { useNavigation } from '@react-navigation/native'
 import { spacing } from 'views/theme'
 
 export const GuildCreate = observer(() => {
-  const [name, setName] = React.useState<string>()
-  const [mission, setMission] = React.useState<string>()
+  const [name, setName] = React.useState<string>('')
+  const [mission, setMission] = React.useState<string>('')
   const { authStore, guildStore } = useStores()
   const { navigate, setOptions } = useNavigation()
   setOptions({ title: 'Create Guild' })
@@ -48,22 +48,14 @@ export const GuildCreate = observer(() => {
 
   return (
     <Screen preset='scrollStack'>
-      <Text
-        preset='bold'
-        tx='guild.guildName'
-        style={DESCRIP_SPACING}
-      />
+      <Text preset='bold' tx='guild.guildName' style={DESCRIP_SPACING} />
       <TextField
         inputStyle={TEXTFIELD_SPACING}
         onChangeText={setName}
         value={name}
       />
 
-      <Text
-        preset='bold'
-        tx='guild.missionStatement'
-        style={DESCRIP_SPACING}
-      />
+      <Text preset='bold' tx='guild.missionStatement' style={DESCRIP_SPACING} />
       <TextField
         inputStyle={TEXTFIELD_SPACING}
         onChangeText={setMission}

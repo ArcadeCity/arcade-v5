@@ -24,6 +24,13 @@ export class Api {
    */
   constructor(config: ApiConfig = DEFAULT_API_CONFIG) {
     this.config = config
+    this.apisauce = create({
+      baseURL: this.config.url,
+      timeout: this.config.timeout,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
   }
 
   /**
@@ -35,13 +42,6 @@ export class Api {
    */
   setup() {
     // construct the apisauce instance
-    this.apisauce = create({
-      baseURL: this.config.url,
-      timeout: this.config.timeout,
-      headers: {
-        Accept: 'application/json',
-      },
-    })
   }
 
   async callAuthedApi(url: string, params: any = {}, method = 'POST') {
