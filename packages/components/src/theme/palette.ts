@@ -12,4 +12,5 @@ export const palette = {
   pinkFlamingo: '#F459F4',
   electricViolet: '#AE30FF',
   electricIndigo: '#5B20F2',
+  prBlue: '#004FF0',
 }

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import { palette } from '../../theme'
 import { Mapbox } from '../Mapbox'
+import bitcoinimg from './bitcoinisland.png'
 
 export const IslandApp = () => {
   return (
@@ -10,30 +11,23 @@ export const IslandApp = () => {
       <View
         style={{
           position: 'absolute',
-          top: 110,
+          top: 70,
           width: '100%',
           justifyContent: 'center',
           alignItems: 'center',
         }}
         pointerEvents='none'
       >
-        <Text
-          style={{
-            fontFamily: 'Avenir',
-            fontSize: 74,
-            textAlign: 'center',
-            letterSpacing: 5,
-            lineHeight: 84,
-            color: palette.minsk,
-          }}
-        >
-          BITCOIN ISLAND
-        </Text>
+        <Image
+          source={bitcoinimg}
+          style={{ width: 300, height: 200 }}
+          resizeMode='contain'
+        />
       </View>
       <View
         style={{
           position: 'absolute',
-          bottom: 80,
+          bottom: 70,
           width: '100%',
           justifyContent: 'center',
           alignItems: 'center',
@@ -41,7 +35,7 @@ export const IslandApp = () => {
       >
         <TouchableOpacity
           style={{
-            backgroundColor: palette.electricIndigo,
+            backgroundColor: palette.prBlue,
             borderRadius: 10,
             paddingLeft: 26,
             paddingRight: 20,
