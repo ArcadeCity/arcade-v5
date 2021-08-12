@@ -1,7 +1,7 @@
 import * as Location from 'expo-location'
 import { display } from 'lib'
 import { AuthStore, SimpleCoords as Coords } from 'stores/auth-store'
-import { AuthApi } from '@arcadecity/core/src/api'
+import { AuthApi } from 'services/api'
 
 let fetching = false
 

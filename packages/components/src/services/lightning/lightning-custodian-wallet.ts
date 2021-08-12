@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { LegacyWallet } from './legacy-wallet'
 import Frisbee from 'frisbee'
 import bolt11 from 'bolt11'

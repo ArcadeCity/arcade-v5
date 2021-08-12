@@ -1,18 +1,9 @@
-import {
-  Api,
-  Broadcasting,
-  Ceramic,
-  Lightning,
-  Magic,
-  Mapbox,
-} from '@arcadecity/core/src'
-
-// import { Api } from '../services/api'
-// import { Broadcasting } from '../services/broadcasting'
-// import { Ceramic } from '../services/ceramic'
-// import { Lightning } from '../services/lightning'
-// import { Magic } from '../services/magic'
-// import { Mapbox } from '../services/mapbox'
+import { Api } from '../services/api'
+import { Broadcasting } from '../services/broadcasting'
+import { Ceramic } from '../services/ceramic'
+import { Lightning } from '../services/lightning'
+import { Magic } from '../services/magic'
+import { Mapbox } from '../services/mapbox'
 // import { Solana } from '../services/solana'
 
 let ReactotronDev

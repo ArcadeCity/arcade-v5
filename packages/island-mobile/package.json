@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@arcadecity/components": "0.1.0",
-    "@arcadecity/core": "0.1.0",
     "react": "17.0.1",
     "react-native": "0.64.2"
   },

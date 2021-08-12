@@ -8,13 +8,13 @@ import {
   initialWindowMetrics,
 } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
-import { magic } from '@arcadecity/core'
 import * as storage from 'lib/storage'
 import {
   RootNavigator,
   setRootNavigation,
   useNavigationPersistence,
 } from 'navigation'
+import { magic } from 'services/magic'
 import { RootStore, RootStoreProvider, setupRootStore } from 'stores'
 import { Loading } from 'views/loading'
 import { ModalContainer } from 'views/modal'

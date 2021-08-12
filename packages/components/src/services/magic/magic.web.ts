@@ -1,4 +1,4 @@
-import { Magic as MagicSDK } from '@magic-sdk/react-native'
+import { Magic as MagicSDK } from 'magic-sdk'
 import { ethers } from 'ethers'
 
 export const magic = new MagicSDK(process.env.REACT_APP_MAGIC_SDK_PK ?? '')
