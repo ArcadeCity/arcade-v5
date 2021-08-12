@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "yarn workspaces run clean",
     "watch": "yarn workspace @arcadecity/components compile -w",
-    "dev": "yarn run dev:city-web",
+    "dev": "yarn run dev:city-mobile",
     "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
@@ -17,7 +17,10 @@
     "patch-package": "patch-package"
   },
   "dependencies": {
-    "react-native": "0.64.2"
+    "moment": "2.29.1",
+    "react-hook-form": "7.6.6",
+    "react-native": "0.64.2",
+    "react-query": "2.26.4"
   },
   "devDependencies": {
     "concurrently": "5.3.0",

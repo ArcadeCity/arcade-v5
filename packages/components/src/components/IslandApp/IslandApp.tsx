@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
-import { palette } from '../../theme'
+import { palette } from 'views/theme'
 import { Mapbox } from '../Mapbox'
 import bitcoinimg from './bitcoinisland.png'
 
