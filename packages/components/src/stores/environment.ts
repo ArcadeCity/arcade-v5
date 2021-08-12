@@ -33,7 +33,7 @@ export class Environment {
 
   async setup() {
     // allow each service to setup
-    console.log('setup placeholder')
+    // console.log('setup placeholder')
     // if (__DEV__) {
     //   await this.reactotron.setup()
     // }
