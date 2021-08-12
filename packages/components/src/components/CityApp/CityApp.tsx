@@ -2,21 +2,22 @@ import 'i18n'
 import 'lib/ignore-warnings'
 import React, { useEffect, useRef, useState } from 'react'
 import { Alert, StatusBar, View } from 'react-native'
-import { magic } from '@arcadecity/core'
 import { NavigationContainerRef } from '@react-navigation/native'
 import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from 'react-native-safe-area-context'
-import { ModalContainer } from 'views/modal'
+import { enableScreens } from 'react-native-screens'
+import { magic } from '@arcadecity/core'
+import * as storage from 'lib/storage'
 import {
   RootNavigator,
   setRootNavigation,
   useNavigationPersistence,
 } from 'navigation'
 import { RootStore, RootStoreProvider, setupRootStore } from 'stores'
-import { enableScreens } from 'react-native-screens'
-import * as storage from 'lib/storage'
+import { Loading } from 'views/loading'
+import { ModalContainer } from 'views/modal'
 
 enableScreens()
 
@@ -44,7 +45,7 @@ export const CityApp = () => {
     })()
   }, [])
 
-  if (!rootStore) return null
+  if (!rootStore) return <Loading message='Loading' />
 
   return (
     <>
