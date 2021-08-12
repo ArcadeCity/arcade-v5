@@ -1,5 +1,4 @@
 import { Instance, SnapshotOut, types } from 'mobx-state-tree'
-import { PublicKey } from '@solana/web3.js'
 import { withEnvironment, withRootStore } from 'stores/_extensions'
 import * as actions from './wallet-actions'
 import { BalancesModel, TransactionModel } from './wallet-models'
@@ -25,27 +24,8 @@ export const WalletStoreModel = types
     },
     reset() {
       self.tokenAccounts = undefined
+      // @ts-ignore
       self.transactions = undefined
-    },
-  }))
-  .views((self) => ({
-    ourTokenAccounts: () => {
-      if (!self.tokenAccounts) return []
-      return self.tokenAccounts
-        .map(
-          ({ parsed, publicKey }: { parsed: any; publicKey: PublicKey }) => ({
-            amount: parsed.amount,
-            name: mintNames[parsed.mint.toString()]?.name ?? '',
-            decimals: mintNames[parsed.mint.toString()]?.decimals ?? '',
-            mint: parsed.mint,
-            // owner: parsed.owner.toString(),
-            publicKey,
-          })
-        )
-        .filter(function (e) {
-          return e.name === 'Arcade Token' || e.name === 'USD Coin'
-        })
-        .sort((a, b) => (a.name > b.name ? 1 : -1))
     },
   }))
 

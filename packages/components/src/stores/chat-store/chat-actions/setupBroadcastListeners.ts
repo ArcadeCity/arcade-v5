@@ -17,9 +17,9 @@ import { ServiceRequest } from 'stores/service-store'
 
 export const setupBroadcastListeners = async (self: ChatStore) => {
   const token = self.rootStore.authStore.tokens.api
-  await self.env.broadcasting.setupClient(token)
+  await self.env.broadcasting.setupClient(token ?? '')
   const echo = self.env.broadcasting.echo
-  const id = self.rootStore.authStore.player.id.toString()
+  const id = self.rootStore.authStore.player?.id.toString()
 
   echo
     .private(`user.${id}`)

@@ -68,6 +68,7 @@ export const GuildStoreModel = types
       await actions.saveMission(self, mission),
     /** Setters */
     deleteAllInvites() {
+      // @ts-ignore
       self.invites = undefined // BUT will it repopulate???
     },
     setFetchingMembers(value: boolean) {
@@ -98,6 +99,7 @@ export const GuildStoreModel = types
     },
     reset() {
       self.selectedGuild = undefined
+      // @ts-ignore
       self.guilds = undefined
     },
   }))
@@ -109,7 +111,7 @@ export const GuildStoreModel = types
       }
       const root = getRoot(self) as RootStore
       const uid = root.authStore.id
-      return self.guild.members.get(uid.toString()).guildRole
+      return self.guild.members.get(uid.toString())?.guildRole ?? ''
     },
     /** Can the current user create a new guild? */
     get canCreateGuild(): boolean {
@@ -143,7 +145,7 @@ export const GuildStoreModel = types
     },
     /** Is the current user a member of guild with id ___? */
     isMemberOfGuild(id: number): boolean {
-      return self.guild && self.guild.id === id
+      return (self.guild && self.guild.id === id) ?? false
     },
     /** Return list of guilds sorted by distance to user */
     get guildsByDistance() {
