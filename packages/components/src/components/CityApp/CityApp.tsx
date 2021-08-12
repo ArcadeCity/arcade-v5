@@ -1,10 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import 'i18n'
+import 'lib/ignore-warnings'
+import React, { useEffect, useRef, useState } from 'react'
 import { Alert, StatusBar, View } from 'react-native'
-import { RootStore, RootStoreProvider, setupRootStore } from '../../stores'
-import { Mapbox } from '../Mapbox'
+import { NavigationContainerRef } from '@react-navigation/native'
+import {
+  SafeAreaProvider,
+  initialWindowMetrics,
+} from 'react-native-safe-area-context'
+import { ModalContainer } from 'views/modal'
+import {
+  RootNavigator,
+  setRootNavigation,
+  useNavigationPersistence,
+} from 'navigation'
+import { RootStore, RootStoreProvider, setupRootStore } from 'stores'
+import { enableScreens } from 'react-native-screens'
+import * as storage from 'lib/storage'
+
+enableScreens()
+
+export const NAVIGATION_PERSISTENCE_KEY = 'NAVIGATION_STATE'
 
 export const CityApp = () => {
+  const navigationRef = useRef<NavigationContainerRef<{}>>()
   const [rootStore, setRootStore] = useState<RootStore | undefined>(undefined)
+
+  setRootNavigation(navigationRef)
+  const { initialNavigationState, onNavigationStateChange } =
+    useNavigationPersistence(storage, NAVIGATION_PERSISTENCE_KEY)
 
   // Kick off initial async loading actions, like loading fonts and RootStore
   useEffect(() => {
@@ -26,7 +49,16 @@ export const CityApp = () => {
     <View style={{ flex: 1 }}>
       <RootStoreProvider value={rootStore}>
         <StatusBar barStyle='light-content' />
-        <Mapbox />
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+          <View style={{ flex: 1, zIndex: 50 }}>
+            <RootNavigator
+              ref={navigationRef}
+              initialState={initialNavigationState}
+              onStateChange={onNavigationStateChange}
+            />
+            <ModalContainer />
+          </View>
+        </SafeAreaProvider>
       </RootStoreProvider>
     </View>
   )
