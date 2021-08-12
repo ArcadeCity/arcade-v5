@@ -10,7 +10,12 @@ MapboxGL.setAccessToken(
 export const Mapbox = () => {
   return (
     <View style={{ flex: 1, backgroundColor: palette.electricViolet }}>
-      <MapboxGL.MapView style={{ flex: 1 }} />
+      <MapboxGL.MapView
+        style={{ flex: 1 }}
+        // styleURL='mapbox://styles/mapbox/streets-v11'
+      >
+        <MapboxGL.Camera centerCoordinate={[-66.3, 18.4655]} zoomLevel={7} />
+      </MapboxGL.MapView>
     </View>
   )
 }
