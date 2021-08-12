@@ -6,6 +6,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native'
+import { log } from 'lib'
 import { Guild } from 'stores/guild-store'
 import { Avatar, Text } from 'views/shared'
 import { images, spacing } from 'views/theme'
@@ -38,7 +39,7 @@ export const InviteDetail = ({
   deleteAllInvites,
   when,
 }: Props) => {
-  console.tron.log('In InviteDetail with guild:', guild)
+  log('In InviteDetail with guild:', guild)
 
   try {
     return (
@@ -62,7 +63,7 @@ export const InviteDetail = ({
       </TouchableOpacity>
     )
   } catch (e) {
-    console.tron.log('hehehehehehe', e.message)
+    log('hehehehehehe', e.message)
     // delete all invites for now hm? not ideal but hey
     // deleteAllInvites()
     return <View />
