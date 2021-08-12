@@ -1,8 +1,8 @@
 import { onSnapshot } from 'mobx-state-tree'
 import { RootStoreModel, RootStore } from './root-store'
 import { Environment } from '../environment'
-// import * as storage from 'lib/storage'
-// import { display } from 'lib'
+import * as storage from 'lib/storage'
+import { display } from 'lib'
 
 /**
  * The key we'll be saving our state as within async storage.
@@ -40,18 +40,17 @@ export async function setupRootStore(store: any) {
 
   try {
     // load data from storage
-    // data = (await storage.load(ROOT_STATE_STORAGE_KEY)) || {}
-    data = {}
+    data = (await storage.load(ROOT_STATE_STORAGE_KEY)) || {}
     rootStore = RootStoreModel.create(data, env)
 
     const apiToken = data?.authStore?.tokens?.api
     if (apiToken) {
-      // env.api.apisauce.setHeaders({
-      //   Accept: 'application/json',
-      //   'Content-Type': 'application/json',
-      //   Authorization: `Bearer ${apiToken}`,
-      // })
-      console.log({
+      env.api.apisauce.setHeaders({
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiToken}`,
+      })
+      display({
         name: 'API token',
         preview: 'Rehydrated API service with token',
         value: apiToken,
@@ -63,20 +62,20 @@ export async function setupRootStore(store: any) {
     rootStore = RootStoreModel.create({}, env)
 
     // but please inform us what happened
-    __DEV__ && console.log(`ROOTSTORE ERROR: ${e.message}`, null)
+    __DEV__ && console.tron.error(`ROOTSTORE ERROR: ${e.message}`, null)
   }
 
   // reactotron logging
-  // if (__DEV__) {
-  //   env.reactotron.setRootStore(rootStore, data)
-  // }
+  if (__DEV__) {
+    env.reactotron.setRootStore(rootStore, data)
+  }
 
   // track changes & save to storage
-  // onSnapshot(rootStore, (snapshot) =>
-  //   storage.save(ROOT_STATE_STORAGE_KEY, snapshot)
-  // )
+  onSnapshot(rootStore, (snapshot) =>
+    storage.save(ROOT_STATE_STORAGE_KEY, snapshot)
+  )
 
-  // rootStore.authStore.setLoggingIn(false)
+  rootStore.authStore.setLoggingIn(false)
 
   return rootStore
 }
