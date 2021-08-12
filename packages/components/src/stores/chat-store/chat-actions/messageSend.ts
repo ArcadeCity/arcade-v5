@@ -9,7 +9,7 @@ export const messageSend = async (
   chatroomId: number
 ) => {
   const chatApi = new ChatApi(self.env.api)
-  const userId = (getRoot(self) as RootStore).authStore.player.id
+  const userId = (getRoot(self) as RootStore).authStore.player?.id ?? 0
   await chatApi.sendMessage(message, chatroomId, userId)
   return true
 }

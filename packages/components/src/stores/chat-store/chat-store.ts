@@ -42,6 +42,7 @@ export const ChatStoreModel = types
     },
     reset() {
       self.activeChatroom = undefined
+      // @ts-ignore
       self.chatrooms = undefined
     },
   }))

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Alert } from 'react-native'
 import { LightningWallet, LightningWalletModel } from 'stores/wallet-store'
 import { LightningCustodianWallet } from './lightning-custodian-wallet'

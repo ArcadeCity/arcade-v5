@@ -10,7 +10,7 @@ export const getPlayerByUsername = async (
   const { success, player } = await api.fetchPlayerByUsername(username)
 
   if (success && !player) {
-    self.setSelectedPlayer(undefined)
+    self.setSelectedPlayer(0)
     Alert.alert(
       "No player found with that username. Probably they changed their username and it wasn't reflected in the chat - this will be fixed soon."
     )
