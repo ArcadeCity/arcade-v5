@@ -6,14 +6,15 @@ export const Mapbox = () => {
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100%',
-    latitude: 37.7577,
-    longitude: -122.4376,
-    zoom: 8,
+    latitude: 10,
+    longitude: -50,
+    zoom: 1,
   })
   return (
     <ReactMapGL
       {...viewport}
       mapboxApiAccessToken='pk.eyJ1IjoiYWNsaW9ucyIsImEiOiJja3M5ZGM0eHcwcnI0MnhuenFocjBtNDY3In0.LbWIQ4extcXwNy9k4QWIoQ'
+      mapStyle={styleURLs.blank}
       onViewportChange={(nextViewport) => setViewport(nextViewport)}
     />
   )
