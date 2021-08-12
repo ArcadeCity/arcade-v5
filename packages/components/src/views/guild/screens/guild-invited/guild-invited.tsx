@@ -9,6 +9,7 @@ export const GuildInvited = observer(() => {
   const { authStore, guildStore } = useStores()
   const selectedGuild = guildStore.selectedGuild
   const selectedInvite = guildStore.selectedInvite
+  if (!selectedGuild || !selectedInvite) return null
   return (
     <Screen preset='scrollStack' key={authStore?.locale}>
       <Text
