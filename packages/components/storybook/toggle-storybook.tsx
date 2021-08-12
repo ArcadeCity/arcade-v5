@@ -4,7 +4,7 @@ const USE_STORYBOOK = false
 
 export function ToggleStorybook(props) {
   const [showStorybook, setShowStorybook] = useState(false)
-  const [StorybookUIRoot, setStorybookUIRoot] = useState(null)
+  const [StorybookUIRoot, setStorybookUIRoot]: any = useState(null)
 
   useEffect(() => {
     if (USE_STORYBOOK) {
