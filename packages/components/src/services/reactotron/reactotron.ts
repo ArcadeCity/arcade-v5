@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { NativeModules } from 'react-native'
 import Tron from 'reactotron-react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -89,7 +90,7 @@ export class Reactotron {
       rootStore = rootStore as RootStore // typescript hack
       this.rootStore = rootStore
 
-      const { initial, snapshots } = this.config.state
+      const { initial, snapshots }: any = this.config.state
       const name = 'ROOT STORE'
 
       // logging features
