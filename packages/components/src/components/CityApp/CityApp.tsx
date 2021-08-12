@@ -24,7 +24,7 @@ enableScreens()
 export const NAVIGATION_PERSISTENCE_KEY = 'NAVIGATION_STATE'
 
 export const CityApp = () => {
-  const navigationRef = useRef<NavigationContainerRef<{}>>()
+  const navigationRef = useRef<NavigationContainerRef>(null)
   const [rootStore, setRootStore] = useState<RootStore | undefined>(undefined)
 
   setRootNavigation(navigationRef)

@@ -1,5 +1,5 @@
 import { Platform, TextStyle, ViewStyle } from 'react-native'
-import { color } from '../../theme'
+import { color } from 'views/theme'
 
 const SMALL_VIEW: ViewStyle = {
   borderRadius: 2,

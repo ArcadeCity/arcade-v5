@@ -52,7 +52,6 @@ export class Environment {
     }
     this.api.setup()
     await this.ceramic.setup()
-    await this.magic.setup()
     // await this.solana.setup()
   }
 

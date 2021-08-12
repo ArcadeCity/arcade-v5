@@ -2,7 +2,7 @@ import * as React from 'react'
 import { TextStyle, View, ViewStyle } from 'react-native'
 import { Avatar, Text } from '../../../shared'
 // import { Location as LocationType } from '../../../../stores'
-import { spacing } from '../../../theme'
+import { spacing } from 'views/theme'
 import { DETAILS, DIVIDER, USERNAME } from '../../styles'
 import { format } from '../../../../lib/locale-date-fns'
 

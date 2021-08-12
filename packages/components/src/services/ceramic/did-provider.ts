@@ -91,6 +91,7 @@ export const didMethods: HandlerMethods<Context, DIDProviderMethods> = {
     // TODO - if the requesting DID is our management key
     // (did:key) we should request explicit permission.
     const jws = await sign(
+      // @ts-ignore
       params.payload,
       params.did,
       keyring,

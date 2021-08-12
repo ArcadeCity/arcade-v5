@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native'
-import { color, spacing } from '../../theme'
+import { color, spacing } from 'views/theme'
 import { isEmpty, isNil } from 'ramda'
 
 /**

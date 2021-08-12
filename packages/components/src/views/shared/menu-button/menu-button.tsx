@@ -10,7 +10,7 @@ import {
 import { Text } from '../text'
 // import { Avatar } from '../avatar'
 import { MenuButtonProps } from './menu-button.props'
-import { color, spacing, images } from '../../theme'
+import { color, spacing, images } from 'views/theme'
 
 const ROOT: ViewStyle = {
   flex: 1,

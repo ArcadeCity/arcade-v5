@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import MapboxGL from '@react-native-mapbox-gl/maps'
-import { palette } from '../../theme'
+import { palette } from 'views/theme'
 
 MapboxGL.setAccessToken(
   'pk.eyJ1IjoiYWNsaW9ucyIsImEiOiJja3M5NGNvOHYwcjJ4MnZwZW10azYyNDFhIn0.nKlBGTV6rb6UbK53mDZDWQ'

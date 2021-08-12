@@ -35,6 +35,7 @@ export const setRootNavigation = (
 export function getActiveRouteName(
   state: NavigationState | PartialState<NavigationState>
 ) {
+  if (!state || !state.index) return ''
   const route = state.routes[state.index]
 
   // Found the active route -- return the name

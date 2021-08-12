@@ -182,7 +182,7 @@ export default class Keyring {
     kid?: string
   ): Promise<JWE> {
     const encrypter = x25519Encrypter(this.getEncryptionPublicKey(), kid)
-    return createJWE(prepareCleartext(cleartext), [encrypter])
+    return createJWE(await prepareCleartext(cleartext), [encrypter])
   }
 
   getSigner(version: string = LATEST): Signer {

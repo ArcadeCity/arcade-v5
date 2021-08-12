@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Button, Text, TextStyle, View } from 'react-native'
 import { Ceramic, Lightning, magic, provider } from '@arcadecity/core'
-import { palette } from '../../theme'
+import { palette } from 'views/theme'
 import { ethers } from 'ethers'
 import { LightningCustodianWallet } from '@arcadecity/core'
 import useInterval from './useInterval'

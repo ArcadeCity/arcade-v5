@@ -13,6 +13,7 @@ import { stackOptions } from './onboarding-navigator'
 type PrimaryParamList = {
   Login: undefined
   changelog: undefined
+  changeLanguage: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/

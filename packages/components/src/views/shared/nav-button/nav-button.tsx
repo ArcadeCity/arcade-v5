@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Image, TouchableOpacity } from 'react-native'
 import { Text } from '../text'
 import { NavButtonProps } from './nav-button.props'
-import { spacing } from '../../theme'
+import { spacing } from 'views/theme'
 
 function NavButtonImage({ preset }: { preset: string }) {
   if (preset === 'close') {

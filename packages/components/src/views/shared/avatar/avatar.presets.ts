@@ -1,5 +1,5 @@
 import { Platform, ViewStyle } from 'react-native'
-import { color } from '../../theme'
+import { color } from 'views/theme'
 
 const shadow = (height: number, shadowRadius: number) =>
   Platform.select({
