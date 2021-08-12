@@ -5,7 +5,7 @@ import { Button, Screen, Text, TextField } from 'views/shared'
 
 export const GuildProfileEdit = () => {
   const { guildStore } = useStores()
-  const [mission, setMission] = React.useState<string>()
+  const [mission, setMission] = React.useState<string>('')
   const saveMission = () => {
     const missionStatement = mission.trim()
     if (missionStatement && missionStatement.length > 0) {
