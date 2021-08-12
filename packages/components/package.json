@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@react-native-mapbox-gl/maps": "^8.2.1",
-    "@react-navigation/native": "^6.0.2",
-    "@react-navigation/stack": "^6.0.6",
+    "@react-navigation/native": "5.9.4",
+    "@react-navigation/stack": "5.14.5",
     "mobx": "^6.3.2",
     "mobx-react-lite": "^3.2.0",
     "mobx-state-tree": "^5.0.2",
