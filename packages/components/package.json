@@ -13,6 +13,7 @@
     "@types/react-native": "0.64.10"
   },
   "dependencies": {
+    "@react-native-mapbox-gl/maps": "^8.2.1",
     "mobx": "^6.3.2",
     "mobx-state-tree": "^5.0.2"
   }
