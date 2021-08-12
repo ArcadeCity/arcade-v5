@@ -29,7 +29,6 @@ if (__DEV__) {
 } else {
   // attach a mock so if things sneaky by our __DEV__ guards, we won't crash.
   console.tron = {
-    benchmark: noop,
     clear: noop,
     close: noop,
     configure: noop,
@@ -48,7 +47,7 @@ if (__DEV__) {
     use: noop,
     useReactNative: noop,
     warn: noop,
-  }
+  } as any
 }
 
 /**
