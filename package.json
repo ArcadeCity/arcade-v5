@@ -7,7 +7,8 @@
   "repository": "https://github.com/ArcadeCity/arcade",
   "scripts": {
     "clean": "yarn workspaces run clean",
-    "dev": "yarn run dev:wallet",
+    "dev": "yarn run dev:city-mobile",
+    "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "format": "yarn workspaces run format",
