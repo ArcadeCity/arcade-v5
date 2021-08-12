@@ -60,6 +60,7 @@ export const AuthStoreModel = types
       self.player = player
     },
     setBio(value: string) {
+      if (!self.player) return
       self.player.bio = value
     },
     setEmailInput(email: string) {
@@ -69,9 +70,11 @@ export const AuthStoreModel = types
       self.geo = value
     },
     setInvites(invites: number) {
+      if (!self.player) return
       self.player.invites = invites
     },
     setLocale(locale: string) {
+      if (!self.player) return
       self.player.locale = locale
     },
     setLocation(value: any) {
@@ -87,9 +90,11 @@ export const AuthStoreModel = types
       self.tokens.magic = token
     },
     setOnboarded(value: boolean = true) {
+      if (!self.player) return
       self.player.onboarded = value
     },
     setProfession(value: string) {
+      if (!self.player) return
       self.player.profession = value
     },
     setPushToken(token: string) {
@@ -99,17 +104,19 @@ export const AuthStoreModel = types
     //   self.player.solAddress = address
     // },
     setTermsAgree(value: Date) {
+      if (!self.player) return
       self.player.acceptedTerms = value.toString()
     },
     setUsername(value: string) {
+      if (!self.player) return
       self.player.username = value
     },
     reset() {
       self.geo = undefined
       self.location = undefined
-      self.permissions = undefined
+      self.permissions = { location: undefined, notifications: undefined }
       self.player = undefined
-      self.tokens = undefined
+      self.tokens = { api: null, magic: null, push: null }
       self.emailInput = ''
       self.loggingIn = false
     },
@@ -142,13 +149,16 @@ export const AuthStoreModel = types
       return self.player?.locale || Localization.locale || 'en'
     },
     get id(): number {
-      return self.player?.id
+      return self.player?.id ?? 0
     },
     get invited(): boolean {
       return !!self.player && self?.player?.invited
     },
     get invites(): number {
-      return !!self.player && self?.player?.invites
+      if (typeof self?.player?.invites === 'number') {
+        return self.player.invites
+      }
+      return 0
     },
     get isServiceProvider(): boolean {
       return (
@@ -158,7 +168,7 @@ export const AuthStoreModel = types
       )
     },
     get onboarded(): boolean {
-      return !!self.player && self?.player?.onboarded
+      return (!!self.player && self?.player?.onboarded) ?? false
     },
     get profession(): string {
       return self.player?.profession ?? ''
