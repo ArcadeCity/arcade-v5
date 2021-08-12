@@ -27,12 +27,17 @@ export const balances: BalancesType = {
 
 storiesOf('Wallet - Balances', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Balances' usage='' noPad>
-        <Balances balances={balances} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'Balances renders a BalanceDetail component for ARCD, BTC, and USDC with the user balances. Data is passed in as props: balances of type Balances.'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Balances' usage='' noPad>
+          <Balances balances={balances} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'Balances renders a BalanceDetail component for ARCD, BTC, and USDC with the user balances. Data is passed in as props: balances of type Balances.',
+    }
+  )

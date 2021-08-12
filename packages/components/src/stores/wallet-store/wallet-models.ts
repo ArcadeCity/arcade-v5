@@ -32,7 +32,7 @@ export const BalanceModel = types.model('Balance').props({
 export const BalancesModel = types.model('Balances').props({
   ARCD: types.optional(BalanceModel, {}),
   BTC: types.optional(BalanceModel, {}),
-  sats: types.optional(BalanceModel, {}),
+  // sats: types.optional(BalanceModel, {}),
   USDC: types.optional(BalanceModel, {}),
 })
 
