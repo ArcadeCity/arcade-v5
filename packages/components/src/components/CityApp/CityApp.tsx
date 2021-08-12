@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Alert, View } from 'react-native'
+import { Alert, StatusBar, View } from 'react-native'
 import { RootStore, RootStoreProvider, setupRootStore } from '../../stores'
 import { Mapbox } from '../Mapbox'
 
@@ -20,9 +20,14 @@ export const CityApp = () => {
     })()
   }, [])
 
+  if (!rootStore) return null
+
   return (
     <View style={{ flex: 1 }}>
-      <Mapbox />
+      <RootStoreProvider value={rootStore}>
+        <StatusBar barStyle='light-content' />
+        <Mapbox />
+      </RootStoreProvider>
     </View>
   )
 }
