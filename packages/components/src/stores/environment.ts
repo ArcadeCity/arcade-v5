@@ -1,10 +1,19 @@
-import { Api } from '../services/api'
-import { Broadcasting } from '../services/broadcasting'
-import { Ceramic } from '../services/ceramic'
-import { Lightning } from '../services/lightning'
-import { Magic } from '../services/magic'
-import { Mapbox } from '../services/mapbox'
-import { Solana } from '../services/solana'
+import {
+  Api,
+  Broadcasting,
+  Ceramic,
+  Lightning,
+  Magic,
+  Mapbox,
+} from '@arcadecity/core/src'
+
+// import { Api } from '../services/api'
+// import { Broadcasting } from '../services/broadcasting'
+// import { Ceramic } from '../services/ceramic'
+// import { Lightning } from '../services/lightning'
+// import { Magic } from '../services/magic'
+// import { Mapbox } from '../services/mapbox'
+// import { Solana } from '../services/solana'
 
 let ReactotronDev
 if (__DEV__) {
@@ -33,7 +42,7 @@ export class Environment {
         'pk.eyJ1IjoiYWNsaW9ucyIsImEiOiJjamVhMmNtY2swaXNtMnBsbnB2aDVqNTBiIn0.gM_i1jhawFz2EpKBX4VmwQ',
       baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places/',
     })
-    this.solana = new Solana()
+    // this.solana = new Solana()
   }
 
   async setup() {
@@ -85,5 +94,5 @@ export class Environment {
   /**
    * Solana blockchain
    */
-  solana: Solana
+  // solana: Solana
 }

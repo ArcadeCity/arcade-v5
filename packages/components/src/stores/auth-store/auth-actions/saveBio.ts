@@ -1,5 +1,5 @@
 import { display } from 'lib'
-import { AuthApi } from 'services/api'
+import { AuthApi } from '@arcadecity/core/src/api'
 import { AuthStore } from 'stores/auth-store'
 
 export const saveBio = async (self: AuthStore, bio: string) => {

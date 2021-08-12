@@ -1,6 +1,6 @@
 import { ServiceStore } from '../service-store'
 import { ServiceRequest } from '../service-models'
-import { ServiceApi } from 'services/api'
+import { ServiceApi } from '@arcadecity/core/src/api'
 
 export const selectDriver = async (self: ServiceStore, id: number) => {
   if (!self.activeRequest) return false

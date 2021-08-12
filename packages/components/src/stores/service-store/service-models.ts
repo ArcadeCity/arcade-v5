@@ -1,8 +1,8 @@
 import { values } from 'mobx'
 import { getRoot, types, Instance } from 'mobx-state-tree'
 import { ChatroomModel } from '../chat-store/chat-models'
-import { PlayerModel } from 'stores/player-store'
-import { RootStore } from 'stores/root-store'
+import { PlayerModel } from '../player-store'
+import { RootStore } from '../root-store'
 import * as requestViews from './service-request-views'
 
 // Coords
@@ -104,7 +104,7 @@ export const ServiceRequestModel = types
   }))
   .views((self: any) => ({
     get note(): string {
-      if (!self.details) return undefined
+      if (!self.details) return ''
       return self.details
     },
     get pickup(): Address | null {

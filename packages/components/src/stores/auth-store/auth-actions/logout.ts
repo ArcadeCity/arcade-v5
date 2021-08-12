@@ -2,7 +2,7 @@ import { display } from 'lib'
 import { AuthStore } from '../auth-store'
 
 export const logout = async (self: AuthStore) => {
-  const id = self.player.id
+  const id = self.player?.id
   try {
     self.env.broadcasting.echo.leave(`user.${id}`)
   } catch (e) {
