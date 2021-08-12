@@ -2,6 +2,7 @@ import 'i18n'
 import 'lib/ignore-warnings'
 import React, { useEffect, useRef, useState } from 'react'
 import { Alert, StatusBar, View } from 'react-native'
+import { magic } from '@arcadecity/core'
 import { NavigationContainerRef } from '@react-navigation/native'
 import {
   SafeAreaProvider,
@@ -46,7 +47,8 @@ export const CityApp = () => {
   if (!rootStore) return null
 
   return (
-    <View style={{ flex: 1 }}>
+    <>
+      <magic.Relayer />
       <RootStoreProvider value={rootStore}>
         <StatusBar barStyle='light-content' />
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
@@ -60,6 +62,6 @@ export const CityApp = () => {
           </View>
         </SafeAreaProvider>
       </RootStoreProvider>
-    </View>
+    </>
   )
 }
