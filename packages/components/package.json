@@ -32,6 +32,7 @@
     "apisauce": "^2.1.1",
     "axios": "^0.21.1",
     "babel-plugin-module-resolver": "^4.1.0",
+    "bs58check": "^2.1.2",
     "dids": "^2.4.0",
     "ethers": "^5.4.4",
     "haversine": "^1.1.1",
@@ -48,6 +49,7 @@
     "react-map-gl": "6.1.16",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
+    "react-native-simple-store": "^2.0.2",
     "react-native-webview": "^11.13.0"
   }
 }

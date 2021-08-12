@@ -7,10 +7,10 @@ import { GuildStore } from '../guild-store'
  */
 
 export const inviteToGuild = async (self: GuildStore) => {
-  const guildId = self.guild.id
-  const guildName = self.guild.name
-  const playerId = self.rootStore.playerStore.selectedPlayer.id
-  const name = self.rootStore.playerStore.selectedPlayer.username
+  const guildId = self.guild?.id ?? 0
+  const guildName = self.guild?.name
+  const playerId = self.rootStore.playerStore.selectedPlayer?.id ?? 0
+  const name = self.rootStore.playerStore.selectedPlayer?.username
   const uid = self.rootStore.authStore.id
 
   console.tron.display({
@@ -29,7 +29,7 @@ export const inviteToGuild = async (self: GuildStore) => {
   const res: any = await api.guildInviteMember(guildId, playerId, uid)
 
   if (res && res.ok) {
-    Alert.alert(undefined, `guild.inviteSent`)
+    Alert.alert('Invite sent', `guild.inviteSent`)
   }
 
   return res.ok ?? false

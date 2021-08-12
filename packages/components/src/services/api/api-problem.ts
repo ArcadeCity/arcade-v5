@@ -71,8 +71,8 @@ export function getGeneralApiProblem(
           return { kind: 'rejected' }
       }
     case 'CANCEL_ERROR':
-      return null
+      return
   }
 
-  return null
+  return
 }

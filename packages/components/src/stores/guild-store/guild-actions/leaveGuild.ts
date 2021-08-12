@@ -7,7 +7,7 @@ export const leaveGuild = async (self: GuildStore, guildId: number) => {
 
   // This should return the chatroom ID so we know which to leave
   const { guildChatroomIdToLeave }: any = await api.leaveGuild(guildId)
-  self.setSelectedGuild(undefined)
+  self.setSelectedGuild(0)
   self.setGuildId(undefined)
   self.rootStore.chatStore.deleteChatroom(guildChatroomIdToLeave)
 

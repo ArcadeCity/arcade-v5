@@ -10,7 +10,7 @@ export async function saveMission(self: any, mission: string) {
   // const { uid }: any = root.userStore
   const { id } = self.guild
 
-  root.guildStore.guilds.get(id).setMission(mission)
+  root.guildStore.guilds.get(id)?.setMission(mission)
 
   const api = new GuildApi(self.env.api)
   await api.guildSetMission(id, mission)
@@ -20,7 +20,7 @@ export async function saveMission(self: any, mission: string) {
   //root.navigationStore.newResetTo('main') // try guildProfile?
   //RN : we are sending back to the user on guild profile screen : issue #25
   // root.navigationStore.goBack()
-  Alert.alert(undefined, `guild.missionUpdated`)
+  Alert.alert('Mission updated', `guild.missionUpdated`)
 
   // Update beacon in database
   // Update playerobj in database

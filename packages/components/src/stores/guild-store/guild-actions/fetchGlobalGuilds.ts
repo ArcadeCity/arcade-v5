@@ -9,7 +9,7 @@ export const fetchGlobalGuilds = async (self: GuildStore) => {
 
   console.tron.log('guilds is ', guilds)
 
-  const guildsToAdd = []
+  const guildsToAdd: Guild[] = []
 
   if (guilds) {
     guilds.forEach((guild: Guild) => {

@@ -6,7 +6,7 @@ import { GuildStore } from '../guild-store'
 export const inviteAccept = async (self: GuildStore, invite: GuildInvite) => {
   const api = new GuildApi(self.env.api)
   await api.acceptGuildInvite(invite.id)
-  self.setGuildId(invite.guild.id)
+  self.setGuildId(invite.guild?.id)
   Alert.alert('You joined the guild!')
   return true
 

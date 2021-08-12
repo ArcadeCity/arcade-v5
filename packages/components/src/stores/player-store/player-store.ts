@@ -43,6 +43,7 @@ export const PlayerStoreModel = types
     },
     reset() {
       self.selectedPlayer = undefined
+      // @ts-ignore
       self.players = undefined
     },
   }))

@@ -9,6 +9,8 @@
     "outDir": "dist",
     "noImplicitAny": false,
     "rootDir": "./",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "typeRoots": ["../../@types", "../../node_modules/@types"],
     "baseUrl": "./",
     "paths": {
@@ -26,5 +28,5 @@
       "views/*": ["src/views/*"]
     }
   },
-  "include": ["src/", "storybook/"]
+  "include": ["src/", "storybook/", "src/i18n/*.json"]
 }
