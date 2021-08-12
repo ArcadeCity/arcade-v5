@@ -22,32 +22,34 @@ Our [flagship Austin network](https://arcade.city/files/ArcadeCity_FinalReport.p
 
 We believe networks of cooperatives with the right tools and incentives can replace corporations and even governments.
 
-
 ## Packages
+
 - **city-mobile** - v5.1 mobile app
 - **city-web** - Lightweight web app with subset of mobile functionality
 - **components** - Shared components
 - **core** - Shared functionality
 - **explorer** - Arcade transaction explorer
+- **island-mobile** - Bitcoin Island mobile app
 - **wallet-web** - Experimental wallet supporting Bitcoin Lightning, USDC and Arcade Tokens
 
 ## Tech stack
+
 - [React](https://github.com/facebook/react)
 - [React Native](https://github.com/facebook/react-native)
 - [React Native Web](https://github.com/necolas/react-native-web)
 - [Create React App](https://github.com/facebook/create-react-app)
 - [TypeScript](https://github.com/Microsoft/TypeScript)
-- [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) *(Monorepo)*
-- [Storybook](https://storybook.js.org/) *(Component library)*
-- [MobX State Tree](https://github.com/mobxjs/mobx-state-tree) *(State management)*
-- [Magic](https://magic.link/) *(Authentication)*
-- [Ceramic](https://ceramic.network/) *(Data storage)*
-- [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) *(Bitcoin Lightning integration)*
-- [solana-web3.js](https://github.com/solana-labs/solana-web3.js/) *(USDC & ARCD integration)*
+- [Yarn Workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) _(Monorepo)_
+- [Storybook](https://storybook.js.org/) _(Component library)_
+- [MobX State Tree](https://github.com/mobxjs/mobx-state-tree) _(State management)_
+- [Magic](https://magic.link/) _(Authentication)_
+- [Ceramic](https://ceramic.network/) _(Data storage)_
+- [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) _(Bitcoin Lightning integration)_
+- [solana-web3.js](https://github.com/solana-labs/solana-web3.js/) _(USDC & ARCD integration)_
 
 ## Contributing
-We welcome contributions. Please email cityhall@arcade.city with how you'd like to help.
 
+We welcome contributions. Please email cityhall@arcade.city with how you'd like to help.
 
 ## Inspiration
 
