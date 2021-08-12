@@ -12,7 +12,8 @@ export const Mapbox = () => {
     <View style={{ flex: 1, backgroundColor: palette.electricViolet }}>
       <MapboxGL.MapView
         style={{ flex: 1 }}
-        // styleURL='mapbox://styles/mapbox/streets-v11'
+        pitchEnabled={false}
+        rotateEnabled={false}
       >
         <MapboxGL.Camera centerCoordinate={[-66.3, 18.2655]} zoomLevel={7} />
       </MapboxGL.MapView>
