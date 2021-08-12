@@ -31,17 +31,15 @@ export const ServiceNavigator: React.FC<{}> = () => {
       <NavButton onPress={navigation.goBack} navigation={navigation} />
     ),
     headerRight:
-      route.name === 'requestChat' ? (
-        () => (
-          <Button
-            preset='small'
-            text='View'
-            onPress={() => modalStore.openModal(ModalName.REQUEST_VIEW, {})}
-          />
-        )
-      ) : (
-        <WalletButton />
-      ),
+      route.name === 'requestChat'
+        ? () => (
+            <Button
+              preset='small'
+              text='View'
+              onPress={() => modalStore.openModal(ModalName.REQUEST_VIEW, {})}
+            />
+          )
+        : () => <WalletButton />,
   })
   return (
     <Stack.Navigator initialRouteName='serviceHome' headerMode='screen'>
