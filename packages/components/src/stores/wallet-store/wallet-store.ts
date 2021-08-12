@@ -17,10 +17,6 @@ export const WalletStoreModel = types
   .actions((self) => ({
     init: async (): Promise<boolean> => await actions.init(self as WalletStore),
     pay: async () => Alert.alert('Pay via store'),
-    sendTest: async (): Promise<boolean> =>
-      await actions.sendTest(self as WalletStore),
-    sendTestEric: async (): Promise<boolean> =>
-      await actions.sendTestEric(self as WalletStore),
     setTokenAccounts(accounts: any) {
       self.tokenAccounts = accounts
     },

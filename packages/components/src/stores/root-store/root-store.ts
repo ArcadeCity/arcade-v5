@@ -1,7 +1,7 @@
 import { Instance, SnapshotOut, types } from 'mobx-state-tree'
-import { GuildStoreModel } from 'stores/guild-store'
 import { AuthStoreModel } from '../auth-store'
 import { ChatStoreModel } from '../chat-store'
+import { GuildStoreModel } from '../guild-store'
 import { ModalStoreModel } from '../modal-store'
 import { PlayerStoreModel } from '../player-store'
 import { ServiceStoreModel } from '../service-store'
