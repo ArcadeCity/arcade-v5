@@ -9,14 +9,26 @@ MapboxGL.setAccessToken(
 
 export const Mapbox = () => {
   return (
-    <View style={{ flex: 1, backgroundColor: palette.electricViolet }}>
+    <View style={{ flex: 1 }}>
       <MapboxGL.MapView
         style={{ flex: 1 }}
         pitchEnabled={false}
         rotateEnabled={false}
+        styleURL={styleURLs.blank}
       >
-        <MapboxGL.Camera centerCoordinate={[-66.3, 18.2655]} zoomLevel={7} />
+        <MapboxGL.Camera
+          defaultSettings={{
+            centerCoordinate: [-50, 10],
+            zoomLevel: 1,
+          }}
+          maxZoomLevel={6}
+        />
       </MapboxGL.MapView>
     </View>
   )
+}
+
+export const styleURLs = {
+  blank: 'mapbox://styles/aclions/cjoo2gldl3bio2rmktwhcy0qh',
+  main: 'mapbox://styles/aclions/cjeai04xo08k02rozqsi9di5a',
 }
