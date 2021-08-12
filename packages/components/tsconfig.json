@@ -8,7 +8,7 @@
     "jsx": "preserve",
     "outDir": "dist",
     "noImplicitAny": false,
-    "rootDir": "src",
+    "rootDir": "./",
     "typeRoots": ["../../@types", "../../node_modules/@types"],
     "baseUrl": "./",
     "paths": {
@@ -25,6 +25,6 @@
       "views/*": ["src/views/*"]
     }
   },
-  "include": ["src/"],
+  "include": ["src/", "storybook/"],
   "references": [{ "path": "../core" }]
 }
