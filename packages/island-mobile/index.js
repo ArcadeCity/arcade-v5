@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native'
 import { name as appName } from './app.json'
 
-const { CityApp } = require('@arcadecity/components/src/components/CityApp')
+const { IslandApp } = require('@arcadecity/components/src/components/IslandApp')
 
-AppRegistry.registerComponent(appName, () => CityApp)
+AppRegistry.registerComponent(appName, () => IslandApp)
