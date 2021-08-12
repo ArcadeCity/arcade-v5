@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, View } from 'react-native'
 import { RootStore, RootStoreProvider, setupRootStore } from '../../stores'
-import { palette } from '../../theme'
+import { Mapbox } from '../Mapbox'
 
 export const CityApp = () => {
   const [rootStore, setRootStore] = useState<RootStore | undefined>(undefined)
@@ -23,8 +23,8 @@ export const CityApp = () => {
   console.log('rootStore:', rootStore)
 
   return (
-    <React.StrictMode>
-      <View style={{ flex: 1, backgroundColor: palette.haiti }}></View>
-    </React.StrictMode>
+    <View style={{ flex: 1 }}>
+      <Mapbox />
+    </View>
   )
 }
