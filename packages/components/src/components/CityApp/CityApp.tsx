@@ -20,8 +20,6 @@ export const CityApp = () => {
     })()
   }, [])
 
-  console.log('rootStore:', rootStore)
-
   return (
     <View style={{ flex: 1 }}>
       <Mapbox />
