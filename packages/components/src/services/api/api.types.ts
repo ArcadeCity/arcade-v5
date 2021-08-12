@@ -1,5 +1,4 @@
 import { GeneralApiProblem } from './api-problem'
-import { Character } from 'stores/_else/character/character'
 import { AuthedPlayer } from 'stores/auth-store'
 import {
   Address,
@@ -48,13 +47,6 @@ export type AttachSolWalletResult =
 // Demo
 export type GetUsersResult = { kind: 'ok'; users: User[] } | GeneralApiProblem
 export type GetUserResult = { kind: 'ok'; user: User } | GeneralApiProblem
-
-export type GetCharactersResult =
-  | { kind: 'ok'; characters: Character[] }
-  | GeneralApiProblem
-export type GetCharacterResult =
-  | { kind: 'ok'; character: Character }
-  | GeneralApiProblem
 
 export interface ConfirmServiceRequestPayload {
   addresses: Address[]
