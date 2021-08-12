@@ -5,8 +5,8 @@ import { TileDocument } from '@ceramicnetwork/stream-tile'
 import ThreeIdResolver from '@ceramicnetwork/3id-did-resolver'
 import ThreeIdProvider from './threeid-provider'
 import { DID } from 'dids'
-import { LightningWallet } from 'stores/wallet-store'
-import { display } from 'lib'
+// import { LightningWallet } from 'stores/wallet-store'
+// import { display } from 'lib'
 
 const API_URL = 'https://ceramic-clay.3boxlabs.com'
 const getPermission = async (request: any) => {
@@ -25,6 +25,16 @@ export class Ceramic {
     return true
   }
 
+  async checkForWallet() {
+    // const existing = await this.downloadSecret()
+    // console.log('EXISTING:', existing)
+  }
+
+  async loadDoc(streamId: string) {
+    const doc = await TileDocument.load(this.client, streamId)
+    return doc
+  }
+
   async authenticate(secret: Uint8Array | null) {
     const ceramic = this.client
     const authSecret =
@@ -34,6 +44,7 @@ export class Ceramic {
         165, 33, 183, 18, 45, 29, 81, 131, 65, 171, 43, 5, 58, 31, 246, 31,
       ])
     const authId = 'TestMethod'
+    console.log('authSecret:', authSecret)
     const threeId = await ThreeIdProvider.create({
       ceramic,
       getPermission,
@@ -45,17 +56,18 @@ export class Ceramic {
     const did = new DID({ provider, resolver })
     ceramic.did = did
     await ceramic.did.authenticate()
-    display({
+    console.log({
       name: 'Ceramic authenticate',
       preview: `Authenticated: ${ceramic.did.authenticated.toString()} - ${
         ceramic.did.id
       }`,
     })
+    return ceramic.did.authenticated
   }
 
   // Encrypt the wallet's secret and persist to Ceramic
-  async saveWallet(wallet: LightningWallet) {
-    display({
+  async saveWallet(wallet: any) {
+    console.log({
       name: 'Ceramic saveWallet',
       preview: `Saving wallet ${wallet.label}`,
       value: wallet,
@@ -71,7 +83,7 @@ export class Ceramic {
     const doc = await TileDocument.create(this.client, { wallet: walletToSave })
     const streamId = doc.id.toString()
 
-    display({
+    console.log({
       name: 'Ceramic saveWallet',
       preview: `Saved wallet with streamId: ${streamId}`,
       value: wallet,
