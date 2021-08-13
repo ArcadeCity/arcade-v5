@@ -1,4 +1,4 @@
-package com.cityrn;
+package arcade.city.mobile;
 
 import com.facebook.react.ReactActivity;
 
