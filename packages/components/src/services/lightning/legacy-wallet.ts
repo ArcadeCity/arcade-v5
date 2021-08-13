@@ -1,8 +1,9 @@
+// @ts-nocheck
 import BigNumber from 'bignumber.js'
 import bitcoinMessage from 'bitcoinjs-message'
 import { randomBytes } from './rng'
 import { AbstractWallet } from './abstract-wallet'
-import { HDSegwitBech32Wallet } from '..'
+// import { HDSegwitBech32Wallet } from '..'
 const bitcoin = require('bitcoinjs-lib')
 // const BlueElectrum = require('../../blue_modules/BlueElectrum')
 const coinSelect = require('coinselect')
@@ -337,12 +338,14 @@ export class LegacyWallet extends AbstractWallet {
   }
 
   getTransactions() {
+    console.log('not implemented')
+    return []
     // a hacky code reuse from electrum HD wallet:
-    this._txs_by_external_index = this._txs_by_external_index || []
-    this._txs_by_internal_index = []
+    // this._txs_by_external_index = this._txs_by_external_index || []
+    // this._txs_by_internal_index = []
 
-    const hd = new HDSegwitBech32Wallet()
-    return hd.getTransactions.apply(this)
+    // const hd = new HDSegwitBech32Wallet()
+    // return hd.getTransactions.apply(this)
   }
 
   /**
