@@ -69,9 +69,9 @@ const createWatchFolders = (dependencies, basePath) => {
 
 module.exports = function (structure) {
   const frameworkPath = path.resolve(__dirname, structure.path)
-  console.log('frameworkPath:', frameworkPath)
+  // console.log('frameworkPath:', frameworkPath)
   const frameworkDependenciesPath = path.resolve(frameworkPath, 'node_modules')
-  console.log('frameworkDependenciesPath:', frameworkDependenciesPath)
+  // console.log('frameworkDependenciesPath:', frameworkDependenciesPath)
 
   const extraNodeModules = structure.modules.reduce((acc, frameworkModule) => {
     const moduleConfig = getModuleConfig(

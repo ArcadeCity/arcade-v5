@@ -27,6 +27,6 @@ const blam = {
   ],
 }
 
-console.log(blam)
+// console.log(blam)
 
 module.exports = blam

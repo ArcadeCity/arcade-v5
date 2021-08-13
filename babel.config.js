@@ -1,9 +1,10 @@
+const path = require('path')
 const monorepoResolver = require('./babel.resolver')
 const { root, alias } = monorepoResolver({
-  path: '../path-to/monorepo-project',
+  path: '.',
   modules: [
-    'subpath-to/module-1',
-    'subpath-to/module-2',
+    'i18n1234', // packages/components/src/
+    // 'subpath-to/module-2',
     // ...etc
   ],
 })
@@ -12,6 +13,7 @@ const moduleResolverConfig = {
   root,
   alias: {
     ...alias,
+    i18n: path.resolve(__dirname, 'packages/components/src/i18n'), //'packages/components/src/i18n',
     // additional aliases
   },
 }
