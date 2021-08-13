@@ -2,6 +2,8 @@ PODS:
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
+  - EXApplication (3.1.2):
+    - UMCore
   - EXConstants (11.0.1):
     - ExpoModulesCore
     - UMCore
@@ -12,6 +14,18 @@ PODS:
     - ExpoModulesCore
     - React-Core
     - UMCore
+  - EXLocalization (10.1.0):
+    - UMCore
+  - EXLocation (12.0.4):
+    - UMCore
+    - UMPermissionsInterface
+    - UMTaskManagerInterface
+  - EXNotifications (0.11.6):
+    - UMCore
+    - UMPermissionsInterface
+  - EXPermissions (12.0.1):
+    - UMCore
+    - UMPermissionsInterface
   - ExpoModulesCore (0.2.0):
     - ExpoModulesCore/Core (= 0.2.0)
     - ExpoModulesCore/Interfaces (= 0.2.0)
@@ -20,6 +34,22 @@ PODS:
     - UMCore
   - ExpoModulesCore/Interfaces (0.2.0):
     - ExpoModulesCore/Core
+    - UMCore
+  - EXSensors (10.1.2):
+    - UMCore
+    - UMPermissionsInterface
+    - UMSensorsInterface
+  - EXSMS (9.1.2):
+    - UMCore
+    - UMPermissionsInterface
+  - EXSplashScreen (0.10.2):
+    - React-Core
+    - UMCore
+  - EXStructuredHeaders (1.0.1):
+    - UMCore
+  - EXUpdates (0.5.5):
+    - EXStructuredHeaders
+    - React-Core
     - UMCore
   - FBLazyVector (0.64.2)
   - FBReactNativeSpec (0.64.2):
@@ -354,9 +384,13 @@ PODS:
     - React-perflogger (= 0.64.2)
   - UMAppLoader (2.2.0)
   - UMCore (7.1.1)
+  - UMPermissionsInterface (6.1.0):
+    - UMCore
   - UMReactNativeAdapter (6.3.5):
     - ExpoModulesCore
     - React-Core
+    - UMCore
+  - UMSensorsInterface (6.1.0):
     - UMCore
   - UMTaskManagerInterface (6.2.0):
     - UMCore
@@ -366,10 +400,20 @@ PODS:
 
 DEPENDENCIES:
   - DoubleConversion (from `../../../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - EXConstants (from `../../../node_modules/expo-constants/ios`)
+  - EXApplication (from `../../../node_modules/expo-application/ios`)
+  - EXConstants (from `../../../node_modules/react-native-unimodules/node_modules/expo-constants/ios`)
   - EXFileSystem (from `../../../node_modules/expo-file-system/ios`)
   - EXImageLoader (from `../../../node_modules/expo-image-loader/ios`)
+  - EXLocalization (from `../../../node_modules/expo-localization/ios`)
+  - EXLocation (from `../../../node_modules/expo-location/ios`)
+  - EXNotifications (from `../../../node_modules/expo-notifications/ios`)
+  - EXPermissions (from `../../../node_modules/expo-permissions/ios`)
   - ExpoModulesCore (from `../../../node_modules/expo-modules-core/ios`)
+  - EXSensors (from `../../../node_modules/expo-sensors/ios`)
+  - EXSMS (from `../../../node_modules/expo-sms/ios`)
+  - EXSplashScreen (from `../../../node_modules/expo-splash-screen/ios`)
+  - EXStructuredHeaders (from `../../../node_modules/expo-structured-headers/ios`)
+  - EXUpdates (from `../../../node_modules/expo-updates/ios`)
   - FBLazyVector (from `../../../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../../../node_modules/react-native/React/FBReactNativeSpec`)
   - Flipper (~> 0.75.1)
@@ -420,7 +464,9 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
   - UMAppLoader (from `../../../node_modules/unimodules-app-loader/ios`)
   - "UMCore (from `../../../node_modules/@unimodules/core/ios`)"
+  - UMPermissionsInterface (from `../../../node_modules/unimodules-permissions-interface/ios`)
   - "UMReactNativeAdapter (from `../../../node_modules/@unimodules/react-native-adapter/ios`)"
+  - UMSensorsInterface (from `../../../node_modules/unimodules-sensors-interface/ios`)
   - UMTaskManagerInterface (from `../../../node_modules/unimodules-task-manager-interface/ios`)
   - Yoga (from `../../../node_modules/react-native/ReactCommon/yoga`)
 
@@ -444,14 +490,34 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../../../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  EXApplication:
+    :path: "../../../node_modules/expo-application/ios"
   EXConstants:
-    :path: "../../../node_modules/expo-constants/ios"
+    :path: "../../../node_modules/react-native-unimodules/node_modules/expo-constants/ios"
   EXFileSystem:
     :path: "../../../node_modules/expo-file-system/ios"
   EXImageLoader:
     :path: "../../../node_modules/expo-image-loader/ios"
+  EXLocalization:
+    :path: "../../../node_modules/expo-localization/ios"
+  EXLocation:
+    :path: "../../../node_modules/expo-location/ios"
+  EXNotifications:
+    :path: "../../../node_modules/expo-notifications/ios"
+  EXPermissions:
+    :path: "../../../node_modules/expo-permissions/ios"
   ExpoModulesCore:
     :path: "../../../node_modules/expo-modules-core/ios"
+  EXSensors:
+    :path: "../../../node_modules/expo-sensors/ios"
+  EXSMS:
+    :path: "../../../node_modules/expo-sms/ios"
+  EXSplashScreen:
+    :path: "../../../node_modules/expo-splash-screen/ios"
+  EXStructuredHeaders:
+    :path: "../../../node_modules/expo-structured-headers/ios"
+  EXUpdates:
+    :path: "../../../node_modules/expo-updates/ios"
   FBLazyVector:
     :path: "../../../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
@@ -510,8 +576,12 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/unimodules-app-loader/ios"
   UMCore:
     :path: "../../../node_modules/@unimodules/core/ios"
+  UMPermissionsInterface:
+    :path: "../../../node_modules/unimodules-permissions-interface/ios"
   UMReactNativeAdapter:
     :path: "../../../node_modules/@unimodules/react-native-adapter/ios"
+  UMSensorsInterface:
+    :path: "../../../node_modules/unimodules-sensors-interface/ios"
   UMTaskManagerInterface:
     :path: "../../../node_modules/unimodules-task-manager-interface/ios"
   Yoga:
@@ -521,10 +591,20 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
+  EXApplication: 4797b8b37f0b0470f587fdccf6407f44b50d18b5
   EXConstants: 3babb61f8f4bb7dffe85b8b7d6eaa31d903e4d7e
   EXFileSystem: 0a04aba8da751b9ac954065911bcf166503f8267
   EXImageLoader: d3531a3fe530b22925c19977cb53bb43e3821fe6
+  EXLocalization: f139efe4a06be1041815879959346e3d437a6e93
+  EXLocation: 65d4250e06ae1c59a3b4aa5d93aa36b0eed8ad7b
+  EXNotifications: c13e078d83ce01c7aeb8e3f44a48c13f50099291
+  EXPermissions: 8f8c1c05580c4e02d4ee2c8dd74bfe173ff6a723
   ExpoModulesCore: 2734852616127a6c1fc23012197890a6f3763dc7
+  EXSensors: ff57f57b4e36568be8c5edc818fbaa7f56a2e9c5
+  EXSMS: 4fec9c48a87eb503852c7fd800c9b97ebb257777
+  EXSplashScreen: a9baaf4fa866003884c90ba049f18760d6a8ce39
+  EXStructuredHeaders: be834496a4d9fd0069cd12ec1cc57b31c6d3b256
+  EXUpdates: efe0e8c514dcff06a8fd0b63be6019a6365fb9c7
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
   FBReactNativeSpec: e9489fef3cbfbbfe0a12b38d7d4f617bfcf36859
   Flipper: d3da1aa199aad94455ae725e9f3aa43f3ec17021
@@ -565,7 +645,9 @@ SPEC CHECKSUMS:
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   UMAppLoader: 21af63390e55c82e037fb9752d93114a80ecf16e
   UMCore: 2f671796d7439604a1cf8ac7bbe5809cd5c50437
+  UMPermissionsInterface: 40b72935a7d12a3f60dc6b7bb99ce47908380cb1
   UMReactNativeAdapter: f808906d586a16cebdc3844d86e1bdb8f114a873
+  UMSensorsInterface: a5e9db661e5d9ae214762033d725989880ae6993
   UMTaskManagerInterface: 2be431101b73604e64fbfffcf759336f9d8fccbb
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

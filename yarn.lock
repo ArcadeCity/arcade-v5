@@ -17831,6 +17831,11 @@ unimodules-permissions-interface@~6.1.0:
   resolved "https://registry.npmjs.org/unimodules-permissions-interface/-/unimodules-permissions-interface-6.1.0.tgz#fd5589945e3b8fc9d2c80c52521853caea85a9ca"
   integrity sha512-jeJx/y+Vn/Cp1/4su5XJ06UBul83MpXkYEqIOAb2jwaikhmj6tNwko7HpKy9OhfGfrhddCzwtedlro8xxZUk9A==
 
+unimodules-sensors-interface@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npmjs.org/unimodules-sensors-interface/-/unimodules-sensors-interface-6.1.0.tgz#fb36a1382b2d1596ce36aad34a763aa4c3d1568d"
+  integrity sha512-tJDOo3p4q4wmhyuwapNjYeON7cd5OSPYr3qDfMgPPg9m6pYM/FdQJ1PKMNb1NJUckpDgQ67Dows2jAdqkNRZSw==
+
 unimodules-task-manager-interface@~6.2.0:
   version "6.2.0"
   resolved "https://registry.npmjs.org/unimodules-task-manager-interface/-/unimodules-task-manager-interface-6.2.0.tgz#e9e19ca5b28b2dfafa5768baf9da6c71bf6940d8"
