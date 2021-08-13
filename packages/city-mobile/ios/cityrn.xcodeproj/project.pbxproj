@@ -266,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport NODE_BINARY=node\nexport ENTRY_FILE=packages/city-mobile/index.js\n../../../node_modules/react-native/scripts/react-native-xcode.sh\n\n";
+			shellScript = "set -e\n\nexport NODE_BINARY=node\nexport ENTRY_FILE=packages/city-mobile/index.js\nexport PROJECT_ROOT=/Users/christopherdavid/code/arcade\n/Users/christopherdavid/code/arcade/node_modules/react-native/scripts/react-native-xcode.sh\n/Users/christopherdavid/code/arcade/node_modules/expo-updates/scripts/create-manifest-ios.sh\n";
 		};
 		44F739055585685A37C50992 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

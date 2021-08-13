@@ -106,7 +106,8 @@ module.exports = function (structure) {
     return [
       ...acc,
       ...createWatchFolders(moduleDependencies, frameworkDependenciesPath),
-      path.resolve('../../' + structure.path, frameworkModule),
+      path.resolve(structure.path, frameworkModule),
+      // path.resolve('../../' + structure.path, frameworkModule),
     ]
   }, [])
 
