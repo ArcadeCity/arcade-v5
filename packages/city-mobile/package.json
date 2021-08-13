@@ -26,5 +26,12 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "react-native-unimodules": {
+    "android": {
+      "modulesPaths": [
+        "../../../../node_modules"
+      ]
+    }
   }
 }
