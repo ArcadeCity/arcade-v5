@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "pods": "npx pod-install"
+    "pods": "npx pod-install",
+    "postinstall": "expo-yarn-workspaces postinstall"
   },
   "dependencies": {
     "@arcadecity/components": "0.1.0",
@@ -21,6 +22,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.6.3",
     "eslint": "7.14.0",
+    "expo-yarn-workspaces": "1.5.2",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
     "react-test-renderer": "17.0.1"
