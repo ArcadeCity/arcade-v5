@@ -30,6 +30,7 @@ static void InitializeFlipper(UIApplication *application) {
 @interface AppDelegate () <RCTBridgeDelegate>
 
 @property (nonatomic, strong) UMModuleRegistryAdapter *moduleRegistryAdapter;
+@property (nonatomic, strong) NSDictionary *launchOptions;
 
 @end
 
@@ -43,10 +44,30 @@ static void InitializeFlipper(UIApplication *application) {
 
   self.moduleRegistryAdapter = [[UMModuleRegistryAdapter alloc] initWithModuleRegistryProvider:[[UMModuleRegistryProvider alloc] init]];
 
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"cityrn"
-                                            initialProperties:nil];
+  self.launchOptions = launchOptions;
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  #ifdef DEBUG
+    [self initializeReactNativeApp];
+  #else
+    EXUpdatesAppController *controller = [EXUpdatesAppController sharedInstance];
+    controller.delegate = self;
+    [controller startAndShowLaunchScreen:self.window];
+  #endif
+
+  [super application:application didFinishLaunchingWithOptions:launchOptions];
+
+  return YES;
+}
+
+- (RCTBridge *)initializeReactNativeApp
+{
+  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:self.launchOptions];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"cityrn" initialProperties:nil];
+
+  // RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+  // RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
+  //                                                  moduleName:@"cityrn"
+  //                                           initialProperties:nil];
 
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
@@ -59,8 +80,8 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-//  [super application:application didFinishLaunchingWithOptions:launchOptions];
-  return YES;
+  // [super application:application didFinishLaunchingWithOptions:launchOptions];
+  return bridge;
 }
 
 - (NSArray<id<RCTBridgeModule>> *)extraModulesForBridge:(RCTBridge *)bridge
@@ -75,8 +96,13 @@ static void InitializeFlipper(UIApplication *application) {
 #if DEBUG
   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 #else
-  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  return [[EXUpdatesAppController sharedInstance] launchAssetUrl];
 #endif
+}
+
+- (void)appController:(EXUpdatesAppController *)appController didStartWithSuccess:(BOOL)success
+{
+  appController.bridge = [self initializeReactNativeApp];
 }
 
 @end
