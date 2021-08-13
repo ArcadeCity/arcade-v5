@@ -7,7 +7,8 @@
   "scripts": {
     "compile": "tsc -b --incremental",
     "watch": "tsc -b --incremental -w",
-    "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
+    "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'",
+    "postinstall": "rn-nodeify --install buffer,events,process,stream,util,inherits,fs,path,assert,crypto --hack --yarn"
   },
   "dependencies": {
     "@ceramicnetwork/3id-did-resolver": "^1.3.1",
@@ -23,15 +24,18 @@
     "@react-navigation/stack": "5.14.5",
     "@react-three/fiber": "5.3.15",
     "apisauce": "^2.1.1",
+    "assert": "^1.1.1",
     "axios": "^0.21.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "bitcoinjs-lib": "5.2.0",
     "bitcoinjs-message": "2.2.0",
     "bolt11": "1.3.2",
     "bs58check": "^2.1.2",
+    "buffer": "^4.9.1",
     "coinselect": "3.1.12",
     "dids": "^2.4.0",
     "ethers": "^5.4.4",
+    "events": "^1.0.0",
     "expo-font": "9.1.0",
     "expo-gl": "10.2.0",
     "expo-linking": "2.2.3",
@@ -49,6 +53,7 @@
     "frisbee": "3.1.4",
     "haversine": "^1.1.1",
     "i18n-js": "^3.8.0",
+    "inherits": "^2.0.1",
     "isomorphic-webcrypto": "2.3.8",
     "key-did-provider-ed25519": "^1.1.0",
     "key-did-resolver": "^1.3.1",
@@ -58,10 +63,15 @@
     "mobx": "^6.3.2",
     "mobx-react-lite": "^3.2.0",
     "mobx-state-tree": "^5.0.2",
+    "path-browserify": "0.0.0",
+    "process": "^0.11.0",
     "pusher-js": "^7.0.3",
     "react-map-gl": "6.1.16",
+    "react-native-crypto": "2.2.0",
     "react-native-flip-card": "3.5.6",
     "react-native-gesture-handler": "1.10.3",
+    "react-native-level-fs": "^3.0.0",
+    "react-native-randombytes": "^3.0.0",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
     "react-native-simple-store": "^2.0.2",
@@ -70,13 +80,16 @@
     "react-native-webview": "^11.13.0",
     "reactotron-mst": "3.1.3",
     "reactotron-react-native": "5.0.0",
+    "readable-stream": "1.0.33",
+    "stream-browserify": "^1.0.0",
     "text-encoding-polyfill": "0.6.7",
     "three": "0.126.1",
     "unimodules-camera-interface": "6.1.0",
     "unimodules-file-system-interface": "6.1.0",
     "unimodules-font-interface": "6.1.0",
     "unimodules-permissions-interface": "6.1.0",
-    "unimodules-sensors-interface": "6.1.0"
+    "unimodules-sensors-interface": "6.1.0",
+    "util": "~0.10.3"
   },
   "devDependencies": {
     "@storybook/addon-knobs": "^6.3.0",
@@ -86,6 +99,33 @@
     "@storybook/react-native-server": "^5.3.23",
     "@types/jest": "^26.0.23",
     "@types/react-native": "0.64.10",
-    "jest": "26.6.3"
+    "jest": "26.6.3",
+    "rn-nodeify": "10.3.0"
+  },
+  "react-native": {
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
+  },
+  "browser": {
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
   }
 }
