@@ -15,12 +15,14 @@
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "format": "yarn workspaces run format",
     "patch-package": "patch-package",
-    "pods": "yarn workspace @arcadecity/city-mobile pods"
+    "pods": "yarn workspace @arcadecity/city-mobile pods",
+    "postinstall": "rn-nodeify --install buffer,events,process,stream,util,inherits,fs,path,assert,crypto --hack --yarn"
   },
   "dependencies": {
     "moment": "2.29.1",
     "react-hook-form": "7.6.6",
     "react-native": "0.64.2",
+    "react-native-crypto": "2.2.0",
     "react-query": "2.26.4"
   },
   "devDependencies": {
@@ -60,5 +62,31 @@
     "name": "Christopher David",
     "email": "chris@arcade.city",
     "url": "https://twitter.com/ArcadeCityMayor"
+  },
+  "react-native": {
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
+  },
+  "browser": {
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
   }
 }

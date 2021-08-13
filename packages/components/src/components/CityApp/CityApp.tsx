@@ -1,3 +1,4 @@
+import '../../shim'
 import 'i18n'
 import 'lib/ignore-warnings'
 import React, { useEffect, useRef, useState } from 'react'
