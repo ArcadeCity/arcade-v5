@@ -1,9 +1,10 @@
 module.exports = function (api) {
+  console.log('HERE?')
   api.cache(true)
   return {
     plugins: [
       [
-        'module-resolver',
+        'babel-plugin-module-resolver',
         {
           root: ['./src'],
           extensions: [

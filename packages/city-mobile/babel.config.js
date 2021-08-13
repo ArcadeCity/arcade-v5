@@ -1,19 +1,25 @@
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: [
-    'module-resolver',
-    {
-      alias: {
-        app: './src/app',
-        components: './src/components',
-        i18n: './src/i18n',
-        lib: './src/lib',
-        navigation: './src/navigation',
-        services: './src/services',
-        stores: './src/stores',
-        storybook: './storybook',
-        views: './src/views',
-      },
-    },
-  ],
+module.exports = function (api) {
+  api.cache(true)
+  return {
+    presets: ['module:metro-react-native-babel-preset'],
+    plugins: [
+      [
+        'babel-plugin-module-resolver',
+        {
+          root: ['../components/src'],
+          alias: {
+            app: '../components/src/app',
+            components: '../components/src/components',
+            i18n: '../components/src/i18n',
+            lib: '../components/src/lib',
+            navigation: '../components/src/navigation',
+            services: '../components/src/services',
+            stores: '../components/src/stores',
+            storybook: '../components/storybook',
+            views: '../components/src/views',
+          },
+        },
+      ],
+    ],
+  }
 }
