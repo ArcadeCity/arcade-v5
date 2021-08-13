@@ -1,3 +1,4 @@
+import { log } from 'lib'
 import { GuildApi } from 'services/api'
 import { GuildStore } from 'stores/guild-store'
 import { Player } from 'stores/player-store'
@@ -14,13 +15,13 @@ export const fetchGuildMembers = async (self: GuildStore, guildId: number) => {
   const api = new GuildApi(self.env.api)
   const { members }: any = await api.fetchGuildMembers(guildId)
 
-  console.tron.log('members is ', members)
-  console.tron.log('guildId is ', guildId)
+  log('members is ', members)
+  log('guildId is ', guildId)
 
   if (members) {
     const guild = self.guilds.get(guildId.toString())
     if (!guild) {
-      console.tron.log('NO GUILD?????????')
+      log('NO GUILD?????????')
     } else {
       const { setMember } = guild
       members.forEach((member: Player) => {
