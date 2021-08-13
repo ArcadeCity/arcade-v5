@@ -4,7 +4,7 @@ const { createMetroConfiguration } = require('expo-yarn-workspaces')
 const { getDefaultConfig } = require('expo/metro-config')
 
 // const config = getDefaultConfig(path.resolve(__dirname, '../../'))
-const config = createMetroConfiguration(__dirname)
+const config = createMetroConfiguration(path.resolve(__dirname, '../../'))
 
 module.exports = (async () => {
   const {

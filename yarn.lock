@@ -9575,7 +9575,7 @@ expo-updates@0.5.5:
     resolve-from "^5.0.0"
     uuid "^3.4.0"
 
-expo-yarn-workspaces@*:
+expo-yarn-workspaces@1.5.2:
   version "1.5.2"
   resolved "https://registry.npmjs.org/expo-yarn-workspaces/-/expo-yarn-workspaces-1.5.2.tgz#93b68a10d9f1271eab37d2df642458d7c304aea8"
   integrity sha512-+qD5tdB4g4L4I1sxdHpLwP2CJc+ipM/kDA9YrDCDWHS9JbKQQCwnJTXR44kKMpgd2FlSJUAzLFhohzliEvNixw==
