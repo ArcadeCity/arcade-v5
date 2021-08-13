@@ -47,14 +47,20 @@ export const usePushNotifications = () => {
       })
 
     return () => {
-      Notifications.removeNotificationSubscription(notificationListener.current)
-      Notifications.removeNotificationSubscription(responseListener.current)
+      if (notificationListener.current) {
+        Notifications.removeNotificationSubscription(
+          notificationListener.current
+        )
+      }
+      if (responseListener.current) {
+        Notifications.removeNotificationSubscription(responseListener.current)
+      }
     }
   }, [])
 }
 
 async function registerForPushNotificationsAsync() {
-  let token: ExpoPushToken
+  let token: ExpoPushToken | null = null
   if (Constants.isDevice) {
     const { status: existingStatus } = await Notifications.getPermissionsAsync()
     let finalStatus = existingStatus
