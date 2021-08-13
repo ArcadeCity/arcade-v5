@@ -16,6 +16,8 @@ const moduleResolverConfig = {
   },
 }
 
+console.log('moduleResolverConfig:', moduleResolverConfig)
+
 module.exports = function (api) {
   api.cache(true)
 

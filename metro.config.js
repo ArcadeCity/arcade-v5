@@ -1,14 +1,20 @@
+const path = require('path')
 const structure = {
   path: './',
   modules: ['packages/components'],
 }
 const monorepoResolver = require('./metro.resolver')
 const { extraNodeModules, watchFolders } = monorepoResolver(structure)
+const { getDefaultConfig } = require('expo/metro-config')
 
-console.log('extraNodeModules:', extraNodeModules)
-console.log('watchFolders:', watchFolders)
+const config = getDefaultConfig(path.resolve('../../', __dirname))
+// console.log('config:', config)
 
-module.exports = {
+// console.log('extraNodeModules:', extraNodeModules)
+// console.log('watchFolders:', watchFolders)
+
+const blam = {
+  ...config,
   resolver: {
     extraNodeModules: {
       ...extraNodeModules,
@@ -21,15 +27,6 @@ module.exports = {
   ],
 }
 
-// module.exports = {
-//   resolver: {
-//     extraNodeModules: {
-//       ...extraNodeModules,
-//       // any other node modules if needed
-//     },
-//   },
-//   watchFolders: [
-//     ...watchFolders,
-//     // any other watch folders if needed
-//   ],
-// }
+console.log(blam)
+
+module.exports = blam
