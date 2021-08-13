@@ -16,7 +16,7 @@
     "format": "yarn workspaces run format",
     "patch-package": "patch-package",
     "pods": "yarn workspace @arcadecity/city-mobile pods",
-    "postinstall": "expo-yarn-workspaces check-workspace-dependencies && rn-nodeify --install buffer,events,process,stream,util,inherits,fs,path,assert,crypto --hack --yarn && yarn patch-package"
+    "postinstall": "expo-yarn-workspaces check-workspace-dependencies && rn-nodeify --install buffer,events,process,stream,util,inherits,fs,path,assert,crypto --hack --yarn && yarn workspace @arcadecity/city-mobile postinstall && yarn patch-package"
   },
   "dependencies": {
     "moment": "2.29.1",
