@@ -36,5 +36,6 @@
         "../../../../node_modules"
       ]
     }
-  }
+  },
+  "main": "./index.js"
 }
