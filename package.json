@@ -14,7 +14,8 @@
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "format": "yarn workspaces run format",
-    "patch-package": "patch-package"
+    "patch-package": "patch-package",
+    "pods": "yarn workspace @arcadecity/city-mobile pods"
   },
   "dependencies": {
     "moment": "2.29.1",

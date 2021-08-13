@@ -10,6 +10,16 @@ PODS:
   - EXFileSystem (11.1.3):
     - ExpoModulesCore
     - UMCore
+  - EXFont (9.1.0):
+    - UMCore
+    - UMFontInterface
+  - EXGL (10.2.0):
+    - EXGL_CPP
+    - UMCameraInterface
+    - UMCore
+    - UMFileSystemInterface
+  - EXGL_CPP (10.1.0):
+    - React-jsi
   - EXImageLoader (2.2.0):
     - ExpoModulesCore
     - React-Core
@@ -383,7 +393,11 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - UMAppLoader (2.2.0)
+  - UMCameraInterface (6.1.0):
+    - UMCore
   - UMCore (7.1.1)
+  - UMFileSystemInterface (6.1.0)
+  - UMFontInterface (6.1.0)
   - UMPermissionsInterface (6.1.0):
     - UMCore
   - UMReactNativeAdapter (6.3.5):
@@ -403,6 +417,9 @@ DEPENDENCIES:
   - EXApplication (from `../../../node_modules/expo-application/ios`)
   - EXConstants (from `../../../node_modules/react-native-unimodules/node_modules/expo-constants/ios`)
   - EXFileSystem (from `../../../node_modules/expo-file-system/ios`)
+  - EXFont (from `../../../node_modules/expo-font/ios`)
+  - EXGL (from `../../../node_modules/expo-gl/ios`)
+  - EXGL_CPP (from `../../../node_modules/expo-gl-cpp/cpp`)
   - EXImageLoader (from `../../../node_modules/expo-image-loader/ios`)
   - EXLocalization (from `../../../node_modules/expo-localization/ios`)
   - EXLocation (from `../../../node_modules/expo-location/ios`)
@@ -463,7 +480,10 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../../../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
   - UMAppLoader (from `../../../node_modules/unimodules-app-loader/ios`)
+  - UMCameraInterface (from `../../../node_modules/unimodules-camera-interface/ios`)
   - "UMCore (from `../../../node_modules/@unimodules/core/ios`)"
+  - UMFileSystemInterface (from `../../../node_modules/unimodules-file-system-interface/ios`)
+  - UMFontInterface (from `../../../node_modules/unimodules-font-interface/ios`)
   - UMPermissionsInterface (from `../../../node_modules/unimodules-permissions-interface/ios`)
   - "UMReactNativeAdapter (from `../../../node_modules/@unimodules/react-native-adapter/ios`)"
   - UMSensorsInterface (from `../../../node_modules/unimodules-sensors-interface/ios`)
@@ -496,6 +516,12 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/react-native-unimodules/node_modules/expo-constants/ios"
   EXFileSystem:
     :path: "../../../node_modules/expo-file-system/ios"
+  EXFont:
+    :path: "../../../node_modules/expo-font/ios"
+  EXGL:
+    :path: "../../../node_modules/expo-gl/ios"
+  EXGL_CPP:
+    :path: "../../../node_modules/expo-gl-cpp/cpp"
   EXImageLoader:
     :path: "../../../node_modules/expo-image-loader/ios"
   EXLocalization:
@@ -574,8 +600,14 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/react-native/ReactCommon"
   UMAppLoader:
     :path: "../../../node_modules/unimodules-app-loader/ios"
+  UMCameraInterface:
+    :path: "../../../node_modules/unimodules-camera-interface/ios"
   UMCore:
     :path: "../../../node_modules/@unimodules/core/ios"
+  UMFileSystemInterface:
+    :path: "../../../node_modules/unimodules-file-system-interface/ios"
+  UMFontInterface:
+    :path: "../../../node_modules/unimodules-font-interface/ios"
   UMPermissionsInterface:
     :path: "../../../node_modules/unimodules-permissions-interface/ios"
   UMReactNativeAdapter:
@@ -594,6 +626,9 @@ SPEC CHECKSUMS:
   EXApplication: 4797b8b37f0b0470f587fdccf6407f44b50d18b5
   EXConstants: 3babb61f8f4bb7dffe85b8b7d6eaa31d903e4d7e
   EXFileSystem: 0a04aba8da751b9ac954065911bcf166503f8267
+  EXFont: d6fb79f9863120f0d0b26b0c2d1453bc9511e9df
+  EXGL: 06a49ecd37931c7042db2d7d930fb9d445c2deda
+  EXGL_CPP: e5e7c466e007e360abe42d2ddfc57ac200fd7776
   EXImageLoader: d3531a3fe530b22925c19977cb53bb43e3821fe6
   EXLocalization: f139efe4a06be1041815879959346e3d437a6e93
   EXLocation: 65d4250e06ae1c59a3b4aa5d93aa36b0eed8ad7b
@@ -644,7 +679,10 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: a9904c6d0218fb9f8b19d6dd88607225927668f9
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   UMAppLoader: 21af63390e55c82e037fb9752d93114a80ecf16e
+  UMCameraInterface: 81ff46700da88435f17afedfc88915eaede7e6a6
   UMCore: 2f671796d7439604a1cf8ac7bbe5809cd5c50437
+  UMFileSystemInterface: f72245e90ce78fa6427180ff0b0904ead13d8161
+  UMFontInterface: 5843cff7db85a42ba629aaac53d33091c35524d3
   UMPermissionsInterface: 40b72935a7d12a3f60dc6b7bb99ce47908380cb1
   UMReactNativeAdapter: f808906d586a16cebdc3844d86e1bdb8f114a873
   UMSensorsInterface: a5e9db661e5d9ae214762033d725989880ae6993
