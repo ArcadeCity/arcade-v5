@@ -50,6 +50,7 @@
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
     "react-native-simple-store": "^2.0.2",
+    "react-native-unimodules": "^0.14.6",
     "react-native-webview": "^11.13.0"
   }
 }

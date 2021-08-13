@@ -1,11 +1,13 @@
 require_relative '../../../node_modules/react-native/scripts/react_native_pods'
+require_relative '../../../node_modules/react-native-unimodules/cocoapods.rb'
 require_relative '../../../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 pod 'react-native-mapbox-gl', :path => '../../../node_modules/@react-native-mapbox-gl/maps'
 
-platform :ios, '10.0'
+platform :ios, '11.1'
 
 target 'cityrn' do
+  use_unimodules!(modules_paths: ['../../../node_modules'])
   config = use_native_modules!
 
   use_react_native!(
