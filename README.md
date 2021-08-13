@@ -44,7 +44,6 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - [Magic](https://magic.link/) _(Authentication)_
 - [Ceramic](https://ceramic.network/) _(Data storage)_
 - [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) _(Bitcoin Lightning integration)_
-- [solana-web3.js](https://github.com/solana-labs/solana-web3.js/) _(USDC & ARCD integration)_
 
 ## Contributing
 
