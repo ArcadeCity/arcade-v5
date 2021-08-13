@@ -29,7 +29,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - **components** - Shared components & functionality
 - **explorer** - Arcade transaction explorer
 - **island-mobile** - Bitcoin Island mobile app
-- **wallet-web** - Experimental wallet supporting Bitcoin Lightning, USDC and Arcade Tokens
+- **wallet-web** - Experimental Bitcoin Lightning wallet
 
 ## Tech stack
 
