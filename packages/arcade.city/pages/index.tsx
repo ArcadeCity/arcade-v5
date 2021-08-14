@@ -33,6 +33,8 @@ function Box(props) {
 }
 
 const Home: NextPage = () => {
+  const { nodes } = useGLTF('/graces-draco.glb')
+  console.log(nodes)
   return (
     <div className={styles.container}>
       <Head>
@@ -56,9 +58,9 @@ const Home: NextPage = () => {
         >
           <fog attach='fog' args={['black', 0, 20]} />
           <pointLight position={[0, 10, -10]} intensity={7} />
-          <Box position={[-1.2, 0, 0]} />
-          <Box position={[1.2, 0, 0]} />
-          <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} />
+          {/* <Box position={[-1.2, 0, 0]} /> */}
+          {/* <Box position={[1.2, 0, 0]} /> */}
+          {nodes && <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} />}
         </Canvas>
       </div>
 
@@ -83,6 +85,8 @@ function Model(props) {
   const group = useRef()
   const { nodes } = useGLTF('/graces-draco.glb')
 
+  console.log('nodes:', nodes)
+
   useFrame(({ clock, mouse }) => {
     group.current.rotation.y = lerp(
       group.current.rotation.y,
@@ -91,9 +95,7 @@ function Model(props) {
     )
   })
 
-  console.log('nodes:', nodes)
-
-  if (!nodes) return <></>
+  // if (!nodes) return <></>
 
   return (
     <group {...props} dispose={null}>
