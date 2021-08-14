@@ -1,3 +1,4 @@
+import { log } from 'lib'
 import { GuildApi } from 'services/api'
 import { Guild, GuildModel } from '../guild-models'
 import { GuildStore } from '../guild-store'
@@ -7,7 +8,7 @@ export const fetchGlobalGuilds = async (self: GuildStore) => {
   const api = new GuildApi(self.env.api)
   const { guilds }: any = await api.fetchGlobalGuilds()
 
-  console.tron.log('guilds is ', guilds)
+  log('guilds is ', guilds)
 
   const guildsToAdd: Guild[] = []
 

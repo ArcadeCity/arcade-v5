@@ -1,12 +1,14 @@
+import '../../shim'
+import 'expo-asset'
 import 'i18n'
 import 'lib/ignore-warnings'
 import React, { useEffect, useRef, useState } from 'react'
 import { Alert, StatusBar, View } from 'react-native'
 import { NavigationContainerRef } from '@react-navigation/native'
-import {
-  SafeAreaProvider,
-  initialWindowMetrics,
-} from 'react-native-safe-area-context'
+// import {
+//   SafeAreaProvider,
+//   initialWindowMetrics,
+// } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
 import * as storage from 'lib/storage'
 import {
@@ -18,6 +20,7 @@ import { magic } from 'services/magic'
 import { RootStore, RootStoreProvider, setupRootStore } from 'stores'
 import { Loading } from 'views/loading'
 import { ModalContainer } from 'views/modal'
+import { initFonts } from 'views/theme'
 
 enableScreens()
 
@@ -36,7 +39,7 @@ export const CityApp = () => {
     ;(async () => {
       // Check if we're on the latest app version; download and refresh if not.
       // await checkForUpdates()
-      // await initFonts() // expo
+      await initFonts() // expo
       try {
         setupRootStore(null).then(setRootStore)
       } catch (e) {
@@ -52,16 +55,16 @@ export const CityApp = () => {
       <magic.Relayer />
       <RootStoreProvider value={rootStore}>
         <StatusBar barStyle='light-content' />
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <View style={{ flex: 1, zIndex: 50 }}>
-            <RootNavigator
-              ref={navigationRef}
-              initialState={initialNavigationState}
-              onStateChange={onNavigationStateChange}
-            />
-            <ModalContainer />
-          </View>
-        </SafeAreaProvider>
+        {/* <SafeAreaProvider initialMetrics={initialWindowMetrics}> */}
+        <View style={{ flex: 1, zIndex: 50 }}>
+          <RootNavigator
+            ref={navigationRef}
+            initialState={initialNavigationState}
+            onStateChange={onNavigationStateChange}
+          />
+          <ModalContainer />
+        </View>
+        {/* </SafeAreaProvider> */}
       </RootStoreProvider>
     </>
   )

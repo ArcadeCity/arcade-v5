@@ -2,7 +2,7 @@ import { onSnapshot } from 'mobx-state-tree'
 import { RootStoreModel, RootStore } from './root-store'
 import { Environment } from '../environment'
 import * as storage from 'lib/storage'
-import { display } from 'lib'
+import { display, log } from 'lib'
 
 /**
  * The key we'll be saving our state as within async storage.
@@ -62,7 +62,7 @@ export async function setupRootStore(store: any) {
     rootStore = RootStoreModel.create({}, env)
 
     // but please inform us what happened
-    __DEV__ && console.tron.error(`ROOTSTORE ERROR: ${e.message}`, null)
+    log(`ROOTSTORE ERROR: ${e.message}`, null)
   }
 
   // reactotron logging

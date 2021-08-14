@@ -7,24 +7,28 @@
   "repository": "https://github.com/ArcadeCity/arcade",
   "scripts": {
     "clean": "yarn workspaces run clean",
-    "watch": "yarn workspace @arcadecity/components compile -w",
+    "watch": "rm -rf packages/components/dist && yarn workspace @arcadecity/components compile -w",
     "dev": "yarn run dev:city-mobile",
     "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "format": "yarn workspaces run format",
-    "patch-package": "patch-package"
+    "patch-package": "patch-package",
+    "pods": "yarn workspace @arcadecity/city-mobile pods",
+    "postinstall": "expo-yarn-workspaces check-workspace-dependencies && rn-nodeify --install buffer,events,process,stream,util,inherits,fs,path,assert,crypto --hack --yarn && yarn workspace @arcadecity/city-mobile postinstall && yarn patch-package"
   },
   "dependencies": {
     "moment": "2.29.1",
     "react-hook-form": "7.6.6",
     "react-native": "0.64.2",
+    "react-native-crypto": "2.2.0",
     "react-query": "2.26.4"
   },
   "devDependencies": {
     "concurrently": "5.3.0",
     "cross-env": "7.0.3",
+    "expo-yarn-workspaces": "1.5.2",
     "patch-package": "6.2.2",
     "prettier": "2.3.1",
     "shx": "0.3.3",
@@ -59,5 +63,34 @@
     "name": "Christopher David",
     "email": "chris@arcade.city",
     "url": "https://twitter.com/ArcadeCityMayor"
+  },
+  "react-native": {
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
+  },
+  "browser": {
+    "http": "@tradle/react-native-http",
+    "https": "https-browserify",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
+  },
+  "resolutions": {
+    "react": "17.0.2"
   }
 }

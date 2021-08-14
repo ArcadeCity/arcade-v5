@@ -12,8 +12,12 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		28086665C84718907B5A9D98 /* libPods-cityrn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD251490BCB4826C03A02AC /* libPods-cityrn.a */; };
-		806A0D762DAFEFF7A408C074 /* libPods-cityrn-cityrnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F877400960C911C75BCE635A /* libPods-cityrn-cityrnTests.a */; };
+		2C585BA626C739C200990BE2 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C585BA526C739C200990BE2 /* Expo.plist */; };
+		2C585BA926C7494000990BE2 /* emptyfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C585BA826C7494000990BE2 /* emptyfile.swift */; };
+		5FD1F42313EA4F159896391F /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF978B3BDE7E4EC18013E571 /* TitilliumWeb-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CC4FCDB071144708BCE36BE8 /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C91869D709F43F1BBC85C68 /* TitilliumWeb-Bold.ttf */; };
+		FB5A843614BC95B4FCE3DCCA /* libPods-cityrn-cityrnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C95D79B048E33038436113FD /* libPods-cityrn-cityrnTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +40,19 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cityrn/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cityrn/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cityrn/main.m; sourceTree = "<group>"; };
+		2C585BA526C739C200990BE2 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		2C585BA726C7493F00990BE2 /* cityrn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cityrn-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C585BA826C7494000990BE2 /* emptyfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyfile.swift; sourceTree = "<group>"; };
+		345E934E7A11FAE7CAB679CA /* Pods-cityrn-cityrnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn-cityrnTests.release.xcconfig"; path = "Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests.release.xcconfig"; sourceTree = "<group>"; };
 		3AD251490BCB4826C03A02AC /* libPods-cityrn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cityrn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43D0759F22F7C8C0590154C6 /* Pods-cityrn-cityrnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn-cityrnTests.debug.xcconfig"; path = "Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C91869D709F43F1BBC85C68 /* TitilliumWeb-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TitilliumWeb-Bold.ttf"; path = "../assets/fonts/TitilliumWeb-Bold.ttf"; sourceTree = "<group>"; };
+		5E8D98D862CA01C3625FD9E8 /* Pods-cityrn-cityrnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn-cityrnTests.debug.xcconfig"; path = "Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A2A7735DF1D3ADBC26F22D9 /* Pods-cityrn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn.release.xcconfig"; path = "Target Support Files/Pods-cityrn/Pods-cityrn.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cityrn/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ACE1413AE7FB66EFC9907D82 /* Pods-cityrn-cityrnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn-cityrnTests.release.xcconfig"; path = "Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests.release.xcconfig"; sourceTree = "<group>"; };
+		C95D79B048E33038436113FD /* libPods-cityrn-cityrnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cityrn-cityrnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2081BF94131CEB2471EF5 /* Pods-cityrn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn.debug.xcconfig"; path = "Target Support Files/Pods-cityrn/Pods-cityrn.debug.xcconfig"; sourceTree = "<group>"; };
+		DF978B3BDE7E4EC18013E571 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "TitilliumWeb-Regular.ttf"; path = "../assets/fonts/TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F877400960C911C75BCE635A /* libPods-cityrn-cityrnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cityrn-cityrnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				806A0D762DAFEFF7A408C074 /* libPods-cityrn-cityrnTests.a in Frameworks */,
+				FB5A843614BC95B4FCE3DCCA /* libPods-cityrn-cityrnTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +95,7 @@
 		13B07FAE1A68108700A75B9A /* cityrn */ = {
 			isa = PBXGroup;
 			children = (
+				2C585BA426C739C200990BE2 /* Supporting */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -96,14 +106,33 @@
 			name = cityrn;
 			sourceTree = "<group>";
 		};
+		2C585BA426C739C200990BE2 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2C585BA526C739C200990BE2 /* Expo.plist */,
+			);
+			name = Supporting;
+			path = cityrn/Supporting;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				3AD251490BCB4826C03A02AC /* libPods-cityrn.a */,
-				F877400960C911C75BCE635A /* libPods-cityrn-cityrnTests.a */,
+				C95D79B048E33038436113FD /* libPods-cityrn-cityrnTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C7F0ABB7495405B933DA344 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C91869D709F43F1BBC85C68 /* TitilliumWeb-Bold.ttf */,
+				DF978B3BDE7E4EC18013E571 /* TitilliumWeb-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		6B3AB65E73EDA01A4643560D /* Pods */ = {
@@ -111,8 +140,8 @@
 			children = (
 				DAD2081BF94131CEB2471EF5 /* Pods-cityrn.debug.xcconfig */,
 				6A2A7735DF1D3ADBC26F22D9 /* Pods-cityrn.release.xcconfig */,
-				43D0759F22F7C8C0590154C6 /* Pods-cityrn-cityrnTests.debug.xcconfig */,
-				ACE1413AE7FB66EFC9907D82 /* Pods-cityrn-cityrnTests.release.xcconfig */,
+				5E8D98D862CA01C3625FD9E8 /* Pods-cityrn-cityrnTests.debug.xcconfig */,
+				345E934E7A11FAE7CAB679CA /* Pods-cityrn-cityrnTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -127,12 +156,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2C585BA826C7494000990BE2 /* emptyfile.swift */,
 				13B07FAE1A68108700A75B9A /* cityrn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* cityrnTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6B3AB65E73EDA01A4643560D /* Pods */,
+				2C585BA726C7493F00990BE2 /* cityrn-Bridging-Header.h */,
+				3C7F0ABB7495405B933DA344 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -155,12 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "cityrnTests" */;
 			buildPhases = (
-				48CC6083138C5A35F4B28E2A /* [CP] Check Pods Manifest.lock */,
+				557A6AC928CB617B40B87470 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C160EF5A4CF6F72ACFC1D379 /* [CP] Embed Pods Frameworks */,
-				44F739055585685A37C50992 /* [CP] Copy Pods Resources */,
+				6B32E99BECE09F8A790D9896 /* [CP] Embed Pods Frameworks */,
+				1181F4988A7D9E1C159B8919 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,7 +239,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -242,8 +274,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C585BA626C739C200990BE2 /* Expo.plist in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CC4FCDB071144708BCE36BE8 /* TitilliumWeb-Bold.ttf in Resources */,
+				5FD1F42313EA4F159896391F /* TitilliumWeb-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +297,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport NODE_BINARY=node\nexport ENTRY_FILE=packages/city-mobile/index.js\n../../../node_modules/react-native/scripts/react-native-xcode.sh\n";
+			shellScript = "set -e\n\nexport NODE_BINARY=node\nexport ENTRY_FILE=packages/city-mobile/index.js\nexport PROJECT_ROOT=/Users/christopherdavid/code/arcade\n/Users/christopherdavid/code/arcade/node_modules/react-native/scripts/react-native-xcode.sh\n#/Users/christopherdavid/code/arcade/node_modules/expo-updates/scripts/create-manifest-ios.sh\n`node --print \"require.resolve('expo-updates/package.json').slice(0, -13) + '/scripts/create-manifest-ios.sh'\"`\n";
 		};
-		44F739055585685A37C50992 /* [CP] Copy Pods Resources */ = {
+		1181F4988A7D9E1C159B8919 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +316,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		48CC6083138C5A35F4B28E2A /* [CP] Check Pods Manifest.lock */ = {
+		557A6AC928CB617B40B87470 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,6 +336,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B32E99BECE09F8A790D9896 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7EC1FDAF8DCFB635AC533686 /* [CP] Check Pods Manifest.lock */ = {
@@ -340,23 +392,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cityrn/Pods-cityrn-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C160EF5A4CF6F72ACFC1D379 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -411,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				2C585BA926C7494000990BE2 /* emptyfile.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,8 +464,9 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43D0759F22F7C8C0590154C6 /* Pods-cityrn-cityrnTests.debug.xcconfig */;
+			baseConfigurationReference = 5E8D98D862CA01C3625FD9E8 /* Pods-cityrn-cityrnTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -455,8 +492,9 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACE1413AE7FB66EFC9907D82 /* Pods-cityrn-cityrnTests.release.xcconfig */;
+			baseConfigurationReference = 345E934E7A11FAE7CAB679CA /* Pods-cityrn-cityrnTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = cityrnTests/Info.plist;
@@ -499,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = arcade.city.mobile;
 				PRODUCT_NAME = cityrn;
+				SWIFT_OBJC_BRIDGING_HEADER = "cityrn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,6 +566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = arcade.city.mobile;
 				PRODUCT_NAME = cityrn;
+				SWIFT_OBJC_BRIDGING_HEADER = "cityrn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -589,7 +629,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -647,7 +686,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;

@@ -17,9 +17,15 @@ export const typography = {
   /**
    * The primary font.  Used in most places.
    */
-  primary: Platform.select({ ios: 'titillium', android: 'titillium' }),
+  primary: Platform.select({
+    ios: 'TitilliumWeb-Regular',
+    android: 'titillium',
+  }),
 
-  bold: 'titillium-bold',
+  bold: Platform.select({
+    ios: 'TitilliumWeb-Bold',
+    android: 'titillium-bold',
+  }),
 
   /**
    * An alternate font used for perhaps titles and stuff.

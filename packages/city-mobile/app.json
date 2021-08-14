@@ -1,4 +1,9 @@
 {
   "name": "cityrn",
-  "displayName": "Arcade City"
+  "displayName": "Arcade City",
+  "expo": {
+    "name": "Arcade City",
+    "slug": "app5",
+    "sdkVersion": "41.0.0"
+  }
 }

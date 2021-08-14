@@ -1,4 +1,3 @@
-
 export const professions = {
   ['professionCategories.content']: [
     'professions.editor',

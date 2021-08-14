@@ -26,8 +26,8 @@ if (locale.includes('pt')) {
 type DefaultLocale = typeof en
 export type TxKeyPath = RecursiveKeyOf<DefaultLocale>
 
-// type RecursiveKeyOf<TObj extends Record<string, any>> = {
-//   [TKey in keyof TObj & string]: TObj[TKey] extends Record<string, any>
-//     ? `${TKey}` | `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
-//     : `${TKey}`
-// }[keyof TObj & string]
+type RecursiveKeyOf<TObj extends Record<string, any>> = {
+  [TKey in keyof TObj & string]: TObj[TKey] extends Record<string, any>
+    ? `${TKey}` | `${TKey}.${RecursiveKeyOf<TObj[TKey]>}`
+    : `${TKey}`
+}[keyof TObj & string]

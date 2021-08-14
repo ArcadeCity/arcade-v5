@@ -1,11 +1,16 @@
-require_relative '../../../node_modules/react-native/scripts/react_native_pods'
-require_relative '../../../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require File.join(`node --print "require.resolve('react-native/package.json')"`, "../scripts/react_native_pods")
+require File.join(`node --print "require.resolve('@react-native-community/cli-platform-ios/package.json')"`, "../native_modules")
+require File.join(`node --print "require.resolve('react-native-unimodules/package.json')"`, "../cocoapods")
 
+# oh: https://github.com/react-native-community/cli/blob/master/docs/autolinking.md#custom-root-monorepos
 pod 'react-native-mapbox-gl', :path => '../../../node_modules/@react-native-mapbox-gl/maps'
+pod 'RNCAsyncStorage', :path => '../../../node_modules/@react-native-async-storage/async-storage'
+pod 'react-native-netinfo', :path => '../../../node_modules/@react-native-community/netinfo'
 
-platform :ios, '10.0'
+platform :ios, '11.1'
 
 target 'cityrn' do
+  use_unimodules!(modules_paths: ['../../../node_modules'])
   config = use_native_modules!
 
   use_react_native!(
@@ -32,5 +37,12 @@ target 'cityrn' do
   post_install do |installer|
     $RNMBGL.post_install(installer)
     react_native_post_install(installer)
+
+    # https://stackoverflow.com/questions/64040154/xcode-12-error-multiple-commands-produce-accessibilityresources-bundle
+    installer.pods_project.targets.each do |target|
+      if target.name == "React-Core.common-AccessibilityResources"
+        target.remove_from_project
+      end
+    end
   end
 end

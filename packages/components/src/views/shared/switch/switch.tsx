@@ -1,3 +1,4 @@
+import { log } from 'lib'
 import * as React from 'react'
 import {
   ViewStyle,
@@ -72,7 +73,7 @@ export class Switch extends React.PureComponent<SwitchProps, SwitchState> {
 
   UNSAFE_componentWillReceiveProps(newProps: SwitchProps) {
     if (newProps.value && newProps.value !== this.props.value) {
-      console.tron.log('componentWillReceiveProps about to animate')
+      log('componentWillReceiveProps about to animate')
       this.startAnimation(newProps.value)
     }
   }

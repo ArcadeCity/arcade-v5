@@ -1,5 +1,5 @@
 import { ViewStyle, TextStyle } from 'react-native'
-import { color, spacing } from 'views/theme'
+import { color, spacing, typography } from 'views/theme'
 
 /**
  * All buttons will start off looking like this.
@@ -46,7 +46,7 @@ const BASE_TEXT: TextStyle = {
   paddingHorizontal: spacing[3],
   fontSize: 18,
   lineHeight: 28,
-  fontFamily: 'titillium-bold',
+  fontFamily: typography.bold,
 }
 
 /**

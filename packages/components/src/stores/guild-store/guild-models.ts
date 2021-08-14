@@ -3,6 +3,7 @@ import { getRoot, Instance, types } from 'mobx-state-tree'
 import { CoordsModel } from 'stores/service-store'
 import haversine from 'haversine'
 import { Player, PlayerModel } from 'stores/player-store'
+import { log } from 'lib'
 
 export const GuildMemberModel = types.model('GuildMember').props({
   id: types.identifierNumber,
@@ -54,13 +55,13 @@ export const GuildModel = types
 
       // So if we're a member of a guild and it gets deleted, byebye
       if (guild && guild.id && guild.id === self.id) {
-        console.tron.log('was in this guild, NOT ANYMORE!')
+        log('was in this guild, NOT ANYMORE!')
         root.guildStore.setGuildId(undefined)
       }
 
       // So if we're looking at a guild profile and it gets deleted.. byebye
       if (selectedGuild && selectedGuild.id && selectedGuild.id === self.id) {
-        console.tron.log('was looking at this guild, NOT ANYMORE!')
+        log('was looking at this guild, NOT ANYMORE!')
         root.guildStore.setSelectedGuild(undefined)
       }
 
@@ -96,7 +97,7 @@ export const GuildReference = types.maybe(
     get(identifier /* string */, parent: any /*Store*/) {
       // does this assume... we in guildstore?
       // return parent.guilds.find(g => g.id === identifier) || null
-      console.tron.log('Here parent is what?', parent)
+      log('Here parent is what?', parent)
       // @ts-ignore
       return getRoot(parent).guildStore.guilds.get(identifier) || null
     },
