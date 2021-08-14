@@ -17,7 +17,7 @@ export const typography = {
   /**
    * The primary font.  Used in most places.
    */
-  primary: Platform.select({ ios: 'titillium', android: 'titillium' }),
+  primary: 'titillium',
 
   bold: 'titillium-bold',
 

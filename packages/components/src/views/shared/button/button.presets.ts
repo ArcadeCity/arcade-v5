@@ -46,7 +46,7 @@ const BASE_TEXT: TextStyle = {
   paddingHorizontal: spacing[3],
   fontSize: 18,
   lineHeight: 28,
-  fontFamily: 'titillium-bold',
+  fontFamily: 'titillium', //-bold
 }
 
 /**

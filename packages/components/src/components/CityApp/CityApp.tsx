@@ -1,4 +1,5 @@
 import '../../shim'
+import 'expo-asset'
 import 'i18n'
 import 'lib/ignore-warnings'
 import React, { useEffect, useRef, useState } from 'react'
@@ -19,6 +20,7 @@ import { magic } from 'services/magic'
 import { RootStore, RootStoreProvider, setupRootStore } from 'stores'
 import { Loading } from 'views/loading'
 import { ModalContainer } from 'views/modal'
+import { initFonts } from 'views/theme'
 
 enableScreens()
 
@@ -37,7 +39,7 @@ export const CityApp = () => {
     ;(async () => {
       // Check if we're on the latest app version; download and refresh if not.
       // await checkForUpdates()
-      // await initFonts() // expo
+      await initFonts() // expo
       try {
         setupRootStore(null).then(setRootStore)
       } catch (e) {

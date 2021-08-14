@@ -5,10 +5,12 @@ const structure = {
 }
 const monorepoResolver = require('./metro.resolver')
 const { extraNodeModules, watchFolders } = monorepoResolver(structure)
-const { getDefaultConfig } = require('expo/metro-config')
+const { getDefaultConfig } = require('@expo/metro-config')
 
 const config = getDefaultConfig(path.resolve('../../', __dirname))
 // console.log('config:', config)
+
+config.resolver.assetExts.push('fbx', 'glb', 'obj', 'ttf')
 
 // console.log('extraNodeModules:', extraNodeModules)
 // console.log('watchFolders:', watchFolders)
