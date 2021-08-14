@@ -8,11 +8,12 @@
   "scripts": {
     "clean": "yarn workspaces run clean",
     "watch": "rm -rf packages/components/dist && yarn workspace @arcadecity/components compile -w",
-    "dev": "yarn run dev:city-mobile",
+    "dev": "yarn run dev:arcade.city",
     "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
+    "dev:arcade.city": "yarn workspace @arcadecity/arcade.city dev",
     "format": "yarn workspaces run format",
     "patch-package": "patch-package",
     "pods": "yarn workspace @arcadecity/city-mobile pods",
@@ -26,9 +27,11 @@
     "react-query": "2.26.4"
   },
   "devDependencies": {
+    "asyncstorage-down": "^4.2.0",
     "concurrently": "5.3.0",
     "cross-env": "7.0.3",
     "expo-yarn-workspaces": "1.5.2",
+    "invariant": "^2.2.4",
     "patch-package": "6.2.2",
     "prettier": "2.3.1",
     "shx": "0.3.3",
@@ -89,8 +92,5 @@
     "crypto": "react-native-crypto",
     "path": "path-browserify",
     "fs": "react-native-level-fs"
-  },
-  "resolutions": {
-    "react": "17.0.2"
   }
 }
