@@ -13,6 +13,7 @@
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
+    "dev:website": "yarn workspace @arcadecity/website dev",
     "format": "yarn workspaces run format",
     "patch-package": "patch-package",
     "pods": "yarn workspace @arcadecity/city-mobile pods",
@@ -90,8 +91,5 @@
     "crypto": "react-native-crypto",
     "path": "path-browserify",
     "fs": "react-native-level-fs"
-  },
-  "resolutions": {
-    "react": "17.0.2"
   }
 }
