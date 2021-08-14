@@ -11,7 +11,8 @@ import { AppRegistry } from 'react-native-web'
 
 import './index.css'
 
-import { CityApp } from '@arcadecity/components/src/components/CityApp'
+const CityApp = () => <></>
+// import { CityApp } from '@arcadecity/components/src/components/CityApp'
 
 const render = (AppComponent: ComponentType) => {
   AppRegistry.registerComponent('city', () => AppComponent)
