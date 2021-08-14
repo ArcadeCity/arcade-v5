@@ -6,12 +6,14 @@ export const CityWeb = () => {
   return (
     <View
       style={{
-        backgroundColor: palette.electricIndigo,
+        backgroundColor: palette.electricViolet,
         flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Text style={{ color: 'white', fontSize: 44, fontFamily: 'monospace' }}>
-        CityWeb Test
+        City
       </Text>
     </View>
   )
