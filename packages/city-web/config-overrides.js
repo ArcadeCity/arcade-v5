@@ -11,7 +11,7 @@ const appIncludes = [
   resolveApp('src'),
   // resolveApp('../core'),
   resolveApp('../components'),
-  // resolveApp('../../node_modules/react-native-gesture-handler'),
+  resolveApp('../../node_modules/react-native-gesture-handler'),
   // resolveApp('../../node_modules/react-native-haptic-feedback'),
   // resolveApp('../../node_modules/react-native-vector-icons'),
 ]
