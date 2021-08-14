@@ -89,5 +89,8 @@
     "crypto": "react-native-crypto",
     "path": "path-browserify",
     "fs": "react-native-level-fs"
+  },
+  "resolutions": {
+    "react": "17.0.2"
   }
 }

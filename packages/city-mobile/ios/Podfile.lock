@@ -492,7 +492,7 @@ DEPENDENCIES:
   - "react-native-mapbox-gl (from `../../../node_modules/@react-native-mapbox-gl/maps`)"
   - "react-native-netinfo (from `../../../node_modules/@react-native-community/netinfo`)"
   - react-native-safe-area-context (from `../../../node_modules/react-native-safe-area-context`)
-  - react-native-tor (from `../node_modules/react-native-tor`)
+  - react-native-tor (from `../../../node_modules/react-native-tor`)
   - react-native-webview (from `../../../node_modules/react-native-webview`)
   - React-perflogger (from `../../../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../../../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -508,7 +508,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../../../node_modules/@react-native-async-storage/async-storage`)"
   - RNGestureHandler (from `../../../node_modules/react-native-gesture-handler`)
-  - RNScreens (from `../node_modules/react-native-screens`)
+  - RNScreens (from `../../../node_modules/react-native-screens`)
   - UMAppLoader (from `../../../node_modules/unimodules-app-loader/ios`)
   - UMCameraInterface (from `../../../node_modules/unimodules-camera-interface/ios`)
   - UMConstantsInterface (from `../../../node_modules/unimodules-constants-interface/ios`)
@@ -614,7 +614,7 @@ EXTERNAL SOURCES:
   react-native-safe-area-context:
     :path: "../../../node_modules/react-native-safe-area-context"
   react-native-tor:
-    :path: "../node_modules/react-native-tor"
+    :path: "../../../node_modules/react-native-tor"
   react-native-webview:
     :path: "../../../node_modules/react-native-webview"
   React-perflogger:
@@ -646,7 +646,7 @@ EXTERNAL SOURCES:
   RNGestureHandler:
     :path: "../../../node_modules/react-native-gesture-handler"
   RNScreens:
-    :path: "../node_modules/react-native-screens"
+    :path: "../../../node_modules/react-native-screens"
   UMAppLoader:
     :path: "../../../node_modules/unimodules-app-loader/ios"
   UMCameraInterface:
