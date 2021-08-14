@@ -38,6 +38,7 @@ target 'cityrn' do
     $RNMBGL.post_install(installer)
     react_native_post_install(installer)
 
+    # https://stackoverflow.com/questions/64040154/xcode-12-error-multiple-commands-produce-accessibilityresources-bundle
     installer.pods_project.targets.each do |target|
       if target.name == "React-Core.common-AccessibilityResources"
         target.remove_from_project
