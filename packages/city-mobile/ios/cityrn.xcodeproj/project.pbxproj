@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		28086665C84718907B5A9D98 /* libPods-cityrn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD251490BCB4826C03A02AC /* libPods-cityrn.a */; };
 		2C585BA626C739C200990BE2 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C585BA526C739C200990BE2 /* Expo.plist */; };
+		2C585BA926C7494000990BE2 /* emptyfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C585BA826C7494000990BE2 /* emptyfile.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FB5A843614BC95B4FCE3DCCA /* libPods-cityrn-cityrnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C95D79B048E33038436113FD /* libPods-cityrn-cityrnTests.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cityrn/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cityrn/main.m; sourceTree = "<group>"; };
 		2C585BA526C739C200990BE2 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		2C585BA726C7493F00990BE2 /* cityrn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cityrn-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C585BA826C7494000990BE2 /* emptyfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyfile.swift; sourceTree = "<group>"; };
 		345E934E7A11FAE7CAB679CA /* Pods-cityrn-cityrnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn-cityrnTests.release.xcconfig"; path = "Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests.release.xcconfig"; sourceTree = "<group>"; };
 		3AD251490BCB4826C03A02AC /* libPods-cityrn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cityrn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8D98D862CA01C3625FD9E8 /* Pods-cityrn-cityrnTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityrn-cityrnTests.debug.xcconfig"; path = "Target Support Files/Pods-cityrn-cityrnTests/Pods-cityrn-cityrnTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,12 +142,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				2C585BA826C7494000990BE2 /* emptyfile.swift */,
 				13B07FAE1A68108700A75B9A /* cityrn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* cityrnTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6B3AB65E73EDA01A4643560D /* Pods */,
+				2C585BA726C7493F00990BE2 /* cityrn-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -219,7 +224,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -424,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				2C585BA926C7494000990BE2 /* emptyfile.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E8D98D862CA01C3625FD9E8 /* Pods-cityrn-cityrnTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -470,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 345E934E7A11FAE7CAB679CA /* Pods-cityrn-cityrnTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = cityrnTests/Info.plist;
@@ -512,6 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = arcade.city.mobile;
 				PRODUCT_NAME = cityrn;
+				SWIFT_OBJC_BRIDGING_HEADER = "cityrn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,6 +549,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = arcade.city.mobile;
 				PRODUCT_NAME = cityrn;
+				SWIFT_OBJC_BRIDGING_HEADER = "cityrn-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

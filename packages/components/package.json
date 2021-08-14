@@ -87,6 +87,7 @@
     "text-encoding-polyfill": "0.6.7",
     "three": "0.126.1",
     "unimodules-camera-interface": "6.1.0",
+    "unimodules-constants-interface": "6.1.0",
     "unimodules-file-system-interface": "6.1.0",
     "unimodules-font-interface": "6.1.0",
     "unimodules-permissions-interface": "6.1.0",

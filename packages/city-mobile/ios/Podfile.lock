@@ -405,6 +405,8 @@ PODS:
   - UMAppLoader (2.2.0)
   - UMCameraInterface (6.1.0):
     - UMCore
+  - UMConstantsInterface (6.1.0):
+    - UMCore
   - UMCore (7.1.1)
   - UMFileSystemInterface (6.1.0)
   - UMFontInterface (6.1.0)
@@ -496,6 +498,7 @@ DEPENDENCIES:
   - "RNCAsyncStorage (from `../../../node_modules/@react-native-async-storage/async-storage`)"
   - UMAppLoader (from `../../../node_modules/unimodules-app-loader/ios`)
   - UMCameraInterface (from `../../../node_modules/unimodules-camera-interface/ios`)
+  - UMConstantsInterface (from `../../../node_modules/unimodules-constants-interface/ios`)
   - "UMCore (from `../../../node_modules/@unimodules/core/ios`)"
   - UMFileSystemInterface (from `../../../node_modules/unimodules-file-system-interface/ios`)
   - UMFontInterface (from `../../../node_modules/unimodules-font-interface/ios`)
@@ -627,6 +630,8 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/unimodules-app-loader/ios"
   UMCameraInterface:
     :path: "../../../node_modules/unimodules-camera-interface/ios"
+  UMConstantsInterface:
+    :path: "../../../node_modules/unimodules-constants-interface/ios"
   UMCore:
     :path: "../../../node_modules/@unimodules/core/ios"
   UMFileSystemInterface:
@@ -710,6 +715,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: 56a3355a10b5d660c48c6e37325ac85ebfd09885
   UMAppLoader: 21af63390e55c82e037fb9752d93114a80ecf16e
   UMCameraInterface: 81ff46700da88435f17afedfc88915eaede7e6a6
+  UMConstantsInterface: bb94dd46039dcde276ed50225b29e22785e604bf
   UMCore: 2f671796d7439604a1cf8ac7bbe5809cd5c50437
   UMFileSystemInterface: f72245e90ce78fa6427180ff0b0904ead13d8161
   UMFontInterface: 5843cff7db85a42ba629aaac53d33091c35524d3
@@ -720,6 +726,6 @@ SPEC CHECKSUMS:
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: f23b9001449a148802808cccbebda14129e3aeba
+PODFILE CHECKSUM: fcb18d338724f597254c0e5a229eedc0ecd9e959
 
 COCOAPODS: 1.10.2
