@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </div>
 
       <main className={styles.main}>
-        Connect Freely.
+        {/* Coming Soon */}
         {/* <a
           href='https://github.com/ArcadeCity/arcade'
           className={styles.sneak}

@@ -9,6 +9,7 @@
 }
 
 .main {
+  pointer-events: none;
   z-index: 5;
   padding: 5rem 0;
   flex: 1;
@@ -16,6 +17,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  color: #999;
+  font-family: monospace;
+  /* font-family: 'Josefin Sans'; */
 }
 
 .footer {
