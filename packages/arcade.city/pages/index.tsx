@@ -18,6 +18,7 @@ const Home: NextPage = () => {
           href='https://github.com/ArcadeCity/arcade'
           className={styles.sneak}
           target='_blank'
+          rel='noreferrer'
         >
           Sneak peek
         </a>
