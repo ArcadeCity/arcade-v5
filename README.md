@@ -24,7 +24,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 
 ## Packages
 
-- **arcade.city** - New website at [https://arcade.city](arcade.city)
+- **arcade.city** - New website at [arcade.city](https://arcade.city)
 - **city-mobile** - v5.1 mobile app
 - **city-web** - Lightweight web app with subset of mobile functionality
 - **components** - Shared components & functionality
