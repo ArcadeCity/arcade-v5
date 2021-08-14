@@ -1,14 +1,18 @@
 import React from 'react'
-import { View } from 'react-native'
-// import { palette } from 'views/theme'
+import { Text, View } from 'react-native'
+import { palette } from '../../views/theme/palette'
 
 export const CityWeb = () => {
   return (
     <View
       style={{
-        backgroundColor: 'blue',
+        backgroundColor: palette.electricIndigo,
         flex: 1,
       }}
-    ></View>
+    >
+      <Text style={{ color: 'white', fontSize: 44, fontFamily: 'monospace' }}>
+        CityWeb Test
+      </Text>
+    </View>
   )
 }
