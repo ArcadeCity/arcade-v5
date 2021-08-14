@@ -2,8 +2,21 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Amiri', monospace, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  background: radial-gradient(
+    circle at bottom center,
+    rgba(60, 60, 60, 1) 0%,
+    rgba(0, 0, 0, 1) 48%
+  );
+  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
+      39 39,
+    auto;
 }
 
 a {
