@@ -13,8 +13,12 @@
   },
   "dependencies": {
     "@arcadecity/components": "0.1.0",
+    "@react-native-async-storage/async-storage": "1.15.5",
+    "@react-native-community/netinfo": "6.0.0",
+    "@react-native-mapbox-gl/maps": "8.2.1",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "react-native-tor": "0.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
