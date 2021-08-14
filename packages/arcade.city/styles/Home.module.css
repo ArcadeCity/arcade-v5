@@ -119,3 +119,10 @@
     flex-direction: column;
   }
 }
+
+.sneak {
+  color: #666;
+  text-decoration: underline;
+  font-style: italic;
+  margin-top: 25px !important;
+}

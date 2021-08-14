@@ -12,7 +12,16 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className={styles.main}>Ready?</main>
+      <main className={styles.main}>
+        Be right back.
+        <a
+          href='https://github.com/ArcadeCity/arcade'
+          className={styles.sneak}
+          target='_blank'
+        >
+          Sneak peek
+        </a>
+      </main>
     </div>
   )
 }
