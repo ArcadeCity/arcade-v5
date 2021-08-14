@@ -16,33 +16,14 @@ export default function Model(props) {
   const { nodes } = useGLTF('/graces-draco.glb')
 
   useFrame(({ clock, mouse }) => {
-    group.current.rotation.y = lerp(
-      group.current.rotation.y,
-      mouse.x * (Math.PI / 5),
-      0.005
-    )
+    group.current.rotation.y = lerp(group.current.rotation.y, mouse.x * (Math.PI / 5), 0.005)
   })
-
-  console.log('nodes:', nodes)
-
-  if (!nodes) return <></>
 
   return (
     <group {...props} dispose={null}>
       <group ref={group}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Node_3.geometry}
-          rotation={[-Math.PI / 2, 0, 0]}
-          scale={[0.2, 0.224, 0.224]}
-        >
-          <meshStandardMaterial
-            attach='material'
-            roughness={0.9}
-            metalness={0.5}
-            color='#474747'
-          />
+        <mesh castShadow receiveShadow geometry={nodes.Node_3.geometry} rotation={[-Math.PI / 2, 0, 0]} scale={[0.2, 0.224, 0.224]}>
+          <meshStandardMaterial attach="material" roughness={0.9} metalness={0.5} color="#474747" />
         </mesh>
         <Lights />
       </group>
@@ -56,22 +37,10 @@ function Lights() {
   const front = useRef()
 
   useFrame(({ clock, mouse }) => {
-    groupL.current.rotation.y = lerp(
-      groupL.current.rotation.y,
-      -mouse.x * (Math.PI / 2),
-      0.1
-    )
-    groupR.current.rotation.y = lerp(
-      groupR.current.rotation.y,
-      mouse.x * (Math.PI / 2),
-      0.1
-    )
+    groupL.current.rotation.y = lerp(groupL.current.rotation.y, -mouse.x * (Math.PI / 2), 0.1)
+    groupR.current.rotation.y = lerp(groupR.current.rotation.y, mouse.x * (Math.PI / 2), 0.1)
     front.current.position.x = lerp(front.current.position.x, mouse.x * 12, 0.4)
-    front.current.position.y = lerp(
-      front.current.position.y,
-      7 + mouse.y * 4,
-      0.4
-    )
+    front.current.position.y = lerp(front.current.position.y, 7 + mouse.y * 4, 0.4)
   })
 
   return (
