@@ -334,8 +334,12 @@ PODS:
     - React-Core
   - react-native-netinfo (6.0.0):
     - React-Core
+  - react-native-safe-area-context (3.3.0):
+    - React-Core
   - react-native-tor (0.1.7):
     - React
+  - react-native-webview (11.13.0):
+    - React-Core
   - React-perflogger (0.64.2)
   - React-RCTActionSheet (0.64.2):
     - React-Core/RCTActionSheetHeaders (= 0.64.2)
@@ -402,6 +406,11 @@ PODS:
     - React-perflogger (= 0.64.2)
   - RNCAsyncStorage (1.15.5):
     - React-Core
+  - RNGestureHandler (1.10.3):
+    - React-Core
+  - RNScreens (3.5.0):
+    - React-Core
+    - React-RCTImage
   - UMAppLoader (2.2.0)
   - UMCameraInterface (6.1.0):
     - UMCore
@@ -482,7 +491,9 @@ DEPENDENCIES:
   - React-jsinspector (from `../../../node_modules/react-native/ReactCommon/jsinspector`)
   - "react-native-mapbox-gl (from `../../../node_modules/@react-native-mapbox-gl/maps`)"
   - "react-native-netinfo (from `../../../node_modules/@react-native-community/netinfo`)"
+  - react-native-safe-area-context (from `../../../node_modules/react-native-safe-area-context`)
   - react-native-tor (from `../node_modules/react-native-tor`)
+  - react-native-webview (from `../../../node_modules/react-native-webview`)
   - React-perflogger (from `../../../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../../../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../../../node_modules/react-native/Libraries/NativeAnimation`)
@@ -496,6 +507,8 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../../../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../../../node_modules/react-native/ReactCommon`)
   - "RNCAsyncStorage (from `../../../node_modules/@react-native-async-storage/async-storage`)"
+  - RNGestureHandler (from `../../../node_modules/react-native-gesture-handler`)
+  - RNScreens (from `../node_modules/react-native-screens`)
   - UMAppLoader (from `../../../node_modules/unimodules-app-loader/ios`)
   - UMCameraInterface (from `../../../node_modules/unimodules-camera-interface/ios`)
   - UMConstantsInterface (from `../../../node_modules/unimodules-constants-interface/ios`)
@@ -598,8 +611,12 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/@react-native-mapbox-gl/maps"
   react-native-netinfo:
     :path: "../../../node_modules/@react-native-community/netinfo"
+  react-native-safe-area-context:
+    :path: "../../../node_modules/react-native-safe-area-context"
   react-native-tor:
     :path: "../node_modules/react-native-tor"
+  react-native-webview:
+    :path: "../../../node_modules/react-native-webview"
   React-perflogger:
     :path: "../../../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -626,6 +643,10 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
     :path: "../../../node_modules/@react-native-async-storage/async-storage"
+  RNGestureHandler:
+    :path: "../../../node_modules/react-native-gesture-handler"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   UMAppLoader:
     :path: "../../../node_modules/unimodules-app-loader/ios"
   UMCameraInterface:
@@ -699,7 +720,9 @@ SPEC CHECKSUMS:
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
   react-native-mapbox-gl: b79f2d7522556eeabd9fe5c4c94f8f6ce4412304
   react-native-netinfo: e849fc21ca2f4128a5726c801a82fc6f4a6db50d
+  react-native-safe-area-context: 61c8c484a3a9e7d1fda19f7b1794b35bbfd2262a
   react-native-tor: 6a64351e96ccd6a49941989703f63ec81fc1ae7c
+  react-native-webview: 133a6a5149f963259646e710b4545c67ef35d7c9
   React-perflogger: 25373e382fed75ce768a443822f07098a15ab737
   React-RCTActionSheet: af7796ba49ffe4ca92e7277a5d992d37203f7da5
   React-RCTAnimation: 6a2e76ab50c6f25b428d81b76a5a45351c4d77aa
@@ -713,6 +736,8 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: a9904c6d0218fb9f8b19d6dd88607225927668f9
   ReactCommon: 149906e01aa51142707a10665185db879898e966
   RNCAsyncStorage: 56a3355a10b5d660c48c6e37325ac85ebfd09885
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
+  RNScreens: 01ab149b5dd5c27f5ff26741b1d2bdf2cee1af35
   UMAppLoader: 21af63390e55c82e037fb9752d93114a80ecf16e
   UMCameraInterface: 81ff46700da88435f17afedfc88915eaede7e6a6
   UMConstantsInterface: bb94dd46039dcde276ed50225b29e22785e604bf

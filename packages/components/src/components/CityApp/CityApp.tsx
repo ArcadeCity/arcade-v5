@@ -4,10 +4,10 @@ import 'lib/ignore-warnings'
 import React, { useEffect, useRef, useState } from 'react'
 import { Alert, StatusBar, View } from 'react-native'
 import { NavigationContainerRef } from '@react-navigation/native'
-import {
-  SafeAreaProvider,
-  initialWindowMetrics,
-} from 'react-native-safe-area-context'
+// import {
+//   SafeAreaProvider,
+//   initialWindowMetrics,
+// } from 'react-native-safe-area-context'
 import { enableScreens } from 'react-native-screens'
 import * as storage from 'lib/storage'
 import {
@@ -53,16 +53,16 @@ export const CityApp = () => {
       <magic.Relayer />
       <RootStoreProvider value={rootStore}>
         <StatusBar barStyle='light-content' />
-        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-          <View style={{ flex: 1, zIndex: 50 }}>
-            <RootNavigator
-              ref={navigationRef}
-              initialState={initialNavigationState}
-              onStateChange={onNavigationStateChange}
-            />
-            <ModalContainer />
-          </View>
-        </SafeAreaProvider>
+        {/* <SafeAreaProvider initialMetrics={initialWindowMetrics}> */}
+        <View style={{ flex: 1, zIndex: 50 }}>
+          <RootNavigator
+            ref={navigationRef}
+            initialState={initialNavigationState}
+            onStateChange={onNavigationStateChange}
+          />
+          <ModalContainer />
+        </View>
+        {/* </SafeAreaProvider> */}
       </RootStoreProvider>
     </>
   )
