@@ -1,4 +1,3 @@
-// require('xmlhttprequest')
 import dynamic from 'next/dynamic'
 import { Suspense, useRef, useState } from 'react'
 import type { NextPage } from 'next'
@@ -51,6 +50,10 @@ const Home: NextPage = () => {
           Sneak peek
         </a>
       </main>
+      <div className={styles.arcade}>
+        <h2>The</h2>
+        <h1>ARCADE</h1>
+      </div>
     </div>
   )
 }

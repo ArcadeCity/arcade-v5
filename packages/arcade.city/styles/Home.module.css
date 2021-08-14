@@ -127,3 +127,77 @@
   font-style: italic;
   margin-top: 25px !important;
 }
+
+.arcade {
+  z-index: 5;
+}
+
+.loader {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+}
+
+.header {
+  pointer-events: none;
+  position: absolute;
+  top: 6em;
+  left: 0;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 900;
+  font-size: 0.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.header > span {
+  padding: 0 3.25em;
+  letter-spacing: 0.4em;
+  position: relative;
+}
+
+.header > span.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 20px;
+  height: 2px;
+  background: white;
+}
+
+.arcade {
+  pointer-events: none;
+  position: absolute;
+  bottom: 2.5em;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  font-size: 2em;
+  letter-spacing: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+
+.arcade > h1 {
+  line-height: 0.9em;
+  font-weight: 100;
+}
+
+.arcade > h1::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 2px;
+  background: white;
+}
+
+.arcade > h2 {
+  font-size: 1em;
+  line-height: 0px;
+  font-weight: 100;
+  letter-spacing: 0.25em;
+  font-style: italic;
+}
