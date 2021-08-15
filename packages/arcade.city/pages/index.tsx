@@ -6,11 +6,11 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <main className={styles.main}>Connect Freely</main>
-      <div className={styles.arcade}>
+      {/* <main className={styles.main}>Connect Freely</main> */}
+      {/* <div className={styles.arcade}>
         <h2>The</h2>
         <h1>ARCADE</h1>
-      </div>
+      </div> */}
     </div>
   )
 }
