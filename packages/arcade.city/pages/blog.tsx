@@ -17,16 +17,15 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.header}>
-        <span className={styles.active}>
+        <span>
           <Link href='/'>HOME</Link>
         </span>
-
-        <span>
+        <span className={styles.active}>
           <Link href='/blog'>BLOG</Link>
         </span>
       </div>
 
-      <main className={styles.main}>Connect Freely</main>
+      <main className={styles.main}>Blog</main>
       <div className={styles.arcade}>
         <h2>The</h2>
         <h1>ARCADE</h1>

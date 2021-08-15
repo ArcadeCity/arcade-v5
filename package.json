@@ -14,6 +14,7 @@
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "dev:arcade.city": "yarn workspace @arcadecity/arcade.city dev",
+    "buildsite": "yarn workspace @arcadecity/arcade.city build",
     "format": "yarn workspaces run format",
     "patch-package": "patch-package",
     "pods": "yarn workspace @arcadecity/city-mobile pods"
