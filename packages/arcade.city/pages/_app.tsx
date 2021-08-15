@@ -14,8 +14,8 @@ if (process.env.NODE_ENV === 'production') {
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
       <LCanvas />
+      <Component {...pageProps} />
     </>
   )
 }

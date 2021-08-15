@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         {/* <span>CONTACT</span> */}
       </div>
 
-      <div
+      {/* <div
         style={{
           position: 'absolute',
           flex: 1,
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         }}
       >
         <Canvas />
-      </div>
+      </div> */}
       {/* <Switch location={location}>
         <Route path='/'>Home</Route>
         <Route path='/blog'>Blog</Route>
