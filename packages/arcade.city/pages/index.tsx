@@ -20,6 +20,14 @@ const Home: NextPage = () => {
         />
       </Head>
 
+      <div className={styles.header}>
+        <span className={styles.active}>HOME</span>
+        <span>APP</span>
+        <span>BLOG</span>
+        {/* <span>FREE BITCOIN</span> */}
+        <span>CONTACT</span>
+      </div>
+
       <div
         style={{
           position: 'absolute',
