@@ -12,6 +12,7 @@ const LCanvas = () => {
   const location = router.pathname
   const props = useSpring({
     intensity: location === '/' ? 1 : 8,
+    cameraPosition: location === '/' ? [0, -6, 0] : [0, -10, 0],
   })
   return (
     <>
