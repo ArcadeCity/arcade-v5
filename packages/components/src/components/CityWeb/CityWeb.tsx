@@ -6,7 +6,7 @@ export const CityWeb = () => {
   return (
     <View
       style={{
-        backgroundColor: palette.electricViolet,
+        backgroundColor: 'transparent',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

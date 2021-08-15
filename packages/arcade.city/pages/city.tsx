@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Button } from 'react-native'
+import { View } from 'react-native'
 import { CityWeb } from '../../components/src/components/CityWeb'
 
-const Home: NextPage = () => {
+const City: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,28 +18,11 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <div className={styles.header}>
-        <span className={styles.active}>
-          <Link href='/'>HOME</Link>
-        </span>
-
-        <span>
-          <Link href='/blog'>BLOG</Link>
-        </span>
-      </div>
-
-      <main className={styles.main}>
-        CITY
-        <Button
-          title='Hello'
-          onPress={() => {
-            console.log('ok')
-          }}
-        />
+      <View style={{ flex: 1, width: '100vw', height: '100vh' }}>
         <CityWeb />
-      </main>
+      </View>
     </div>
   )
 }
 
-export default Home
+export default City
