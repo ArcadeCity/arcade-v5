@@ -1,16 +1,9 @@
-import dynamic from 'next/dynamic'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-const Canvas = dynamic(() => import('../components/Canvas'), {
-  ssr: false,
-})
-
 const Home: NextPage = () => {
-  // const [location] = useLocation()
-  // console.log('location:', location)
   return (
     <div className={styles.container}>
       <Head>
@@ -27,41 +20,12 @@ const Home: NextPage = () => {
         <span>
           <Link href='/'>HOME</Link>
         </span>
-
-        {/* <span>APP</span> */}
         <span className={styles.active}>
           <Link href='/blog'>BLOG</Link>
         </span>
-        {/* <span>FREE BITCOIN</span> */}
-        {/* <span>CONTACT</span> */}
       </div>
 
-      {/* <div
-        style={{
-          position: 'absolute',
-          flex: 1,
-          width: '100vw',
-          height: '100vh',
-          zIndex: 0,
-        }}
-      >
-        <Canvas />
-      </div> */}
-      {/* <Switch location={location}>
-        <Route path='/'>Home</Route>
-        <Route path='/blog'>Blog</Route>
-      </Switch> */}
-      <main className={styles.main}>
-        Blog
-        {/* <a
-          href='https://github.com/ArcadeCity/arcade'
-          className={styles.sneak}
-          target='_blank'
-          rel='noreferrer'
-        >
-          Sneak peek
-        </a> */}
-      </main>
+      <main className={styles.main}>Blog</main>
       <div className={styles.arcade}>
         <h2>The</h2>
         <h1>ARCADE</h1>

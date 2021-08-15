@@ -5,7 +5,6 @@ import { Html, Loader } from '@react-three/drei'
 import Model from './Model'
 
 const LCanvas = ({ children }: any) => {
-  console.log('?')
   return (
     <div
       style={{
