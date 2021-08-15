@@ -6,7 +6,7 @@ const BoxComponent = () => {
   // { route, r3f }
   // const router = useStore((s) => s.router)
   // This reference will give us direct access to the THREE.Mesh object
-  const mesh = useRef(null)
+  const mesh: any = useRef(null)
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false)
   // Subscribe this component to the render-loop, rotate the mesh every frame
