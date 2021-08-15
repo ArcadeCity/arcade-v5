@@ -1,5 +1,6 @@
 import { useFrame } from '@react-three/fiber'
 import { useRef, useState } from 'react'
+import { palette } from '../../components/src/views/theme'
 
 const BoxComponent = () => {
   // { route, r3f }
@@ -25,7 +26,7 @@ const BoxComponent = () => {
         scale={hovered ? 1.1 : 1}
       >
         <boxBufferGeometry args={[1, 1, 1]} />
-        <meshPhysicalMaterial color={'orange'} />
+        <meshPhysicalMaterial color={palette.electricIndigo} />
       </mesh>
       <directionalLight position={[5, 5, 5]} />
       <ambientLight />
