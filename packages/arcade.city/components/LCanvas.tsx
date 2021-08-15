@@ -1,10 +1,14 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Box from './Box'
+import { useRouter } from 'next/router'
 import { Html, Loader } from '@react-three/drei'
 import Model from './Model'
 
-const LCanvas = ({ children }: any) => {
+const LCanvas = () => {
+  const router = useRouter()
+  console.log(router)
+  const intensity = router.pathname === '/' ? 1 : 5
   return (
     <>
       <div
@@ -21,7 +25,7 @@ const LCanvas = ({ children }: any) => {
           camera={{ position: [0, 0, 12], fov: 50, near: 7, far: 15 }}
         >
           <fog attach='fog' args={['black', 0, 20]} />
-          <pointLight position={[0, 10, -10]} intensity={1} />
+          <pointLight position={[0, 10, -10]} intensity={intensity} />
           {/* <Box /> */}
           <Suspense fallback={<Html center className='loader'></Html>}>
             <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} />
