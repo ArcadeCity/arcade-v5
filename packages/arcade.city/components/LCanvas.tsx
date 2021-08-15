@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Box from './Box'
 import { useRouter } from 'next/router'
-import { Html, Loader, OrbitControls } from '@react-three/drei'
+import { Html, Loader, OrbitControls, Stars } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
 import { extend } from '@react-three/fiber'
@@ -40,6 +40,7 @@ const LCanvas = () => {
             {/* <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} /> */}
             <Globe />
           </Suspense>
+          <Stars />
           {/* <OrbitControls /> */}
         </Canvas>
       </div>
