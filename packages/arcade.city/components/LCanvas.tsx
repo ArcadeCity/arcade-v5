@@ -29,6 +29,7 @@ const LCanvas = () => {
           width: '100vw',
           height: '100vh',
           zIndex: 0,
+          backgroundColor: 'rgba(0,0,0,0.5)',
         }}
       >
         <Canvas shadows camera={{ position: [0, 25, 50], fov: 50 }}>
@@ -40,7 +41,13 @@ const LCanvas = () => {
             {/* <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} /> */}
             <Globe />
           </Suspense>
-          <Stars />
+          <Stars
+            radius={100}
+            depth={50}
+            count={1500}
+            factor={3}
+            saturation={0}
+          />
           {/* <OrbitControls /> */}
         </Canvas>
       </div>
