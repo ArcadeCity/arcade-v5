@@ -24,12 +24,12 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.header}>
-        <span className={styles.active}>
+        <span>
           <Link href='/'>HOME</Link>
         </span>
 
         {/* <span>APP</span> */}
-        <span>
+        <span className={styles.active}>
           <Link href='/blog'>BLOG</Link>
         </span>
         {/* <span>FREE BITCOIN</span> */}
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         <Route path='/blog'>Blog</Route>
       </Switch> */}
       <main className={styles.main}>
-        Connect Freely
+        Blog
         {/* <a
           href='https://github.com/ArcadeCity/arcade'
           className={styles.sneak}
