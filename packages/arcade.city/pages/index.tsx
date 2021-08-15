@@ -25,10 +25,10 @@ const Home: NextPage = () => {
           <a href='/test'>HOME</a>
         </span>
 
-        <span>APP</span>
+        {/* <span>APP</span> */}
         <span>BLOG</span>
         {/* <span>FREE BITCOIN</span> */}
-        <span>CONTACT</span>
+        {/* <span>CONTACT</span> */}
       </div>
 
       <div
