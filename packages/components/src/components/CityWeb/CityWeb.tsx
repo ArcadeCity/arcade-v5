@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import { palette } from '../../views/theme/palette'
+// import { palette } from '../../views/theme/palette'
+// import { Button } from '../../views/shared/button'
 
 export const CityWeb = () => {
   return (
@@ -12,9 +13,7 @@ export const CityWeb = () => {
         alignItems: 'center',
       }}
     >
-      <Text style={{ color: 'white', fontSize: 44, fontFamily: 'monospace' }}>
-        City
-      </Text>
+      {/* <Button text='Test Button' onPress={() => {}} /> */}
     </View>
   )
 }

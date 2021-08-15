@@ -8,11 +8,11 @@ export const Navbar = () => {
   return (
     <div className={styles.header}>
       <span className={location === '/' ? styles.active : ''}>
-        <Link href='/'>HOME</Link>
+        <Link href='/'>WELCOME</Link>
       </span>
 
       <span className={location === '/city' ? styles.active : ''}>
-        <Link href='/city'>CITY</Link>
+        <Link href='/city'>ENTER</Link>
       </span>
     </div>
   )
