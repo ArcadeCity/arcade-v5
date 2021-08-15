@@ -21,7 +21,10 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.header}>
-        <span className={styles.active}>HOME</span>
+        <span className={styles.active}>
+          <a href='/test'>HOME</a>
+        </span>
+
         <span>APP</span>
         <span>BLOG</span>
         {/* <span>FREE BITCOIN</span> */}
@@ -41,7 +44,7 @@ const Home: NextPage = () => {
       </div>
 
       <main className={styles.main}>
-        {/* Coming Soon */}
+        Connect Freely
         {/* <a
           href='https://github.com/ArcadeCity/arcade'
           className={styles.sneak}

@@ -17,10 +17,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  color: #999;
-  font-family: monospace;
-  /* font-family: 'Josefin Sans'; */
+  font-size: 26px;
+  /* color: #999; */
+  /* font-family: monospace; */
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
 
 .footer {
@@ -208,7 +210,8 @@
 }
 
 .header {
-  pointer-events: none;
+  pointer-events: auto;
+  z-index: 8;
   position: absolute;
   top: 6em;
   left: 0;
