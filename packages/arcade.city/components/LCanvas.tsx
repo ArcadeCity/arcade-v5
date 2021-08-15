@@ -9,13 +9,10 @@ import Model from './Model'
 
 const LCanvas = () => {
   const router = useRouter()
-  console.log(router)
   const location = router.pathname
-  // const intensity = router.pathname === '/' ? 1 : 5
   const props = useSpring({
-    intensity: location === '/' ? 1 : 15,
+    intensity: location === '/' ? 1 : 8,
   })
-  console.log(props.intensity)
   return (
     <>
       <div
