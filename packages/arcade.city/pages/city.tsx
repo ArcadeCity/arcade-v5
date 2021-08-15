@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { Button } from 'react-native'
+import { Text } from '../../components/src/views/shared'
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
             console.log('ok')
           }}
         />
+        <Text text='Any chance this works?' />
       </main>
     </div>
   )
