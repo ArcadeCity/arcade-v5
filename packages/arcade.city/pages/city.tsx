@@ -18,6 +18,16 @@ const City: NextPage = () => {
         />
       </Head>
 
+      <div className={styles.header}>
+        <span className={styles.active}>
+          <Link href='/'>HOME</Link>
+        </span>
+
+        <span>
+          <Link href='/blog'>BLOG</Link>
+        </span>
+      </div>
+
       <View style={{ flex: 1, width: '100vw', height: '100vh' }}>
         <CityWeb />
       </View>
