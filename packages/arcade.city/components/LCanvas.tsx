@@ -39,7 +39,7 @@ const LCanvas = () => {
           </Suspense>
         </Canvas>
       </div>
-      <Loader />
+      {/* <Loader /> */}
     </>
   )
 }
