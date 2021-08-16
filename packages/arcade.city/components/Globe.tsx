@@ -17,7 +17,12 @@ export const Globe = () => {
   })
 
   return (
-    <group ref={group} scale={[2, 2, 2]} position={[-0.5, 0, 0]}>
+    <group
+      ref={group}
+      scale={[2, 2, 2]}
+      position={[-1.5, 0, 0]}
+      rotation={[-0.2, -0.7, 0]}
+    >
       <mesh>
         <sphereGeometry args={[5, 50, 50]} />
         <meshStandardMaterial map={globe} roughness={1} fog={false} />
