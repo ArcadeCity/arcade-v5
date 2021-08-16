@@ -9,6 +9,7 @@
 }
 
 .main {
+  text-align: center;
   pointer-events: none;
   z-index: 5;
   padding: 5rem 0;
