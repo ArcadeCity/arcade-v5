@@ -7,6 +7,11 @@ const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 
 export default function Post({ meta, children, posts }) {
   const router = useRouter()
+
+  const components = {
+    a: ExternalLink,
+  }
+
   return (
     <div
       className='absolute w-full h-screen px-4 sm:px-6 lg:px-8 py-16 overflow-y-auto'
@@ -34,10 +39,21 @@ export default function Post({ meta, children, posts }) {
       <div className='mb-16 prose prose-lg text-white mx-auto'>
         <div className='divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2'>
           <div className='max-w-none pt-10 pb-8'>
-            <MDXProvider>{children}</MDXProvider>
+            <MDXProvider components={components}>{children}</MDXProvider>
           </div>
         </div>
       </div>
     </div>
+  )
+}
+
+const ExternalLink = (props) => {
+  // if (props.href.includes('arcade.city') || props.href[0] === '/') {
+  //   return <a href={props.href}>{props.children}</a>
+  // }
+  return (
+    <a href={props.href} target='_blank' rel='noopener noreferrer'>
+      {props.children}
+    </a>
   )
 }

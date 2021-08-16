@@ -37,7 +37,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.white'),
+            color: theme('colors.moonraker'),
             p: {
               fontSize: 20,
             },
