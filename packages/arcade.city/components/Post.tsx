@@ -18,7 +18,7 @@ export default function Post({ meta, children, posts }) {
       style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
     >
       <Navbar />
-      <div className='pt-20 text-lg max-w-prose mx-auto'>
+      <div className='pt-28 text-lg max-w-prose mx-auto'>
         <div className='flex flex-col justify-center items-center'>
           {/* <img
             className='mb-8 w-auto h-96 rounded-xl border-2 border-minsk shadow-lg'
@@ -29,16 +29,16 @@ export default function Post({ meta, children, posts }) {
           <span className='block text-3xl text-center leading-8 font-extrabold tracking-wide text-white sm:text-4xl'>
             {meta.title}
           </span>
-          <span className='mt-4 block text-base text-center text-bluebell font-semibold tracking-wide'>
-            <time dateTime={meta.date}>
-              {postDateTemplate.render(new Date(meta.date))}
-            </time>
-          </span>
         </h1>
+        <span className='mt-4 block text-base text-center text-bluebell font-semibold tracking-wide'>
+          <time dateTime={meta.date}>
+            {postDateTemplate.render(new Date(meta.date))}
+          </time>
+        </span>
       </div>
       <div className='mb-16 prose prose-lg text-white mx-auto'>
         <div className='divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2'>
-          <div className='max-w-none pt-10 pb-8'>
+          <div className='max-w-none pt-6 pb-8'>
             <MDXProvider components={components}>{children}</MDXProvider>
           </div>
         </div>
