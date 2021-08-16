@@ -6,21 +6,33 @@ export default function Post({ meta, children, posts }) {
   const router = useRouter()
   return (
     <div
-      className='pointer-events-auto overflow-y-scroll'
-      style={{ zIndex: 9000 }}
+      className='absolute w-full h-screen px-4 sm:px-6 lg:px-8 py-16 overflow-y-auto'
+      style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
     >
       <Navbar />
-      <main>
-        <article className='xl:divide-y xl:divide-gray-200'>
-          <div className='prose z-50' style={{ zIndex: 999 }}>
-            <div className='divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2'>
-              <div className='max-w-none pt-10 pb-8'>
-                <MDXProvider>{children}</MDXProvider>
-              </div>
-            </div>
+      <div className='pt-20 text-lg max-w-prose mx-auto'>
+        <div className='flex flex-col justify-center items-center'>
+          {/* <img
+            className='mb-8 w-auto h-96 rounded-xl border-2 border-minsk shadow-lg'
+            src={imgAuthoritarian}
+          /> */}
+        </div>
+        <h1>
+          <span className='block text-3xl text-center leading-8 font-extrabold tracking-wide text-white sm:text-4xl'>
+            Bitcoin First
+          </span>
+          <span className='mt-4 block text-base text-center text-bluebell font-semibold tracking-wide'>
+            August 16, 2021
+          </span>
+        </h1>
+      </div>
+      <div className='mb-16 prose prose-lg text-white mx-auto'>
+        <div className='divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2'>
+          <div className='max-w-none pt-10 pb-8'>
+            <MDXProvider>{children}</MDXProvider>
           </div>
-        </article>
-      </main>
+        </div>
+      </div>
     </div>
   )
 }
