@@ -1,6 +1,9 @@
 import { useRouter } from 'next/router'
 import { MDXProvider } from '@mdx-js/react'
 import { Navbar } from './Navbar'
+import tinytime from 'tinytime'
+
+const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 
 export default function Post({ meta, children, posts }) {
   const router = useRouter()
@@ -19,10 +22,12 @@ export default function Post({ meta, children, posts }) {
         </div>
         <h1>
           <span className='block text-3xl text-center leading-8 font-extrabold tracking-wide text-white sm:text-4xl'>
-            Bitcoin First
+            {meta.title}
           </span>
           <span className='mt-4 block text-base text-center text-bluebell font-semibold tracking-wide'>
-            August 16, 2021
+            <time dateTime={meta.date}>
+              {postDateTemplate.render(new Date(meta.date))}
+            </time>
           </span>
         </h1>
       </div>

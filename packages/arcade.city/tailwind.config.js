@@ -38,6 +38,9 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.white'),
+            p: {
+              fontSize: 20,
+            },
             h1: {
               color: theme('colors.white'),
             },
