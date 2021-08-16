@@ -14,9 +14,9 @@ body {
     rgba(30, 30, 30, 1) 0%,
     rgba(0, 0, 0, 1) 48%
   ); */
-  cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
+  /* cursor: url('https://github.com/chenglou/react-motion/raw/master/demos/demo8-draggable-list/cursor.png')
       39 39,
-    auto;
+    auto; */
 }
 
 a {

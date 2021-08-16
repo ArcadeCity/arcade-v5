@@ -9,6 +9,7 @@
 }
 
 .main {
+  text-align: center;
   pointer-events: none;
   z-index: 5;
   padding: 5rem 0;
@@ -144,15 +145,18 @@
   font-weight: 900;
 }
 
+.link {
+  padding: 15px;
+}
+
 .header {
-  pointer-events: none;
   position: absolute;
   top: 4em;
   left: 0;
   color: white;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 900;
-  font-size: 0.9em;
+  font-size: 1em;
   width: 100%;
   text-align: center;
 }
@@ -177,7 +181,7 @@
 .arcade {
   pointer-events: none;
   position: absolute;
-  bottom: 2em;
+  bottom: 1em;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   font-size: 2em;
@@ -207,35 +211,4 @@
   font-weight: 100;
   letter-spacing: 0.25em;
   font-style: italic;
-}
-
-.header {
-  pointer-events: auto;
-  z-index: 8;
-  position: absolute;
-  top: 5em;
-  left: 0;
-  color: white;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 900;
-  font-size: 1em;
-  width: 100%;
-  text-align: center;
-}
-
-.header > span {
-  padding: 0 3.25em;
-  letter-spacing: 0.4em;
-  position: relative;
-}
-
-.header > span.active::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-  width: 20px;
-  height: 2px;
-  background: white;
 }
