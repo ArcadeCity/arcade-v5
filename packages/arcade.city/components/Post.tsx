@@ -5,7 +5,7 @@ import tinytime from 'tinytime'
 
 const postDateTemplate = tinytime('{MMMM} {DD}, {YYYY}')
 
-export default function Post({ meta, children, posts }) {
+export default function Post({ meta, children, posts }: any) {
   const router = useRouter()
 
   const components = {
@@ -47,7 +47,7 @@ export default function Post({ meta, children, posts }) {
   )
 }
 
-const ExternalLink = (props) => {
+const ExternalLink = (props: any) => {
   // if (props.href.includes('arcade.city') || props.href[0] === '/') {
   //   return <a href={props.href}>{props.children}</a>
   // }
