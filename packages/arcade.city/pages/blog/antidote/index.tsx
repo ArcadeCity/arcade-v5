@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
-import { Navbar } from '../components/Navbar'
+import styles from '../../../styles/Home.module.css'
+import { Navbar } from '../../../components/Navbar'
+import imgAuthoritarian from './authoritarian.png'
 
 const Blog: NextPage = () => {
   return (
@@ -14,7 +15,7 @@ const Blog: NextPage = () => {
           <div className='flex flex-col justify-center items-center'>
             <img
               className='mb-8 w-auto h-96 rounded-xl border-2 border-minsk shadow-lg'
-              src='/img/authoritarian.png'
+              src={imgAuthoritarian}
             />
             <p className='-my-4 mb-12 text-bluebell italic text-center text-sm leading-relaxed'>
               "CLAMPDOWN: A hooded detainee is escorted on Thursday as Hong
