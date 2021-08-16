@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import styles from '../../styles/Home.module.css'
 import { Navbar } from '../../components/Navbar'
+import Link from 'next/link'
 
 const Blog: NextPage = () => {
   return (
@@ -10,6 +11,14 @@ const Blog: NextPage = () => {
         style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
       >
         <Navbar />
+        <div className='mt-64 text-center'>
+          <p>
+            <Link href='/blog/bitcoin-first'>Bitcoin First</Link>
+          </p>
+          <p>
+            <Link href='/blog/antidote'>The Antidote to Authoritarianism</Link>
+          </p>
+        </div>
       </div>
     </div>
   )
