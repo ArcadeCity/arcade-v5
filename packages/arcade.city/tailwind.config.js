@@ -20,49 +20,45 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        teal: colors.cyan,
-
-        // for syntax highlighting
-        fuchsia: colors.fuchsia,
-        lime: colors.lime,
-        sky: colors.sky,
-        rose: colors.rose,
-        emerald: colors.emerald,
+        amber: '#ffa76c',
+        arwes: '#7efcf6',
+        arwes2: '#acf9fb',
+        bluebell: '#9D98CB',
+        electricindigo: '#5B20F2',
+        electricviolet: '#AE30FF',
+        haiti: '#120B29',
+        minsk: '#46367C',
+        moonraker: '#EEECFB',
+        pinkflamingo: '#F459F4',
+        portgore: '#2D2252',
+        purple: '#1C133A',
+        radicalred: '#FC3A57',
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: '#333',
+            h1: {
+              color: theme('colors.white'),
+            },
             h2: {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.white'),
             },
             h3: {
-              fontWeight: '600',
-              color: theme('colors.gray.900'),
-            },
-            'ol li:before': {
-              fontWeight: '600',
-              color: theme('colors.gray.500'),
-            },
-            'ul li:before': {
-              backgroundColor: theme('colors.gray.400'),
-            },
-            code: {
-              color: theme('colors.gray.900'),
+              color: theme('colors.white'),
             },
             a: {
-              color: theme('colors.gray.900'),
-              fontWeight: 400,
-            },
-            pre: {
               color: theme('colors.white'),
-              backgroundColor: theme('colors.gray.800'),
+              '&:hover': {
+                color: theme('colors.moonraker'),
+              },
+            },
+            strong: {
+              color: theme('colors.white'),
+              fontWeight: 700,
             },
             blockquote: {
-              color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.gray.200'),
+              color: theme('colors.bluebell'),
             },
           },
         },
