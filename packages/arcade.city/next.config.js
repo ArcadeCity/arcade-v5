@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
+// https://blog.tailwindcss.com/building-the-tailwind-blog
 const { createLoader } = require('simple-functional-loader')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 const withSyntaxHighlighting = require('./remark/withSyntaxHighlighting')
 const withProse = require('./remark/withProse')
 
-module.exports = {
+module.exports = withBundleAnalyzer({
   // reactStrictMode: true,
+  pageExtensions: ['tsx', 'mdx'],
   experimental: {
     externalDir: true,
+    modern: true,
   },
 
   // https://stackoverflow.com/questions/68008498/nextjs-typeerror-unsupported-file-type-undefined-after-update-to-v-11
@@ -111,4 +117,4 @@ module.exports = {
     ]
     return config
   },
-}
+})
