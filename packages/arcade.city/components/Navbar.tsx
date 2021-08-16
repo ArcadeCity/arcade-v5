@@ -21,8 +21,8 @@ export const Navbar = () => {
         <Link href='/'>WELCOME</Link>
       </span>
 
-      <span className={location === '/blog/antidote' ? styles.active : ''}>
-        <Link href='/blog/antidote'>BLOG</Link>
+      <span className={location === '/blog' ? styles.active : ''}>
+        <Link href='/blog'>BLOG</Link>
       </span>
     </div>
   )
