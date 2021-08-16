@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
+  font-size: 38px;
   /* color: #999; */
   /* font-family: monospace; */
   font-family: 'Josefin Sans';
@@ -147,12 +147,12 @@
 .header {
   pointer-events: none;
   position: absolute;
-  top: 6em;
+  top: 4em;
   left: 0;
   color: white;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 900;
-  font-size: 0.8em;
+  font-size: 0.9em;
   width: 100%;
   text-align: center;
 }
@@ -177,7 +177,7 @@
 .arcade {
   pointer-events: none;
   position: absolute;
-  bottom: 2.5em;
+  bottom: 2em;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   font-size: 2em;
@@ -213,12 +213,12 @@
   pointer-events: auto;
   z-index: 8;
   position: absolute;
-  top: 6em;
+  top: 5em;
   left: 0;
   color: white;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 900;
-  font-size: 0.8em;
+  font-size: 1em;
   width: 100%;
   text-align: center;
 }
