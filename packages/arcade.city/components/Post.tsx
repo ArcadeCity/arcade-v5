@@ -26,7 +26,7 @@ export default function Post({ meta, children, posts }: any) {
           /> */}
         </div>
         <h1>
-          <span className='block text-3xl text-center leading-8 font-extrabold tracking-wide text-white sm:text-4xl'>
+          <span className='block text-3xl text-center leading-8 font-extrabold tracking-wider text-white sm:text-5xl'>
             {meta.title}
           </span>
         </h1>

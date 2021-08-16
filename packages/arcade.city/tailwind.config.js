@@ -41,6 +41,9 @@ module.exports = {
             p: {
               fontSize: 20,
             },
+            li: {
+              fontSize: 20,
+            },
             h1: {
               color: theme('colors.white'),
             },
