@@ -8,7 +8,9 @@ const Blog: NextPage = () => {
       <Navbar />
       <main className={styles.main}>
         Blog Test
-        <p>Now let's try this.</p>
+        <div className='prose'>
+          <p className='font-sans text-2xl text-gray-400'>What is this</p>
+        </div>
       </main>
       <div className='prose'>
         <p className='font-sans text-2xl text-gray-400'>What is this</p>

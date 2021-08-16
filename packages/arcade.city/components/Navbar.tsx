@@ -7,7 +7,7 @@ export const Navbar = () => {
   const location = router.pathname
   return (
     <div className={styles.header}>
-      <span className={styles.active}>
+      {/* <span className={styles.active}>
         <a
           href='https://github.com/ArcadeCity/arcade'
           target='_blank'
@@ -16,14 +16,14 @@ export const Navbar = () => {
         >
           COMING SOON
         </a>
-      </span>
-      {/* <span className={location === '/' ? styles.active : ''}>
+      </span> */}
+      <span className={location === '/' ? styles.active : ''}>
         <Link href='/'>WELCOME</Link>
       </span>
 
-      <span className={location === '/city' ? styles.active : ''}>
-        <Link href='/city'>ENTER</Link>
-      </span> */}
+      <span className={location === '/blog' ? styles.active : ''}>
+        <Link href='/blog'>BLOG</Link>
+      </span>
     </div>
   )
 }

@@ -1,25 +1,18 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import Box from './Box'
 import { useRouter } from 'next/router'
-import { Html, Loader, OrbitControls, Stars } from '@react-three/drei'
+import { Html, Stars } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
-import { extend } from '@react-three/fiber'
-import Model from './Model'
 import { Globe } from './Globe'
 
 const LCanvas = () => {
   const router = useRouter()
   const location = router.pathname
   const props = useSpring({
-    intensity: location === '/' ? 0.4 : 0.8,
-    cameraPosition: location === '/' ? [0, -6, 0] : [0, -10, 0],
+    intensity: location === '/' ? 0.6 : 0.3,
+    config: { duration: 1000 },
   })
-  // const myGlobe = new ThreeGlobe()
-  // .globeImageUrl()
-
-  // console.log(myGlobe)
   return (
     <>
       <div
@@ -33,7 +26,7 @@ const LCanvas = () => {
         }}
       >
         <Canvas shadows camera={{ position: [0, 25, 50], fov: 50 }}>
-          {/* <fog attach='fog' args={['black', 0, 20]} /> */}
+          <fog attach='fog' args={['black', 0, 20]} />
           <a.pointLight position={[5, 13, 15]} intensity={props.intensity} />
           {/* <directionalLight position={[15, 15, 15]} /> */}
           {/* <ambientLight /> */}
