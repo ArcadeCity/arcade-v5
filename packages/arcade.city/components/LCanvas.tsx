@@ -22,7 +22,8 @@ const LCanvas = () => {
           width: '100vw',
           height: '100vh',
           zIndex: 0,
-          backgroundColor: 'rgba(0,0,0,0.5)',
+          pointerEvents: 'none',
+          // backgroundColor: 'rgba(0,0,0,0.5)',
         }}
       >
         <Canvas shadows camera={{ position: [0, 25, 50], fov: 50 }}>
