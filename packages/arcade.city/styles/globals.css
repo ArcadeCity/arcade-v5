@@ -1,3 +1,12 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+@tailwind components;
+@tailwind utilities;
+
+/* @import './prism.css'; */
+
 html,
 body {
   padding: 0;
