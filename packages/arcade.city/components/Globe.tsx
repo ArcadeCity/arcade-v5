@@ -5,7 +5,7 @@ import lerp from 'lerp'
 
 export const Globe = () => {
   const group: any = useRef()
-  const globe = useTexture('/earth.jpg')
+  const globe = useTexture('/earthglow.png')
   // const globe = useTexture('/globe.png')
   useFrame(({ clock, mouse }) => {
     group.current.rotation.y += 0.001
