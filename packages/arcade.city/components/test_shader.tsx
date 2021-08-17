@@ -1,14 +1,10 @@
 import * as THREE from 'three'
 import { useFrame, extend } from '@react-three/fiber'
 import { useRef, useState } from 'react'
-// import useStore from '@/helpers/store'
 import { shaderMaterial } from '@react-three/drei'
 import glsl from 'glslify'
+import vertex from './glsl/shader.glsl'
 
-// @ts-ignore
-import vertex from './glsl/shader.vert'
-
-// yarn add -D glsl-random to try pragma
 const fragment = glsl`
   uniform float time;
   uniform vec3 color;
