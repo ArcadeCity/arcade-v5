@@ -21,7 +21,7 @@ export const Globe = () => {
     <group
       ref={group}
       scale={[2, 2, 2]}
-      position={[-1.5, -0.3, 0]}
+      position={[-0.15, 0, 0]}
       rotation={[-0.2, -0.7, 0]}
     >
       <mesh>
