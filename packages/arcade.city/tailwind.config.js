@@ -5,7 +5,7 @@ const mdx = require('@mdx-js/mdx')
 module.exports = {
   mode: 'jit',
   purge: {
-    safelist: ['container', 'main', 'arcade'],
+    safelist: ['container', 'main', 'header', 'arcade'],
     content: [
       './pages/**/*.{tsx,js,mdx}',
       './components/**/*.{tsx,js,mdx}',
