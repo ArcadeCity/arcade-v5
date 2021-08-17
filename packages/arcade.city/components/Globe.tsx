@@ -2,8 +2,8 @@ import React, { useRef } from 'react'
 import { useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
+import vertexShader from './glsl/vertex.glsl'
 import fragmentShader from './glsl/fragment.glsl'
-import lerp from 'lerp'
 
 export const Globe = () => {
   const group: any = useRef()
@@ -67,16 +67,16 @@ export const Globe = () => {
 //       vec3 blue = vec3(0.0, 0.0, 1.0);
 //       gl_FragColor = vec4(blue*phong(), 1.0);
 //   }`
-const vertexShader = `
-    varying vec3 Normal;
-    varying vec3 Position;
+// const vertexShader = `
+//     varying vec3 Normal;
+//     varying vec3 Position;
 
-    void main() {
-      Normal = normalize(normalMatrix * normal);
-      Position = vec3(modelViewMatrix * vec4(position, 1.0));
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    }
-  `
+//     void main() {
+//       Normal = normalize(normalMatrix * normal);
+//       Position = vec3(modelViewMatrix * vec4(position, 1.0));
+//       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+//     }
+//   `
 const uniforms = {
   // phong material uniforms
   Ka: { value: new THREE.Vector3(1, 1, 1) },
