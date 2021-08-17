@@ -31,7 +31,9 @@ export const Globe = () => {
         <shaderMaterial
           attach='material'
           uniforms={uniforms}
+          // @ts-ignore
           fragmentShader={fragmentShader}
+          // @ts-ignore
           vertexShader={vertexShader}
         />
       </mesh>
