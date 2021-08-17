@@ -9,7 +9,7 @@ import atmosphereFragmentShader from './glsl/atmosphereFragment.glsl'
 
 export const Globe = () => {
   const group: any = useRef()
-  const globe = useTexture('/earthglow.png')
+  const globe = useTexture('/earthglow2.png')
 
   const uniforms = {
     globeTexture: {

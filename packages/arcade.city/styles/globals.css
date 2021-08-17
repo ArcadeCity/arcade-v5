@@ -57,7 +57,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 38px;
+  font-size: 56px;
+  text-shadow: 2px 2px 4px #000000;
   /* color: #999; */
   /* font-family: monospace; */
   font-family: 'Josefin Sans';

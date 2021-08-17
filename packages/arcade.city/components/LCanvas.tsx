@@ -11,7 +11,7 @@ const LCanvas = () => {
   const router = useRouter()
   const location = router.pathname
   const props = useSpring({
-    intensity: location === '/' ? 0.6 : 0.3,
+    intensity: location === '/' ? 0.5 : 0.3,
     config: { duration: 1000 },
   })
   return (
