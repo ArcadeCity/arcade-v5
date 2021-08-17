@@ -4,6 +4,8 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import vertexShader from './glsl/vertex.glsl'
 import fragmentShader from './glsl/fragment.glsl'
+import atmosphereVertexShader from './glsl/atmosphereVertex.glsl'
+import atmosphereFragmentShader from './glsl/atmosphereFragment.glsl'
 
 export const Globe = () => {
   const group: any = useRef()
@@ -26,25 +28,40 @@ export const Globe = () => {
   })
 
   return (
-    <group
-      ref={group}
-      scale={[2, 2, 2]}
-      position={[-0.15, 0, 0]}
-      rotation={[-0.2, -0.7, 0]}
-    >
-      <mesh>
-        <sphereGeometry args={[5, 50, 50]} />
-        {/* <meshStandardMaterial map={globe} roughness={1} fog={false} /> */}
-        <shaderMaterial
-          attach='material'
-          uniforms={uniforms}
-          // @ts-ignore
-          fragmentShader={fragmentShader}
-          // @ts-ignore
-          vertexShader={vertexShader}
-        />
-      </mesh>
-    </group>
+    <>
+      <group
+        ref={group}
+        scale={[2, 2, 2]}
+        position={[-0.15, 0, 0]}
+        rotation={[-0.2, -0.7, 0]}
+      >
+        <mesh>
+          <sphereGeometry args={[5, 50, 50]} />
+          <shaderMaterial
+            attach='material'
+            uniforms={uniforms}
+            // @ts-ignore
+            fragmentShader={fragmentShader}
+            // @ts-ignore
+            vertexShader={vertexShader}
+          />
+        </mesh>
+      </group>
+      {/* <group scale={[2, 2, 2]} position={[-0.15, 0, 0]}>
+        <mesh scale={[1.05, 1.05, 1.05]}>
+          <sphereGeometry args={[5, 50, 50]} />
+          <shaderMaterial
+            attach='material'
+            // @ts-ignore
+            fragmentShader={atmosphereFragmentShader}
+            // @ts-ignore
+            vertexShader={atmosphereVertexShader}
+            // blending={THREE.AdditiveBlending}
+            side={THREE.BackSide}
+          />
+        </mesh>
+      </group> */}
+    </>
   )
 }
 
