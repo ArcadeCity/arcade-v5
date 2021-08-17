@@ -27,7 +27,7 @@ const LCanvas = () => {
           // backgroundColor: 'rgba(0,0,0,0.5)',
         }}
       >
-        <Canvas shadows camera={{ position: [0, 25, 45], fov: 50 }}>
+        <Canvas shadows camera={{ position: [0, 25, 70], fov: 50 }}>
           <fog attach='fog' args={['black', 0, 20]} />
           <a.pointLight position={[5, 13, 15]} intensity={props.intensity} />
           {/* <directionalLight position={[15, 15, 15]} /> */}
