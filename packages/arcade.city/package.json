@@ -32,11 +32,14 @@
     "@next/bundle-analyzer": "^10.0.8",
     "@types/react": "17.0.18",
     "@types/three": "^0.131.0",
+    "babel-plugin-glsl": "^1.0.0",
     "babel-plugin-react-native-web": "^0.13.14",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "feed": "^4.2.1",
     "file-loader": "^6.0.0",
+    "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
     "simple-functional-loader": "^1.2.1",
     "typescript": "4.3.5"
   }
