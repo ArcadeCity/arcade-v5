@@ -8,6 +8,13 @@ import fragmentShader from './glsl/fragment.glsl'
 export const Globe = () => {
   const group: any = useRef()
   const globe = useTexture('/earthglow.png')
+
+  const uniforms = {
+    globeTexture: {
+      value: globe,
+    },
+  }
+
   // const globe = useTexture('/globe.png')
   useFrame(({ clock, mouse }) => {
     group.current.rotation.y += 0.001
@@ -79,12 +86,12 @@ export const Globe = () => {
 //       gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 //     }
 //   `
-const uniforms = {
-  // phong material uniforms
-  Ka: { value: new THREE.Vector3(1, 1, 1) },
-  Kd: { value: new THREE.Vector3(1, 1, 1) },
-  Ks: { value: new THREE.Vector3(1, 1, 1) },
-  LightIntensity: { value: new THREE.Vector4(0.5, 0.5, 0.5, 1.0) },
-  LightPosition: { value: new THREE.Vector4(0.0, 2000.0, 0.0, 1.0) },
-  Shininess: { value: 200.0 },
-}
+// const uniforms = {
+//   // phong material uniforms
+//   Ka: { value: new THREE.Vector3(1, 1, 1) },
+//   Kd: { value: new THREE.Vector3(1, 1, 1) },
+//   Ks: { value: new THREE.Vector3(1, 1, 1) },
+//   LightIntensity: { value: new THREE.Vector4(0.5, 0.5, 0.5, 1.0) },
+//   LightPosition: { value: new THREE.Vector4(0.0, 2000.0, 0.0, 1.0) },
+//   Shininess: { value: 200.0 },
+// }
