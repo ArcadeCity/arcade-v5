@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { useFrame, extend } from '@react-three/fiber'
 import { useRef, useState } from 'react'
-import useStore from '@/helpers/store'
+// import useStore from '@/helpers/store'
 import { shaderMaterial } from '@react-three/drei'
 import glsl from 'glslify'
 
@@ -31,10 +31,10 @@ const ColorShiftMaterial = shaderMaterial(
 
 extend({ ColorShiftMaterial })
 
-const TestShader = (props) => {
-  const meshRef = useRef(null)
+const TestShader = (props: any) => {
+  const meshRef: any = useRef(null)
   const [hovered, setHover] = useState(false)
-  const router = useStore((state) => state.router)
+  // const router = useStore((state) => state.router)
 
   useFrame((state, delta) => {
     if (meshRef.current) {
@@ -49,9 +49,9 @@ const TestShader = (props) => {
   return (
     <mesh
       ref={meshRef}
-      scale={hovered ? 7 : 5}
+      scale={hovered ? 7 : 15}
       onClick={() => {
-        router.push(`/box`)
+        // router.push(`/box`)
       }}
       onPointerOver={(e) => setHover(true)}
       onPointerOut={(e) => setHover(false)}

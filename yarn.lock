@@ -11344,6 +11344,11 @@ glsl-noise@^0.0.0:
   resolved "https://registry.npmjs.org/glsl-noise/-/glsl-noise-0.0.0.tgz#367745f3a33382c0eeec4cb54b7e99cfc1d7670b"
   integrity sha1-NndF86MzgsDu7Ey1S36Zz8HXZws=
 
+glsl-random@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/glsl-random/-/glsl-random-0.0.5.tgz#bd00c8c1ab1f5587e5fe2d48e83c50c5b9798b5b"
+  integrity sha1-vQDIwasfVYfl/i1I6DxQxbl5i1s=
+
 glsl-resolve@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/glsl-resolve/-/glsl-resolve-0.0.1.tgz#894bef73910d792c81b5143180035d0a78af76d3"
@@ -17432,6 +17437,14 @@ raw-loader@^3.1.0:
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^2.0.1"
+
+raw-loader@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/raw-loader/-/raw-loader-4.0.2.tgz#1aac6b7d1ad1501e66efdac1522c73e59a584eb6"
+  integrity sha512-ZnScIV3ag9A4wPX/ZayxL/jZH+euYb6FcUinPcgiQW0+UBtEv0O6Q3lGd3cqJ+GHH+rksEv3Pj99oxJ3u3VIKA==
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^3.0.0"
 
 rbush@^3.0.1:
   version "3.0.1"

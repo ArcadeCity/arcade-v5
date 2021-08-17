@@ -5,6 +5,7 @@ import { Html, Stars } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
 import { Globe } from './Globe'
+import Testo from './test_shader'
 
 const LCanvas = () => {
   const router = useRouter()
@@ -33,7 +34,8 @@ const LCanvas = () => {
           {/* <ambientLight /> */}
           <Suspense fallback={<Html center className='loader'></Html>}>
             {/* <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} /> */}
-            <Globe />
+            {/* <Globe /> */}
+            <Testo />
           </Suspense>
           <Stars
             radius={100}
