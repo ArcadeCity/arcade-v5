@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { shaderMaterial } from '@react-three/drei'
 import glsl from 'glslify'
 import vertex from './glsl/shader.glsl'
+import atmosphereFragment from './glsl/atmosphereFragment.glsl'
 
 const fragment = glsl`
   uniform float time;

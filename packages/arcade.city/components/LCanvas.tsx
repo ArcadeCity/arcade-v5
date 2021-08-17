@@ -34,8 +34,8 @@ const LCanvas = () => {
           {/* <ambientLight /> */}
           <Suspense fallback={<Html center className='loader'></Html>}>
             {/* <Model position={[0, -6, 0]} rotation={[0, -0.2, 0]} /> */}
-            {/* <Globe /> */}
-            <Testo />
+            <Globe />
+            {/* <Testo /> */}
           </Suspense>
           <Stars
             radius={100}
