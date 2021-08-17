@@ -6,7 +6,7 @@ import { Navbar } from '../components/Navbar'
 
 const City: NextPage = () => {
   return (
-    <div className='container'>
+    <div className='container2'>
       <Navbar />
       <View style={{ flex: 1, width: '100vw', height: '100vh' }}>
         <CityWeb />

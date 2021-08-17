@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Blog: NextPage = () => {
   return (
-    <div className='container'>
+    <div className='container2'>
       <div
         className='absolute w-full h-screen px-4 sm:px-6 lg:px-8 py-16 overflow-y-auto'
         style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
