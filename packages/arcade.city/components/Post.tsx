@@ -15,7 +15,7 @@ export default function Post({ meta, children, posts }: any) {
   return (
     <div
       className='absolute w-full h-screen px-4 sm:px-6 lg:px-8 py-16 overflow-y-auto'
-      style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
+      style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}
     >
       <Navbar />
       <div className='pt-28 text-lg max-w-prose mx-auto'>
