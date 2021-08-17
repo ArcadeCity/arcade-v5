@@ -29,7 +29,7 @@ const LCanvas = () => {
       >
         <Canvas shadows camera={{ position: [0, 25, 45], fov: 50 }}>
           <fog attach='fog' args={['black', 0, 20]} />
-          <a.pointLight position={[5, 13, 15]} intensity={props.intensity} />
+          <a.pointLight position={[5, 13, 15]} intensity={0.5} />
           {/* <directionalLight position={[15, 15, 15]} /> */}
           {/* <ambientLight /> */}
           <Suspense fallback={<Html center className='loader'></Html>}>
