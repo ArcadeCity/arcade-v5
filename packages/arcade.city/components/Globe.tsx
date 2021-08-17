@@ -47,8 +47,8 @@ export const Globe = () => {
           />
         </mesh>
       </group>
-      {/* <group scale={[2, 2, 2]} position={[-0.15, 0, 0]}>
-        <mesh scale={[1.05, 1.05, 1.05]}>
+      <group scale={[2, 2, 2]} position={[-0.15, 0, 0]}>
+        <mesh scale={[1.03, 1.03, 1.03]}>
           <sphereGeometry args={[5, 50, 50]} />
           <shaderMaterial
             attach='material'
@@ -60,7 +60,7 @@ export const Globe = () => {
             side={THREE.BackSide}
           />
         </mesh>
-      </group> */}
+      </group>
     </>
   )
 }
