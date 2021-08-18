@@ -5,7 +5,6 @@ import { Html, Stars } from '@react-three/drei'
 import { useSpring } from '@react-spring/core'
 import { a } from '@react-spring/three'
 import { Globe } from './Globe'
-import Testo from './test_shader'
 
 const LCanvas = () => {
   const router = useRouter()
@@ -27,7 +26,7 @@ const LCanvas = () => {
           // backgroundColor: 'rgba(0,0,0,0.5)',
         }}
       >
-        <Canvas shadows camera={{ position: [0, 25, 70], fov: 50 }}>
+        <Canvas shadows camera={{ position: [0, 25, 60], fov: 50 }}>
           <fog attach='fog' args={['black', 0, 20]} />
           <a.pointLight position={[5, 13, 15]} intensity={props.intensity} />
           {/* <directionalLight position={[15, 15, 15]} /> */}
