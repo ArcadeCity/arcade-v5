@@ -6,6 +6,7 @@ import { magic, provider } from '../../services/magic'
 import { palette } from '../../views/theme/palette'
 import { ethers } from 'ethers'
 import useInterval from './useInterval'
+import { ImperviousWebsockets } from './ImperviousWebsockets'
 
 const ceramic = new Ceramic()
 let LightningWallet: any = null
@@ -259,6 +260,7 @@ export const WalletApp = () => {
                 title='Login'
                 color={palette.electricIndigo}
               />
+              <ImperviousWebsockets />
             </div>
           ) : null}
         </View>
@@ -267,7 +269,7 @@ export const WalletApp = () => {
   )
 }
 
-const TEXT: TextStyle = {
+export const TEXT: TextStyle = {
   color: 'white',
   fontFamily: 'monospace',
   marginVertical: 3,
