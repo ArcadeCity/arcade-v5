@@ -128,7 +128,7 @@ export const WalletApp = () => {
           overflow: 'scroll',
         }}
       >
-        <View style={{ width: '100%', maxWidth: 400 }}>
+        <View style={{ width: '100%', maxWidth: 440 }}>
           {balance && (
             <Text
               style={{
