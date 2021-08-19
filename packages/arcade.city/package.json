@@ -9,22 +9,40 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.0",
+    "@mdx-js/loader": "^1.6.22",
     "@react-spring/core": "^9.2.4",
     "@react-spring/three": "^9.2.4",
     "@react-three/drei": "7.3.1",
     "@react-three/fiber": "7.0.6",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
     "lerp": "1.0.3",
     "next": "11.1.0",
+    "postcss": "^8.2.8",
+    "prismjs": "^1.23.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-native-web": "^0.13.14"
+    "react-native-web": "^0.13.14",
+    "tailwindcss": "^2.2.0-canary.16",
+    "tinytime": "^0.2.6"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^10.0.8",
     "@types/react": "17.0.18",
     "@types/three": "^0.131.0",
+    "babel-plugin-glsl": "^1.0.0",
     "babel-plugin-react-native-web": "^0.13.14",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
+    "feed": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "glsl-random": "^0.0.5",
+    "glslify": "^7.1.1",
+    "glslify-loader": "^2.0.0",
+    "raw-loader": "^4.0.2",
+    "simple-functional-loader": "^1.2.1",
     "typescript": "4.3.5"
   }
 }
