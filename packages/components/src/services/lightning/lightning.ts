@@ -36,7 +36,10 @@ export class Lightning {
     } catch (Err) {
       // setIsLoading(false)
       console.warn('lnd create failure', Err)
-      return Alert.alert(Err)
+      return false
+      // alert(Err)
+      //
+      // return Alert.alert(Err)
       // giving app, not adding anything
     }
     // A(A.ENUM.CREATED_LIGHTNING_WALLET)
