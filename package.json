@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "yarn workspaces run clean",
     "watch": "rm -rf packages/components/dist && yarn workspace @arcadecity/components compile -w",
-    "dev": "yarn run dev:arcade.city",
+    "dev": "yarn run dev:wallet",
     "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
