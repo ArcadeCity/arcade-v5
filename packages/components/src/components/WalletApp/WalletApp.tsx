@@ -12,6 +12,18 @@ const ceramic = new Ceramic()
 let LightningWallet: any = null
 
 export const WalletApp = () => {
+  const [subscribed, setSubscribed] = useState(true)
+
+  // useEffect(() => {
+  //   console.log('attempting connect')
+  //   fetch('http://127.0.0.1:8882/v1/subscribe', {
+  //     method: 'GET',
+  //   }).then((res) => {
+  //     console.log(res)
+  //     setSubscribed(true)
+  //   })
+  // }, [])
+
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>(null)
   const [lightningWallet, setLightningWallet] = useState<any>(null)
@@ -260,7 +272,7 @@ export const WalletApp = () => {
                 title='Login'
                 color={palette.electricIndigo}
               />
-              <ImperviousWebsockets />
+              {subscribed && <ImperviousWebsockets />}
             </div>
           ) : null}
         </View>

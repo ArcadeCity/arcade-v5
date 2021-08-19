@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Text, View } from 'react-native'
 import { palette } from '../../views/theme/palette'
 import { TEXT } from './WalletApp'
@@ -6,9 +6,9 @@ import useWebSocket, { ReadyState } from 'react-use-websocket'
 
 export const ImperviousWebsockets = () => {
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    'ws://127.0.0.1:8884'
+    'ws://127.0.0.1:8882/v1/subscribe'
   )
-
+  // http://127.0.0.1:8882/v1/subscribe
   const connectionStatus = {
     [ReadyState.CONNECTING]: 'Connecting',
     [ReadyState.OPEN]: 'Open',
@@ -18,8 +18,8 @@ export const ImperviousWebsockets = () => {
   }[readyState]
 
   // console.log(sendMessage)
-  console.log(lastMessage)
-  console.log(readyState)
+  // console.log(lastMessage)
+  // console.log(readyState)
 
   return (
     <View
