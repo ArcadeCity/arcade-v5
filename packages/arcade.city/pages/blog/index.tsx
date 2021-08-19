@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { Navbar } from '../../components/Navbar'
 import Link from 'next/link'
 import Image from 'next/image'
-import imgBitcoin from './bitcoin-first/card.jpg'
+import imgBitcoin from './bitcoin-first/bitcoincar.png'
 import image from './antidote/authoritarian2.png'
 
 const Blog: NextPage = () => {
