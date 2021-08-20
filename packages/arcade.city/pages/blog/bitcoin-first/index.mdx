@@ -1,24 +1,38 @@
-import image from './card.jpg'
+import imgBitcoin from './bitcoin.png'
+import imgQuestions from './questions.png'
 import Link from 'next/link'
+import Image from 'next/image'
+import { IMGCONTAINER } from '../'
 
 export const meta = {
   title: 'Bitcoin First',
-  description: `One of the things we believe as a team is that everything we make should be sealed with a blog post. Forcing ourselves to write up a short announcement post for every project we work on acts as a built-in quality check, making sure that we never call a project "done" until we feel comfortable telling the world it's out there. The problem was that up until today, we didn't actually have anywhere to publish those posts!`,
+  description: `Arcade City is pivoting to build on Bitcoin. All serious builders should do the same.`,
   date: '2021-08-19T18:00:00Z',
   authors: [],
-  image,
+  image: imgBitcoin,
   discussion: 'https://github.com/tailwindcss/tailwindcss/discussions/1987',
 }
 
 <p className='text-center italic text-xl leading-relaxed'>
-  We are pivoting to build on Bitcoin.
+  Arcade City is pivoting to build on Bitcoin.
   <br />
   All serious builders should do the same.
 </p>
 
+<div style={{ ...IMGCONTAINER, height: 300, marginBottom: 40 }}>
+  <Image
+    className='h-64 w-full object-cover object-center rounded-lg'
+    src={imgBitcoin}
+    alt=''
+    layout='fill'
+    objectFit='cover'
+  />
+</div>
+
 Old-world institutions are [collapsing](https://tftc.io/martys-bent/issue-1057) before our eyes.
 
-Millions of people suffer for lack of alternatives to the old systems &mdash; a number sure to grow as instability spreads.
+Millions of people suffer for lack of alternatives to the old systems &mdash; a number sure to grow
+as instability spreads.
 
 A new world must be built **now**.
 
@@ -30,7 +44,7 @@ Contours of that new world are becoming clear:
 - Nation-states will be [decentralized or dissolved](https://twitter.com/woonomic/status/1427172525100912640).
 - All people will be [included](https://twitter.com/jack/status/1426521682538344451).
 
-Now **you** have a choice to make: **_Will you help &mdash; and how?_**
+Now you have a choice to make: **_Will you help &mdash; and how?_**
 
 ## Our Bitcoin Pivot
 
@@ -62,8 +76,35 @@ into new countries like El Salvador, offering financial inclusion to millions wh
 Arcade City similarly aims to liberate and empower millions of service providers around
 the world, especially in areas ignored by legacy corporations and governments.
 
-And so we believe the Bitcoin ecosystem to be our rightful home.
+We believe the Bitcoin ecosystem to be our rightful home.
 
-<!-- ## Our Bitcoin Strategy -->
+## Building on Bitcoin
 
-<!-- Bitcoin's layer three is already powering decentralized applications. -->
+Bitcoin's layer three, built on top of the Lightning Network, is already supporting decentralized applications
+featuring instant payments, encrypted messaging, and uncensorable peer-to-peer interactions.
+
+<div className='aspect-w-16 aspect-h-9 my-12'>
+  <iframe
+    src='https://www.youtube.com/embed/OoM4Wx8er3Y'
+    frameBorder='0'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    allowFullScreen
+  ></iframe>
+</div>
+
+Arcade City is building on Bitcoin's layer three starting now. Watch:
+
+<div className='aspect-w-16 aspect-h-9 my-12'>
+  <iframe
+    src='https://www.youtube.com/embed/c4swIVAnQ9w'
+    frameBorder='0'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    allowFullScreen
+  ></iframe>
+</div>
+
+No castle should be built on shifting sands.
+
+Arcade City is building on Bitcoin.
+
+Stay tuned.
