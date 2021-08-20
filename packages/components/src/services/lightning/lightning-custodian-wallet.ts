@@ -3,7 +3,7 @@ import { LegacyWallet } from './legacy-wallet'
 import Frisbee from 'frisbee'
 import bolt11 from 'bolt11'
 import { BitcoinUnit, Chain } from './bitcoinUnits'
-import * as torrific from './torrific'
+// import * as torrific from './torrific'
 
 export class LightningCustodianWallet extends LegacyWallet {
   static type = 'lightningCustodianWallet'
@@ -73,15 +73,15 @@ export class LightningCustodianWallet extends LegacyWallet {
       baseURI: this.baseURI,
     })
 
-    if (
-      isTorCapable &&
-      this.baseURI &&
-      this.baseURI?.indexOf('.onion') !== -1
-    ) {
-      this._api = new torrific.Torsbee({
-        baseURI: this.baseURI,
-      })
-    }
+    // if (
+    //   isTorCapable &&
+    //   this.baseURI &&
+    //   this.baseURI?.indexOf('.onion') !== -1
+    // ) {
+    //   this._api = new torrific.Torsbee({
+    //     baseURI: this.baseURI,
+    //   })
+    // }
   }
 
   accessTokenExpired() {
@@ -689,13 +689,9 @@ export class LightningCustodianWallet extends LegacyWallet {
 
   static async isValidNodeAddress(address) {
     const isTor = address.indexOf('.onion') !== -1
-    const apiCall = isTor
-      ? new torrific.Torsbee({
-          baseURI: address,
-        })
-      : new Frisbee({
-          baseURI: address,
-        })
+    const apiCall = new Frisbee({
+      baseURI: address,
+    })
     const response = await apiCall.get('/getinfo', {
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -821,13 +817,15 @@ tx:
  */
 
 const getIsTorCapable = () => {
-  let capable = true
-  if (Platform.OS === 'android' && Platform.Version < 26) {
-    capable = false
-  }
+  // assume desktop
+  return false
+  // let capable = true
+  // if (Platform.OS === 'android' && Platform.Version < 26) {
+  //   capable = false
+  // }
   // else if (isDesktop) {
   //   capable = false
   // }
   return capable
 }
-isTorCapable = getIsTorCapable()
+let isTorCapable = getIsTorCapable()

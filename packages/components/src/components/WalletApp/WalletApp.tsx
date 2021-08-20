@@ -1,20 +1,29 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Button, Text, TextStyle, View } from 'react-native'
-import {
-  Ceramic,
-  Lightning,
-  LightningCustodianWallet,
-  magic,
-  provider,
-} from 'services'
-import { palette } from 'views/theme'
+import { Ceramic } from '../../services/ceramic'
+import { Lightning, LightningCustodianWallet } from '../../services/lightning'
+import { magic, provider } from '../../services/magic'
+import { palette } from '../../views/theme/palette'
 import { ethers } from 'ethers'
 import useInterval from './useInterval'
+import { ImperviousWebsockets } from './ImperviousWebsockets'
 
 const ceramic = new Ceramic()
 let LightningWallet: any = null
 
 export const WalletApp = () => {
+  const [subscribed, setSubscribed] = useState(true)
+
+  // useEffect(() => {
+  //   console.log('attempting connect')
+  //   fetch('http://127.0.0.1:8882/v1/subscribe', {
+  //     method: 'GET',
+  //   }).then((res) => {
+  //     console.log(res)
+  //     setSubscribed(true)
+  //   })
+  // }, [])
+
   const [email, setEmail] = useState('')
   const [userMetadata, setUserMetadata] = useState<any>(null)
   const [lightningWallet, setLightningWallet] = useState<any>(null)
@@ -132,7 +141,7 @@ export const WalletApp = () => {
           overflow: 'scroll',
         }}
       >
-        <View style={{ width: '100%', maxWidth: 400 }}>
+        <View style={{ width: '100%', maxWidth: 440 }}>
           {balance && (
             <Text
               style={{
@@ -145,14 +154,16 @@ export const WalletApp = () => {
           )}
 
           <Text style={{ ...TEXT, fontSize: 20 }}>
-            Wallet demo: Magic+Lightning+Ceramic
+            Wallet demo: Magic+Lightning+Ceramic+Impervious
           </Text>
           <Text style={{ ...TEXT, marginVertical: 15 }}>
             Log in with an email address via Magic, create a Lightning wallet
-            via LNDHub, store its secret on Ceramic testnet.
+            via LNDHub, store its secret on Ceramic testnet, and send P2P
+            messages via Impervious.
           </Text>
           <Text style={{ ...TEXT, marginBottom: 15, fontWeight: 'bold' }}>
-            ...enabling easy Lightning usage by non-technical users.
+            ...enabling easy Lightning usage and secure payments+messagesby
+            non-technical users.
           </Text>
           <a href='https://github.com/ArcadeCity/arcade' target='_blank'>
             <Text style={TEXT}>[Source]</Text>
@@ -261,6 +272,7 @@ export const WalletApp = () => {
                 title='Login'
                 color={palette.electricIndigo}
               />
+              {subscribed && <ImperviousWebsockets />}
             </div>
           ) : null}
         </View>
@@ -269,7 +281,7 @@ export const WalletApp = () => {
   )
 }
 
-const TEXT: TextStyle = {
+export const TEXT: TextStyle = {
   color: 'white',
   fontFamily: 'monospace',
   marginVertical: 3,

@@ -6,7 +6,8 @@ export const init = async (self: WalletStore) => {
   // self.env.ceramic.authenticate(null)
   // return false
 
-  const wallet = checkForWallet() ?? (await self.env.lightning.createWallet())
+  const wallet: any =
+    checkForWallet() ?? (await self.env.lightning.createWallet())
 
   if (!!wallet && wallet.isNew) {
     await self.env.ceramic.authenticate(null)

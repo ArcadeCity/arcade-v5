@@ -281,7 +281,7 @@ class TorSocket {
   }
 }
 
-module.exports.getDaemonStatus = async () => {
+export const getDaemonStatus = async () => {
   try {
     return await tor.getDaemonStatus()
   } catch (_) {
@@ -289,7 +289,7 @@ module.exports.getDaemonStatus = async () => {
   }
 }
 
-module.exports.stopIfRunning = async () => {
+export const stopIfRunning = async () => {
   try {
     Torsbee._testConn = false
     return await tor.stopIfRunning()
@@ -298,7 +298,7 @@ module.exports.stopIfRunning = async () => {
   }
 }
 
-module.exports.startIfNotStarted = async () => {
+export const startIfNotStarted = async () => {
   try {
     return await tor.startIfNotStarted()
   } catch (_) {
@@ -306,12 +306,12 @@ module.exports.startIfNotStarted = async () => {
   }
 }
 
-module.exports.testSocket = async () => {
+export const testSocket = async () => {
   const c = new Torsbee()
   return c.testSocket()
 }
 
-module.exports.testHttp = async () => {
+export const testHttp = async () => {
   const api = new Torsbee({
     baseURI:
       'http://explorerzydxu5ecjrkwceayqybizmpjjznk5izmitf2modhcusuqlid.onion:80/',
@@ -332,5 +332,5 @@ module.exports.testHttp = async () => {
     throw new Error('TOR failure, got ' + JSON.stringify(torResponse))
 }
 
-module.exports.Torsbee = Torsbee
-module.exports.Socket = TorSocket
+export { Torsbee }
+export const Socket = TorSocket
