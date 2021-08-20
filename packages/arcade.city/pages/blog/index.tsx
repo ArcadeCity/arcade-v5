@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { Navbar } from '../../components/Navbar'
 import Link from 'next/link'
 import Image from 'next/image'
-import imgBitcoin from './bitcoin-first/bitcoincar.png'
+import imgBitcoin from './bitcoin-first/bitcoin.png'
 import image from './antidote/authoritarian2.png'
 
 const Blog: NextPage = () => {
@@ -39,7 +39,7 @@ const Blog: NextPage = () => {
                         <time dateTime='2021-08-01'>August 19, 2021</time>
                       </div>
                       <p className='mt-4 text-base text-gray-900'>
-                        We are pivoting to build on Bitcoin. All serious
+                        Arcade City is pivoting to build on Bitcoin. All serious
                         builders should do the same.
                       </p>
                     </div>
@@ -100,7 +100,7 @@ const Blog: NextPage = () => {
 
 export default Blog
 
-const IMGCONTAINER: any = {
+export const IMGCONTAINER: any = {
   width: '100%',
   height: 250,
   position: 'relative',

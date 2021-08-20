@@ -1,20 +1,33 @@
-import image from './card.jpg'
+import imgBitcoin from './bitcoin.png'
+import imgQuestions from './questions.png'
 import Link from 'next/link'
+import Image from 'next/image'
+import { IMGCONTAINER } from '../'
 
 export const meta = {
   title: 'Bitcoin First',
-  description: `One of the things we believe as a team is that everything we make should be sealed with a blog post. Forcing ourselves to write up a short announcement post for every project we work on acts as a built-in quality check, making sure that we never call a project "done" until we feel comfortable telling the world it's out there. The problem was that up until today, we didn't actually have anywhere to publish those posts!`,
+  description: `Arcade City is pivoting to build on Bitcoin. All serious builders should do the same.`,
   date: '2021-08-19T18:00:00Z',
   authors: [],
-  image,
+  image: imgBitcoin,
   discussion: 'https://github.com/tailwindcss/tailwindcss/discussions/1987',
 }
 
 <p className='text-center italic text-xl leading-relaxed'>
-  We are pivoting to build on Bitcoin.
+  Arcade City is pivoting to build on Bitcoin.
   <br />
   All serious builders should do the same.
 </p>
+
+<div style={{ ...IMGCONTAINER, height: 300, marginBottom: 40 }}>
+  <Image
+    className='h-64 w-full object-cover object-center rounded-lg'
+    src={imgBitcoin}
+    alt=''
+    layout='fill'
+    objectFit='cover'
+  />
+</div>
 
 Old-world institutions are [collapsing](https://tftc.io/martys-bent/issue-1057) before our eyes.
 
@@ -70,17 +83,24 @@ We believe the Bitcoin ecosystem to be our rightful home.
 Bitcoin's [layer three](https://www.youtube.com/watch?v=OoM4Wx8er3Y), built on top of the Lightning Network, is already supporting decentralized applications
 featuring instant payments, encrypted messaging, and uncensorable peer-to-peer interactions.
 
-Should we build on it? Here are the questions we've recently [asked and answered](https://www.youtube.com/watch?v=c4swIVAnQ9w):
+<div className='aspect-w-16 aspect-h-9 my-12'>
+  <iframe
+    src='https://www.youtube.com/embed/OoM4Wx8er3Y'
+    frameBorder='0'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    allowFullScreen
+  ></iframe>
+</div>
 
-The answers are:
+Arcade City is building on Bitcoin's layer three starting now. Watch:
 
-1. Yes. Uncensorable transactions are paramount. Bonus utility from the new feature of encoding application-specific
-   metadata into Lightning transactions, so entire chat and podcasting apps can be built on top of it. (See Sphinx Chat
-   for a working example in production now.)
-2. Yes. Production applications are already demonstrating the power of layer three.
-3. Yes. We've identified an architecture allowing non-technical users to easily onboard to Lightning.
-4. Not at all. The technology is ready. We've identified a network topology that will get us started.
-5. Yes. The layer three platform of Impervious will abstract away a lot of the Lightning-specific usage.
+<div className='aspect-w-16 aspect-h-9 my-12'>
+  <iframe
+    src='https://www.youtube.com/embed/c4swIVAnQ9w'
+    frameBorder='0'
+    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    allowFullScreen
+  ></iframe>
+</div>
 
-We've done this research in the context of preparing the next major version of our mobile app, v5.1 adding payments.
-Debating to what extent
+We'll announce updated product plans in the coming weeks.
