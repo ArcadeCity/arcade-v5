@@ -21,7 +21,7 @@ export default function Post({ meta, children, posts }: any) {
         <meta property='og:description' content={meta.description} />
         <meta
           property='og:image'
-          content={`https://arcade.city/${meta.image}`}
+          content={`https://arcade.city${meta.image}`}
         />
         <meta name='twitter:site' content='@ArcadeCityHall' />
         <meta name='twitter:creator' content='@ArcadeCityHall' />
@@ -31,7 +31,7 @@ export default function Post({ meta, children, posts }: any) {
         <meta name='twitter:card' content='summary_large_image' />
         <meta
           name='twitter:image'
-          content={`https://arcade.city/${meta.image}`}
+          content={`https://arcade.city${meta.image}`}
         />
       </Head>
       <div
