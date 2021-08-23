@@ -33,6 +33,42 @@ const Blog: NextPage = () => {
                   <div className='flex-1'>
                     <div className='block mt-1'>
                       <p className='text-xl font-semibold text-gray-900'>
+                        Bitcoin Fixes OnlyFans
+                      </p>
+                      <div className='mt-1 flex space-x-1 text-sm text-gray-900'>
+                        <time dateTime='2021-08-23'>August 23, 2021</time>
+                      </div>
+                      <p className='mt-4 text-base text-gray-900'>
+                        Arcade City is pivoting to build on Bitcoin. All serious
+                        builders should do the same.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <Link href='/blog/bitcoin-first' passHref>
+              <div
+                style={{ maxWidth: 500 }}
+                className='shadow-xl cursor-pointer flex flex-col rounded-lg overflow-hidden border-2 border-white'
+              >
+                <div className='flex-shrink-0 bg-purple'>
+                  <div style={IMGCONTAINER}>
+                    <Image
+                      className='h-48 w-full object-cover object-center'
+                      src={imgBitcoin}
+                      alt=''
+                      layout='fill'
+                      objectFit='cover'
+                    />
+                  </div>
+                </div>
+
+                <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
+                  <div className='flex-1'>
+                    <div className='block mt-1'>
+                      <p className='text-xl font-semibold text-gray-900'>
                         Bitcoin First
                       </p>
                       <div className='mt-1 flex space-x-1 text-sm text-gray-900'>
