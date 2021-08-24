@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { Navbar } from '../../components/Navbar'
 import Link from 'next/link'
 import Image from 'next/image'
+import imgOnlysats from './onlysats/onlysats3.png'
 import imgBitcoin from './bitcoin-first/bitcoin.png'
 import image from './antidote/authoritarian2.png'
 
@@ -12,16 +13,16 @@ const Blog: NextPage = () => {
         <Navbar />
         <div className='mt-24 max-w-3xl mx-auto'>
           <div className='mt-12 w-lg max-w-lg mx-auto grid gap-8 lg:grid-cols-2 lg:max-w-none'>
-            <Link href='/blog/bitcoin-first' passHref>
+            <Link href='/blog/onlysats' passHref>
               <div
-                style={{ maxWidth: 500 }}
+                style={{ minWidth: 500, maxWidth: 500 }}
                 className='shadow-xl cursor-pointer flex flex-col rounded-lg overflow-hidden border-2 border-white'
               >
                 <div className='flex-shrink-0 bg-purple'>
                   <div style={IMGCONTAINER}>
                     <Image
-                      className='h-48 w-full object-cover object-center'
-                      src={imgBitcoin}
+                      className='h-48 w-full object-cover object-top'
+                      src={imgOnlysats}
                       alt=''
                       layout='fill'
                       objectFit='cover'
@@ -33,14 +34,14 @@ const Blog: NextPage = () => {
                   <div className='flex-1'>
                     <div className='block mt-1'>
                       <p className='text-xl font-semibold text-gray-900'>
-                        Bitcoin Fixes OnlyFans
+                        OnlySats
                       </p>
                       <div className='mt-1 flex space-x-1 text-sm text-gray-900'>
-                        <time dateTime='2021-08-23'>August 23, 2021</time>
+                        <time dateTime='2021-08-24'>August 24, 2021</time>
                       </div>
                       <p className='mt-4 text-base text-gray-900'>
-                        Arcade City is pivoting to build on Bitcoin. All serious
-                        builders should do the same.
+                        Sex workers deserve to make a stable living without fear
+                        of deplatforming. Bitcoin fixes this.
                       </p>
                     </div>
                   </div>

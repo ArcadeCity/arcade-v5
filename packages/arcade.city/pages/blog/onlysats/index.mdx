@@ -1,0 +1,78 @@
+import imgOnlyfans from './onlysats3.png'
+import imgOnlysats from './onlysats.png'
+import imgQuestions from './questions.png'
+import Link from 'next/link'
+import Image from 'next/image'
+import { IMGCONTAINER } from '../'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
+
+export const meta = {
+  title: 'OnlySats',
+  description: `Sex workers deserve to make a stable living without fear of deplatforming. Bitcoin fixes this.`,
+  date: '2021-08-24T18:00:00Z',
+  authors: [],
+  image: imgOnlyfans,
+  discussion: 'https://github.com/tailwindcss/tailwindcss/discussions/1987',
+}
+
+<p className='text-center italic text-xl leading-relaxed px-4'>
+  Sex workers deserve to make a stable living without fear of deplatforming.
+  Bitcoin fixes this.
+</p>
+
+<div style={{ ...IMGCONTAINER, height: 380, marginBottom: 40 }}>
+  <Image
+    className='h-64 w-full object-cover object-center rounded-lg'
+    src={imgOnlyfans}
+    alt=''
+    layout='fill'
+    objectFit='cover'
+  />
+</div>
+
+A story in three tweets:
+
+<div className='mt-4 mb-6'>
+  <TwitterTweetEmbed
+    tweetId={'1428421204055052296'}
+    options={{ cards: 'hidden', conversation: 'none', align: 'center' }}
+  />
+  <TwitterTweetEmbed
+    tweetId={'1428431603131428871'}
+    options={{ cards: 'hidden', conversation: 'none', align: 'center' }}
+  />
+  <TwitterTweetEmbed
+    tweetId={'1429119316926943235'}
+    options={{ conversation: 'none', align: 'center' }}
+  />
+</div>
+
+Bitcoin fixes this.
+
+<div style={{ ...IMGCONTAINER, height: 380, marginBottom: 40 }}>
+  <Image
+    className='h-64 w-full object-cover object-top rounded-lg'
+    src={imgOnlysats}
+    alt=''
+    layout='fill'
+    objectFit='cover'
+  />
+</div>
+
+At this weekend's [pleb.fi Austin](https://pleb.fi/austin/) Bitcoin hackathon,
+we built a prototype for [OnlySats](https://github.com/ArcadeCity/onlysats) &mdash;
+a basic version of OnlyFans powered by the [Lightning Network](https://tftc.io/martys-bent/issue-1061/).
+
+We were excited to [win third place](https://twitter.com/JeremyRubin/status/1429624590255415299)
+&mdash; but more importantly, excited to connect with other teams already building
+infrastructure to support a full-fledged Bitcoin version of OnlyFans.
+
+Arcade City won't be leading the charge on this one. But we are intent on helping it
+come to fruition.
+
+The Bitcoin community must send a message to sex workers, and to everyone vulnerable or
+uncertain about how to make a stable living:
+
+**If you fall out of the old economy, we will catch you.**
+
+Stay tuned.
