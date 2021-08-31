@@ -70,6 +70,7 @@ const App = () => {
       zoomLevel: initialZoomLevel,
     }))
 
+    map.renderLabels = false
     map.addDataSource(baseMap)
     // map
     //   .addDataSource(geoJsonDataSource)
