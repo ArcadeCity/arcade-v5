@@ -1426,7 +1426,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.2,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "runway",
@@ -1439,7 +1439,7 @@
         "technique": "fill",
         "renderOrder": 20,
         "final": true,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "aerodrome",
@@ -1451,7 +1451,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.3,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "national_park",
@@ -1463,7 +1463,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "pitch",
@@ -1487,7 +1487,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.1,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "cemetery",
@@ -1527,7 +1527,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "religion",
@@ -1539,7 +1539,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "industrial",
@@ -1558,7 +1558,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "farmyard",
@@ -1577,7 +1577,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "beach",
@@ -1593,7 +1593,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#150f2b"
+        "color": "#1c133b"
       },
       {
         "description": "Earth layer",
