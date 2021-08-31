@@ -1,7 +1,14 @@
 {
-  "name": "harp.gl-react-example",
-  "version": "0.2.0",
+  "name": "@arcadecity/explorer",
+  "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:harp-gl-decoder": "webpack -p --config ./harp-gl-decoder.config.js"
+  },
   "dependencies": {
     "@here/harp-datasource-protocol": "0.16.0",
     "@here/harp-fontcatalog": "0.1.5",
@@ -15,13 +22,6 @@
     "react-dom": "16.13.1",
     "react-scripts": "3.4.1",
     "three": "0.117.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:harp-gl-decoder": "webpack -p --config ./harp-gl-decoder.config.js"
   },
   "eslintConfig": {
     "extends": "react-app"
