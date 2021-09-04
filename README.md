@@ -8,6 +8,8 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 **Soon:** The Arcade, an open peer-to-peer services ecosystem on Bitcoin.
 
+See [Bitcoinizing Arcade City](docs/bitcoinizing.md) for current thoughts on Bitcoin/Lightning architecture.
+
 ## Why
 
 Transportation, deliveries, housing, food, finance, energy, infrastructure, governance: all can and should be provided peer-to-peer with no government involvement.
