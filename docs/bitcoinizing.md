@@ -51,7 +51,7 @@ See the [main README](https://github.com/ArcadeCity/arcade/blob/main/README.md) 
   - Adds chat on top of Lightning
   - Potential for chat interoperability between Lightning projects
 - [Lightning.Page](https://lightning.page/)
-  - Wizard to launch a node
+  - [Desktop wizard](https://github.com/shocknet/Wizard) to launch a node
 - [Diagon Alley](https://www.youtube.com/watch?v=GeaFTblOmNA)
   - Censorship-resistant market stalls / storefronts
 - [Impervious](https://www.impervious.ai/)
