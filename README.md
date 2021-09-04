@@ -4,7 +4,7 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 ## What
 
-**Now:** Arcade City, a peer-to-peer services app for [Android](https://play.google.com/store/apps/details?id=arcade.city.mobile) and [iOS](https://apps.apple.com/us/app/arcade-city/id1082799882).
+**Now:** Arcade City, a peer-to-peer services app for Android and iOS. _(Removed from app stores 2021-09-04 while we refactor for v5.1.)_
 
 **Soon:** The Arcade, an open peer-to-peer services ecosystem on Bitcoin.
 
