@@ -46,7 +46,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - [MobX State Tree](https://github.com/mobxjs/mobx-state-tree) _(State management)_
 - [Magic](https://magic.link/) _(Authentication)_
 - [Ceramic](https://ceramic.network/) _(Data storage)_
-- [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) and [Impervious](https://www.impervious.ai/) _(Bitcoin Lightning integration)_
+- [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) _(Bitcoin Lightning integration - [see more](docs/bitcoinizing.md))_
 
 ## Contributing
 
