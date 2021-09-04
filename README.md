@@ -8,6 +8,8 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 **Soon:** The Arcade, an open peer-to-peer services ecosystem on Bitcoin.
 
+See [Bitcoinizing Arcade City](docs/bitcoinizing.md) for current thoughts on Bitcoin/Lightning architecture.
+
 ## Why
 
 Transportation, deliveries, housing, food, finance, energy, infrastructure, governance: all can and should be provided peer-to-peer with no government involvement.
@@ -44,7 +46,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - [MobX State Tree](https://github.com/mobxjs/mobx-state-tree) _(State management)_
 - [Magic](https://magic.link/) _(Authentication)_
 - [Ceramic](https://ceramic.network/) _(Data storage)_
-- [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) and [Impervious](https://www.impervious.ai/) _(Bitcoin Lightning integration)_
+- [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) _(Bitcoin Lightning integration - [see more](docs/bitcoinizing.md))_
 
 ## Contributing
 
