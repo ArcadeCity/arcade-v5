@@ -1,19 +1,21 @@
 import React from 'react'
-import { Text, View } from 'react-native'
-// import { palette } from '../../views/theme/palette'
-// import { Button } from '../../views/shared/button'
+import { Button, View } from 'react-native'
+import { Relay } from '../../services/relay'
+import { palette } from '../../views/theme/palette'
+
+const relay = new Relay()
 
 export const CityWeb = () => {
   return (
     <View
       style={{
-        backgroundColor: 'transparent',
+        backgroundColor: palette.haiti,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
       }}
     >
-      {/* <Button text='Test Button' onPress={() => {}} /> */}
+      <Button onPress={() => {}} title='Test' />
     </View>
   )
 }
