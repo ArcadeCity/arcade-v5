@@ -2,7 +2,6 @@ import { getEventHash, signEvent } from './event'
 import { relayConnect, normalizeRelayURL } from './relay'
 
 export function relayPool(globalPrivateKey) {
-  console.log('so relayPool')
   const relays = {}
   const globalSub = []
   const noticeCallbacks = []
