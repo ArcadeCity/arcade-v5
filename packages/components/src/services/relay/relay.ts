@@ -21,13 +21,13 @@ export class Relay {
 
     // subscribing to a single user
     // author is the user's public key
-    pool.sub({
-      cb: onEvent,
-      filter: {
-        author:
-          '645981d1d595fb60bbfd6539a82a8808f2a17e95c94694196d7ba81a587d659a',
-      },
-    })
+    // pool.sub({
+    //   cb: onEvent,
+    //   filter: {
+    //     author:
+    //       '645981d1d595fb60bbfd6539a82a8808f2a17e95c94694196d7ba81a587d659a',
+    //   },
+    // })
   }
 
   async setup() {}
