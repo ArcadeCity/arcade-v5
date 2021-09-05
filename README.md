@@ -10,6 +10,8 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 See [Bitcoinizing Arcade City](docs/bitcoinizing.md) for current thoughts on Bitcoin/Lightning architecture.
 
+See also [Arcade City as Metaverse](docs/metaverse.md).
+
 ## Why
 
 Transportation, deliveries, housing, food, finance, energy, infrastructure, governance: all can and should be provided peer-to-peer with no government involvement.
