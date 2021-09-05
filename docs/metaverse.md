@@ -1,12 +1,12 @@
 # Arcade City as Metaverse
 
-**_Uber meets Pokémon Go_**
-
 ![](https://i.ibb.co/3s0mYRg/jane.png)
 
-_Example 3D avatar on a map of downtown Austin, rendered in JavaScript via [harp.gl](https://www.harp.gl/) and [three.js](https://threejs.org/)._
+_Example avatar on a 3D map of downtown Austin, rendered in JavaScript via [harp.gl](https://www.harp.gl/) and [three.js](https://threejs.org/)._
 
 ## What
+
+**Think _Uber meets Pokémon Go_.**
 
 Arcade City benefits from the intersection of three innovations:
 
