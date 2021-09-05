@@ -21,7 +21,7 @@ export const LoginScreen = observer(() => {
   const { authStore } = useStores()
   return (
     <>
-      <Map />
+      {/* <Map /> */}
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.container}
@@ -45,7 +45,11 @@ export const LoginScreen = observer(() => {
               />
               <Button
                 onPress={authStore.login}
-                text={authStore.loggingIn ? translate('common.loading').toUpperCase() : translate('auth.login').toUpperCase()}
+                text={
+                  authStore.loggingIn
+                    ? translate('common.loading').toUpperCase()
+                    : translate('auth.login').toUpperCase()
+                }
                 style={styles.buttonSpacing}
                 preset='primary'
                 disabled={authStore.loggingIn}
