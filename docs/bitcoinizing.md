@@ -45,6 +45,7 @@ See the [main README](https://github.com/ArcadeCity/arcade/blob/main/README.md) 
   - LNDHub - multitenant Bitcoin/Lightning wallet
 - [Nostr](https://github.com/fiatjaf/nostr)
   - Client/relay model and maybe the NIPs
+  - [Update: Interoperability planned between LNBits' "BUber" and Arcade City via Nostr](https://twitter.com/ArcadeCityHall/status/1434574141756264452)
 - [BTCPayServer](https://btcpayserver.org/)
   - Merchant tools
 - [Sphinx](https://sphinx.chat/)/[Zion](https://getzion.com/)
