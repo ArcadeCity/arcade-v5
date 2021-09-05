@@ -3,7 +3,9 @@ import { View } from 'react-native'
 import { values } from 'mobx'
 import { useStores } from 'stores'
 import { Text } from 'views/shared'
+import { Message } from 'views/social'
 import { palette } from 'views/theme'
+import { Event } from 'stores/relay-store'
 
 export const NostrDemo = () => {
   const { relayStore } = useStores()
@@ -25,8 +27,25 @@ export const NostrDemo = () => {
         backgroundColor: palette.haiti,
       }}
     >
-      {eventsArray.map((eventItem: any) => (
-        <Text text={eventItem.id} style={{ marginVertical: 10 }} />
+      {eventsArray.map((eventItem: any, index: number) => (
+        <Message
+          preset={
+            eventItem.pubkey ===
+            '645981d1d595fb60bbfd6539a82a8808f2a17e95c94694196d7ba81a587d659a'
+              ? 'sent'
+              : 'received'
+          }
+          message={{
+            id: index,
+            text: eventItem.content,
+            chatroomId: 0,
+            createdAt: eventItem.createdAt,
+            userId: 1,
+            player: {
+              username: eventItem.pubkey,
+            },
+          }}
+        />
       ))}
     </View>
   )
