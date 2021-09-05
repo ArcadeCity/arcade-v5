@@ -28,5 +28,6 @@ storiesOf('Service - RequestChat', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
   .add('Standalone', () => <RequestChat />, {
-    notes: 'RequestChat renders a Screen where user can interact with the service requester or provider. Data is provided by the serviceStore rather than props.'
+    notes:
+      'RequestChat renders a Screen where user can interact with the service requester or provider. Data is provided by the serviceStore rather than props.',
   })

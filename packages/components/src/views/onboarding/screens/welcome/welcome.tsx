@@ -47,7 +47,12 @@ export const Welcome = observer(() => {
       >
         <Map />
       </View>
-      <Screen key={`${username}-${authStore?.locale}`} transparent preset='scrollStackSlim' style={{ zIndex: 3 }}>
+      <Screen
+        key={`${username}-${authStore?.locale}`}
+        transparent
+        preset='scrollStackSlim'
+        style={{ zIndex: 3 }}
+      >
         <WelcomeHeader />
         <View
           style={{ paddingHorizontal: 30, paddingVertical: 10, zIndex: 900 }}
@@ -67,7 +72,9 @@ export const Welcome = observer(() => {
           <View style={{ opacity: !!username ? DONE_OPACITY : 1 }}>
             <Button
               text={
-                !!username ? translate('onboarding.displayUsername', { username }) : translate('onboarding.selectUsername')
+                !!username
+                  ? translate('onboarding.displayUsername', { username })
+                  : translate('onboarding.selectUsername')
               }
               style={BUTTON}
               onPress={() => navigate('setUsername')}
@@ -76,7 +83,11 @@ export const Welcome = observer(() => {
           </View>
           <View style={{ opacity: !!bio ? DONE_OPACITY : 1 }}>
             <Button
-              text={!!bio ? translate('onboarding.profileBioSet') : translate('onboarding.selectYourBio') || 'Select your bio'}
+              text={
+                !!bio
+                  ? translate('onboarding.profileBioSet')
+                  : translate('onboarding.selectYourBio') || 'Select your bio'
+              }
               style={BUTTON}
               onPress={() => navigate('setBio')}
               preset={!!bio ? 'secondary' : 'primary'}
@@ -84,7 +95,11 @@ export const Welcome = observer(() => {
           </View>
           <View style={{ opacity: !!locationEnabled ? DONE_OPACITY : 1 }}>
             <Button
-              text={!locationEnabled ? translate('onboarding.locationEnabled') : translate('onboarding.enableLocation')}
+              text={
+                !locationEnabled
+                  ? translate('onboarding.locationEnabled')
+                  : translate('onboarding.enableLocation')
+              }
               style={BUTTON}
               onPress={() => navigate('enableLocation')}
               preset={!!locationEnabled ? 'secondary' : 'primary'}
@@ -92,7 +107,11 @@ export const Welcome = observer(() => {
           </View>
           <View style={{ opacity: hasUserAcceptedTerms ? DONE_OPACITY : 1 }}>
             <Button
-              text={hasUserAcceptedTerms ? translate('onboarding.termsAccepted') : translate('onboarding.acceptTerms')}
+              text={
+                hasUserAcceptedTerms
+                  ? translate('onboarding.termsAccepted')
+                  : translate('onboarding.acceptTerms')
+              }
               style={BUTTON}
               onPress={() => navigate('terms')}
               preset={!!hasUserAcceptedTerms ? 'secondary' : 'primary'}

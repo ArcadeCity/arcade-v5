@@ -31,5 +31,6 @@ storiesOf('Social - Chatroom', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <Chatroom />, {
-    notes: 'Chatroom renders a Screen displaying a list of messages and a dock with a textfield and Send button for user to send messages. Data comes in from the chatStore.activeChatroom rather than props.'
+    notes:
+      'Chatroom renders a Screen displaying a list of messages and a dock with a textfield and Send button for user to send messages. Data comes in from the chatStore.activeChatroom rather than props.',
   })

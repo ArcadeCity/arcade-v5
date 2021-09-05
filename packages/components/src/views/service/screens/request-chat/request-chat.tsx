@@ -50,7 +50,9 @@ export const RequestChat: React.FC<{}> = observer(() => {
   const selectDriver = (driver: Player) =>
     Alert.alert(
       translate('service.confirmDriver'),
-      translate('service.confirmDriverExplainer', { username: driver.username }),
+      translate('service.confirmDriverExplainer', {
+        username: driver.username,
+      }),
       [
         {
           text: capitalize(translate('common.no')),
@@ -65,7 +67,9 @@ export const RequestChat: React.FC<{}> = observer(() => {
   const unselectDriver = (driver: Player) =>
     Alert.alert(
       translate('service.unselectDriver'),
-      translate('service.unselectDriverExplainer', { username: driver.username }),
+      translate('service.unselectDriverExplainer', {
+        username: driver.username,
+      }),
       [
         {
           text: capitalize(translate('common.no')),
@@ -122,7 +126,12 @@ export const RequestChat: React.FC<{}> = observer(() => {
   )
 
   return (
-    <Screen key={`${userId}-${authStore?.locale}`} preset='chatroom' dockHeight={0} dock={dock}>
+    <Screen
+      key={`${userId}-${authStore?.locale}`}
+      preset='chatroom'
+      dockHeight={0}
+      dock={dock}
+    >
       {(request.playerRequesting?.id === userId ||
         request.playerClaiming?.id === userId) && (
         <RequestStatusBar request={request} />

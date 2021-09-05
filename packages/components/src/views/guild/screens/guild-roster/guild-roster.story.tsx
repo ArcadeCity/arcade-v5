@@ -14,12 +14,17 @@ storiesOf('Guilds - GuildRoster', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildRoster' usage='guild roster screen' noPad>
-        <GuildRoster />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildRoster renders a Screen containing a list of guild members with each item linking to the user profile. Data is received from the guildStore.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildRoster' usage='guild roster screen' noPad>
+          <GuildRoster />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildRoster renders a Screen containing a list of guild members with each item linking to the user profile. Data is received from the guildStore.',
+    }
+  )

@@ -15,12 +15,17 @@ storiesOf('Profile', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='Profile' usage='' noPad>
-        <Profile />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'Profile renders a Screen displaying the ProfileSummary as well as the option to open a chat with the user or edit profile if user is viewing their own profile. Will display loading screen if unable to load selected player. Data is provided by playerStore rather than props.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='Profile' usage='' noPad>
+          <Profile />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'Profile renders a Screen displaying the ProfileSummary as well as the option to open a chat with the user or edit profile if user is viewing their own profile. Will display loading screen if unable to load selected player. Data is provided by playerStore rather than props.',
+    }
+  )

@@ -34,10 +34,7 @@ export const RequestOverlay = observer(() => {
 
   // UI
   const [show, setShow] = useState(false)
-  const explain = () =>
-    Alert.alert(
-      translate('service.requestExplainer')
-    )
+  const explain = () => Alert.alert(translate('service.requestExplainer'))
   const cancel = () => {
     Alert.alert(
       translate('service.cancelConfirm'),
@@ -94,11 +91,17 @@ export const RequestOverlay = observer(() => {
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
           <Text
             preset='title2'
-            tx={yesAnd ? 'service.driverSelected' : 'service.driversHaveResponded'}
+            tx={
+              yesAnd ? 'service.driverSelected' : 'service.driversHaveResponded'
+            }
           />
           <Text
             preset='descriptionSlim'
-            tx={yesAnd ? 'service.chatWithYourDriver' : 'service.goSelectYourDriver'}
+            tx={
+              yesAnd
+                ? 'service.chatWithYourDriver'
+                : 'service.goSelectYourDriver'
+            }
           />
           <Button
             tx='service.goToRequestChat'
@@ -142,7 +145,10 @@ export const RequestOverlay = observer(() => {
       )}
     </Animated.View>
   ) : (
-    <Animated.View key={`none-${authStore?.locale}`} style={{ ...s.OPENBTN, opacity: toggleOpacity }}>
+    <Animated.View
+      key={`none-${authStore?.locale}`}
+      style={{ ...s.OPENBTN, opacity: toggleOpacity }}
+    >
       <Button
         text={capitalize(translate('common.open'))}
         preset='purpleglow'

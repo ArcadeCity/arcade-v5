@@ -18,5 +18,6 @@ storiesOf('Onboarding - Welcome screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <Welcome />, {
-    notes: 'Welcome renders a Screen containing buttons to select a profession, username, bio, enable location and accept terms. If user is invited they can enter the city. Data is received from the authStore rather than props'
+    notes:
+      'Welcome renders a Screen containing buttons to select a profession, username, bio, enable location and accept terms. If user is invited they can enter the city. Data is received from the authStore rather than props',
   })

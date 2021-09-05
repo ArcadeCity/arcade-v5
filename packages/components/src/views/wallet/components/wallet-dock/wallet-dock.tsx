@@ -14,7 +14,10 @@ export const WalletDock = () => {
         width: '100%',
       }}
     >
-      <Button preset='primary' text={capitalize(translate('service.request'))} />
+      <Button
+        preset='primary'
+        text={capitalize(translate('service.request'))}
+      />
       {/* @TODO missing translation for 'Pay' */}
       <Button preset='purpleglow' text='Pay' />
       {/* @TODO missing translation for 'Trade' */}

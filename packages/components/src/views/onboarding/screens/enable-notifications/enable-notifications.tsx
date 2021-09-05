@@ -36,10 +36,7 @@ export const EnableNotifications: React.FC<{}> = observer(() => {
     >
       <View style={CONTAINER}>
         <Text preset='title' tx='onboarding.enableNotifications' />
-        <Text
-          preset='description'
-          tx='comms.explainPushNotifications'
-        />
+        <Text preset='description' tx='comms.explainPushNotifications' />
         <Image source={require('./notifications.png')} style={IMAGE} />
       </View>
     </Screen>

@@ -19,5 +19,6 @@ storiesOf('Onboarding - Invites screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <Invites />, {
-    notes: 'Invites renders a Screen displaying the number on invites user has along with a field to send new invites via email address. Data is received from the authStore rather than props'
+    notes:
+      'Invites renders a Screen displaying the number on invites user has along with a field to send new invites via email address. Data is received from the authStore rather than props',
   })

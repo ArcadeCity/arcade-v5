@@ -13,27 +13,18 @@ export const GuildHome: React.FC<{}> = observer(() => {
   const { navigate, setOptions } = useNavigation()
   const { authStore, guildStore } = useStores()
   const guild = guildStore.guild
-  setOptions({ title: capitalize(translate('guild.guilds'))})
+  setOptions({ title: capitalize(translate('guild.guilds')) })
   return (
     <Screen preset='scrollStack'>
-      <View style={styles.container} key={authStore?.locale} >
+      <View style={styles.container} key={authStore?.locale}>
         <Image source={images.guild} style={GUILDIMG} />
         <View style={{ marginTop: -35 }}>
           <Text preset='title3' text={capitalize(translate('guild.guilds'))} />
-          <Text
-            preset='description'
-            tx='guild.explainer1'
-          />
+          <Text preset='description' tx='guild.explainer1' />
 
-          <Text
-            preset='description'
-            tx='guild.explainer2'
-          />
+          <Text preset='description' tx='guild.explainer2' />
 
-          <Text
-            preset='description'
-            tx='guild.charterExplainer4'
-          />
+          <Text preset='description' tx='guild.charterExplainer4' />
         </View>
 
         <Button

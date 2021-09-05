@@ -7,7 +7,7 @@ import { authedPlayer } from 'storybook/demo-data'
 
 const store = {
   authStore: {
-    invited: authedPlayer.invited
+    invited: authedPlayer.invited,
   },
 }
 
@@ -19,5 +19,6 @@ storiesOf('Onboarding - InviteRequired screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <InviteRequired />, {
-    notes: 'InviteRequired renders a Screen containing instruction on how to get an invite along with links to Set up account, Connect, and Logout. Data is received from the authStore rather than props'
+    notes:
+      'InviteRequired renders a Screen containing instruction on how to get an invite along with links to Set up account, Connect, and Logout. Data is received from the authStore rather than props',
   })

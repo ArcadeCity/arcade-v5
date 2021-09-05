@@ -19,5 +19,6 @@ storiesOf('Onboarding - SetProfession screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <SetProfession />, {
-    notes: 'SetProfession renders a Screen containing a form for user to update their profession. Selecting other displays a list of categories and selecting a category displays a list of subcategories. After selecting a profession, user will be asked to confirm before saving. Data is received from the authStore rather than props'
+    notes:
+      'SetProfession renders a Screen containing a form for user to update their profession. Selecting other displays a list of categories and selecting a category displays a list of subcategories. After selecting a profession, user will be asked to confirm before saving. Data is received from the authStore rather than props',
   })

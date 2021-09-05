@@ -12,7 +12,9 @@ interface Props {
 
 export const InviteStatus = observer(({ invited = false }: Props) => {
   const { authStore } = useStores()
-  const title = invited ? translate('common.welcome') : translate('comms.inviteRequired')
+  const title = invited
+    ? translate('common.welcome')
+    : translate('comms.inviteRequired')
   const text = invited
     ? `${translate('guild.invitedToJoin2')} Arcade City.`
     : translate('comms.toJoin')

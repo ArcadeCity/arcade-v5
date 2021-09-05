@@ -20,5 +20,6 @@ storiesOf('Onboarding - SetUsername screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <SetUsername />, {
-    notes: 'SetUsername renders a Screen containing a form for user to update their username. Data is received from the authStore rather than props'
+    notes:
+      'SetUsername renders a Screen containing a form for user to update their username. Data is received from the authStore rather than props',
   })

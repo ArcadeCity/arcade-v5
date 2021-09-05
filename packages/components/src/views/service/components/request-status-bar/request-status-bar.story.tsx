@@ -33,21 +33,26 @@ storiesOf('Service - RequestStatusBar', module)
   ))
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Ride request - unclaimed' usage='' noPad>
-        <RequestStatusBar request={requestUnclaimed} />
-      </UseCase>
-      <UseCase text='Ride request - claimed' usage='' noPad>
-        <RequestStatusBar request={requestClaimed} />
-      </UseCase>
-      <UseCase text='Ride request - resolved by rider' usage='' noPad>
-        <RequestStatusBar request={requestResolvedByRider} />
-      </UseCase>
-      <UseCase text='Ride request - cancelled by rider' usage='' noPad>
-        <RequestStatusBar request={requestCancelledByRider} />
-      </UseCase>
-    </Story>
-  ),{
-    notes: 'RequestStatusBar renders a View depending on the status of request - unclaimed, claimed, resolved by rider or cancelled by driver. Data is provided by the authStore and serviceStore rather than props.'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Ride request - unclaimed' usage='' noPad>
+          <RequestStatusBar request={requestUnclaimed} />
+        </UseCase>
+        <UseCase text='Ride request - claimed' usage='' noPad>
+          <RequestStatusBar request={requestClaimed} />
+        </UseCase>
+        <UseCase text='Ride request - resolved by rider' usage='' noPad>
+          <RequestStatusBar request={requestResolvedByRider} />
+        </UseCase>
+        <UseCase text='Ride request - cancelled by rider' usage='' noPad>
+          <RequestStatusBar request={requestCancelledByRider} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'RequestStatusBar renders a View depending on the status of request - unclaimed, claimed, resolved by rider or cancelled by driver. Data is provided by the authStore and serviceStore rather than props.',
+    }
+  )

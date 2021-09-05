@@ -37,7 +37,11 @@ export const Text = observer((props: TextProps) => {
   const styles = flatten([style, styleOverride])
 
   return (
-    <ReactNativeText key={`${tx}-${authStore?.locale}`} {...rest} style={styles}>
+    <ReactNativeText
+      key={`${tx}-${authStore?.locale}`}
+      {...rest}
+      style={styles}
+    >
       {content}
     </ReactNativeText>
   )

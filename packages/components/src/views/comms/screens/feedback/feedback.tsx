@@ -45,10 +45,7 @@ export const Feedback: React.FC<{}> = observer(() => {
     >
       <View style={CONTAINER}>
         <Text preset='title' tx='comms.giveUsFeedback' />
-        <Text
-          preset='description'
-          tx='comms.feedbackExplainer'
-        />
+        <Text preset='description' tx='comms.feedbackExplainer' />
         <TextField
           // placeholderTx='menu.addFeedbackHere'
           multiline={true}

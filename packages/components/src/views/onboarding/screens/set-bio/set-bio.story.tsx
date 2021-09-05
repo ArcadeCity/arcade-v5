@@ -19,5 +19,6 @@ storiesOf('Onboarding - SetBio screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <SetBio />, {
-    notes: 'SetBio renders a Screen containing a form for user to update their bio. Data is received from the authStore rather than props'
+    notes:
+      'SetBio renders a Screen containing a form for user to update their bio. Data is received from the authStore rather than props',
   })

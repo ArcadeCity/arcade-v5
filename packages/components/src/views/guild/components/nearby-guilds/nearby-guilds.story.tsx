@@ -14,12 +14,17 @@ storiesOf('Guilds - NearbyGuilds', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='NearbyGuilds' usage='' noPad>
-        <NearbyGuilds guilds={[guild1]} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'NearbyGuilds renders a View containing a list of guilds nearby with each item being a GuildRow. Data is passed in as props: guilds of type Guild[]'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='NearbyGuilds' usage='' noPad>
+          <NearbyGuilds guilds={[guild1]} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'NearbyGuilds renders a View containing a list of guilds nearby with each item being a GuildRow. Data is passed in as props: guilds of type Guild[]',
+    }
+  )

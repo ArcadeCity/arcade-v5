@@ -21,12 +21,17 @@ storiesOf('Social - ChatroomDetail', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Chatroom types', () => (
-    <Story>
-      <UseCase text='Chatroom' usage='' noPad>
-        <ChatroomDetail chatroom={chatroom} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'ChatroomDetail renders a TouchableOpacity containing information about the chatroom with onPress navigating to the specific chatroom. Data is passed in as props: chatroom of type Chatroom.'
-  })
+  .add(
+    'Chatroom types',
+    () => (
+      <Story>
+        <UseCase text='Chatroom' usage='' noPad>
+          <ChatroomDetail chatroom={chatroom} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'ChatroomDetail renders a TouchableOpacity containing information about the chatroom with onPress navigating to the specific chatroom. Data is passed in as props: chatroom of type Chatroom.',
+    }
+  )

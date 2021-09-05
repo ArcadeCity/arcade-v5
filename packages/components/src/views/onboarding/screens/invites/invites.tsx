@@ -44,9 +44,18 @@ export const Invites = () => {
   const isError = !!errors.inviteEmail?.message
 
   return (
-    <Screen preset='fixedStack' key={authStore?.locale} >
-      <Text preset='title' tx='onboarding.sendInvite' style={{ paddingTop: 40 }} />
-      <Text preset='description' tx='comms.inviteCount' txOptions={{ invites }} text={`You have ${invites} invites.`} />
+    <Screen preset='fixedStack' key={authStore?.locale}>
+      <Text
+        preset='title'
+        tx='onboarding.sendInvite'
+        style={{ paddingTop: 40 }}
+      />
+      <Text
+        preset='description'
+        tx='comms.inviteCount'
+        txOptions={{ invites }}
+        text={`You have ${invites} invites.`}
+      />
       <TextField
         value={field}
         // autoFocus={true}

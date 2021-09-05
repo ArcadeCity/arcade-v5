@@ -26,10 +26,15 @@ storiesOf('Service - AllRequestDetails', module)
   ))
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
-  .add('Standalone', () => (
-    <View style={REQUEST_CONFIRM_CONTAINER}>
-      <AllRequestDetails />
-    </View>
-  ), {
-    notes: 'AllRequestDetails renders a ScrollView containing all configurable options for the service request. Data is provided by the authStore and serviceStore rather than props.'
-  })
+  .add(
+    'Standalone',
+    () => (
+      <View style={REQUEST_CONFIRM_CONTAINER}>
+        <AllRequestDetails />
+      </View>
+    ),
+    {
+      notes:
+        'AllRequestDetails renders a ScrollView containing all configurable options for the service request. Data is provided by the authStore and serviceStore rather than props.',
+    }
+  )

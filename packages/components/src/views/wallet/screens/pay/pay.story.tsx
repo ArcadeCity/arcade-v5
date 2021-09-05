@@ -10,5 +10,6 @@ storiesOf('Wallet - Pay screen', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .add('Standalone', () => <Pay />, {
-    notes: 'Pay renders a Screen interface to pay a user including TextField for username and TextField for description and a Button to pay. Data is received from the walletStore rather than props.'
+    notes:
+      'Pay renders a Screen interface to pay a user including TextField for username and TextField for description and a Button to pay. Data is received from the walletStore rather than props.',
   })

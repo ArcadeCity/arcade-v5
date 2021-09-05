@@ -26,12 +26,17 @@ const txArray = values(txs) as Transaction[]
 
 storiesOf('Wallet - Transactions', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Transactions' usage='' noPad>
-        <Transactions transactions={txArray} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'Transactions renders a Flatlist of TransactionDetails. Data is passed in as props: transactions of type Transaction[].'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Transactions' usage='' noPad>
+          <Transactions transactions={txArray} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'Transactions renders a Flatlist of TransactionDetails. Data is passed in as props: transactions of type Transaction[].',
+    }
+  )

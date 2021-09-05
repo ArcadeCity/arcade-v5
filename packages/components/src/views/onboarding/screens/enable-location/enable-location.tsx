@@ -35,18 +35,9 @@ export const EnableLocation = observer(() => {
     >
       <View style={CONTAINER}>
         <Text preset='title' tx='onboarding.enableLocation' />
-        <Text
-          preset='description'
-          tx='onboarding.enableLocationExplainer1'
-        />
-        <Text
-          preset='description'
-          tx='onboarding.enableLocationExplainer2'
-        />
-        <Text
-          preset='description'
-          tx='onboarding.enableLocationExplainer3'
-        />
+        <Text preset='description' tx='onboarding.enableLocationExplainer1' />
+        <Text preset='description' tx='onboarding.enableLocationExplainer2' />
+        <Text preset='description' tx='onboarding.enableLocationExplainer3' />
         <Image source={require('./location.png')} style={IMAGE} />
       </View>
     </Screen>

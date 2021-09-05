@@ -18,5 +18,6 @@ storiesOf('Onboarding - Terms screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <Terms />, {
-    notes: 'Terms renders a Screen containing the Arcade City Terms and Service Agreement with a button to agree. Data is received from the authStore rather than props'
+    notes:
+      'Terms renders a Screen containing the Arcade City Terms and Service Agreement with a button to agree. Data is received from the authStore rather than props',
   })

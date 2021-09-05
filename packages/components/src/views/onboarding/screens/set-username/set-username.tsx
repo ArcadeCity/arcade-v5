@@ -31,11 +31,12 @@ export const SetUsername: React.FC<{}> = observer(() => {
 
   return (
     <Screen preset='fixedStack'>
-      <Text preset='title' tx='onboarding.setUsername' style={{ paddingTop: 40 }} />
       <Text
-        preset='description'
-        tx='onboarding.setUsernameExplainer'
+        preset='title'
+        tx='onboarding.setUsername'
+        style={{ paddingTop: 40 }}
       />
+      <Text preset='description' tx='onboarding.setUsernameExplainer' />
       <TextField
         value={field}
         autoFocus={true}
