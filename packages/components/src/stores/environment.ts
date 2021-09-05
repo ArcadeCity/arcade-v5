@@ -1,6 +1,5 @@
 import { Api } from '../services/api'
 import { Broadcasting } from '../services/broadcasting'
-import { Ceramic } from '../services/ceramic'
 import { Lightning } from '../services/lightning'
 import { Magic } from '../services/magic'
 import { Mapbox } from '../services/mapbox'
@@ -25,7 +24,6 @@ export class Environment {
     }
     this.api = new Api()
     this.broadcasting = new Broadcasting()
-    this.ceramic = new Ceramic()
     this.lightning = new Lightning()
     this.magic = new Magic()
     this.mapbox = new Mapbox({
@@ -43,7 +41,6 @@ export class Environment {
     }
     this.api.setup()
     // TODO: change this to promise.all?
-    await this.ceramic.setup()
     await this.relay.setup()
   }
 
@@ -61,11 +58,6 @@ export class Environment {
    * To manage broadcasting
    */
   broadcasting: Broadcasting
-
-  /**
-   * Decentralized storage
-   */
-  ceramic: Ceramic
 
   /**
    * Lightning via ArcadeHub

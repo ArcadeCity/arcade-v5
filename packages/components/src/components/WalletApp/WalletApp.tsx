@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Button, Text, TextStyle, View } from 'react-native'
-import { Ceramic } from '../../services/ceramic'
 import { Lightning, LightningCustodianWallet } from '../../services/lightning'
 import { magic, provider } from '../../services/magic'
 import { palette } from '../../views/theme/palette'
@@ -8,7 +7,6 @@ import { ethers } from 'ethers'
 import useInterval from './useInterval'
 import { ImperviousWebsockets } from './ImperviousWebsockets'
 
-const ceramic = new Ceramic()
 let LightningWallet: any = null
 
 export const WalletApp = () => {
@@ -62,39 +60,36 @@ export const WalletApp = () => {
     setLightningWallet(wallet)
   }
 
-  const saveWalletToCeramic = async () => {
-    const streamId = await ceramic.saveWallet(lightningWallet)
-    console.log(streamId)
-  }
+  const saveWalletToCeramic = async () => {}
 
   useMemo(async () => {
-    if (userMetadata) {
-      console.log('Authenticating with Ceramic...')
-      const signer = provider.getSigner()
-      const originalMessage = ''
-      const signedMessage = await signer.signMessage(originalMessage)
-      const thearray = ethers.utils.arrayify(signedMessage)
-      ceramic.setup()
-      const authed = await ceramic.authenticate(thearray.slice(0, 32))
-      setIsCeramicAuthed(authed)
-      console.log('Checking for wallet...')
-      const wallet: any = await ceramic.checkForWallet()
-      if (wallet) {
-        setLightningWallet({ ...wallet, fromCeramic: true })
-        LightningWallet = new LightningCustodianWallet({
-          secret: wallet.secret,
-        })
-        console.log('LightningCustodianWallet initialized:', LightningWallet)
-        await LightningWallet.authorize()
-        console.log('LightningCustodianWallet authorized:', LightningWallet)
-        await LightningWallet.fetchBalance()
-        console.log('LightningCustodianWallet fetchBalance?', LightningWallet)
-        const gotbalance = LightningWallet.getBalance()
-        setBalance(gotbalance)
-      } else {
-        setLightningWallet(false)
-      }
-    }
+    // if (userMetadata) {
+    //   console.log('Authenticating with Ceramic...')
+    //   const signer = provider.getSigner()
+    //   const originalMessage = ''
+    //   const signedMessage = await signer.signMessage(originalMessage)
+    //   const thearray = ethers.utils.arrayify(signedMessage)
+    //   ceramic.setup()
+    //   const authed = await ceramic.authenticate(thearray.slice(0, 32))
+    //   setIsCeramicAuthed(authed)
+    //   console.log('Checking for wallet...')
+    //   const wallet: any = await ceramic.checkForWallet()
+    //   if (wallet) {
+    //     setLightningWallet({ ...wallet, fromCeramic: true })
+    //     LightningWallet = new LightningCustodianWallet({
+    //       secret: wallet.secret,
+    //     })
+    //     console.log('LightningCustodianWallet initialized:', LightningWallet)
+    //     await LightningWallet.authorize()
+    //     console.log('LightningCustodianWallet authorized:', LightningWallet)
+    //     await LightningWallet.fetchBalance()
+    //     console.log('LightningCustodianWallet fetchBalance?', LightningWallet)
+    //     const gotbalance = LightningWallet.getBalance()
+    //     setBalance(gotbalance)
+    //   } else {
+    //     setLightningWallet(false)
+    //   }
+    // }
   }, [userMetadata])
 
   useEffect(() => {
