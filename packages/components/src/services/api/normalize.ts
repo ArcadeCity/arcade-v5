@@ -27,6 +27,7 @@ import {
   ApiServiceRequest,
 } from './types'
 import { Guild, GuildModel } from 'stores/guild-store'
+import { Event, EventModel } from 'stores/relay-store'
 
 export const saveServiceRequest = (self: any, apiSR: ApiServiceRequest) => {
   // display({
@@ -174,6 +175,14 @@ export const normalizeApiServiceRequest = (
         : serviceRequest.status,
     type: serviceRequest.type,
     when: moment(serviceRequest.when).utc(true).toDate(),
+  })
+  return normalized
+}
+
+export const normalizeEvent = (event: any) => {
+  const normalized: Event = EventModel.create({
+    id: event.id,
+    createdAt: event.created_at,
   })
   return normalized
 }
