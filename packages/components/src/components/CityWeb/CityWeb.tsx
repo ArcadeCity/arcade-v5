@@ -1,6 +1,9 @@
 import React from 'react'
 import { Button, View } from 'react-native'
+import { Relay } from '../../services/relay'
 import { palette } from '../../views/theme/palette'
+
+const relay = new Relay()
 
 export const CityWeb = () => {
   return (
