@@ -4,7 +4,7 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 ## What
 
-**Now:** Arcade City, a peer-to-peer services app for [Android](https://play.google.com/store/apps/details?id=arcade.city.mobile) and [iOS](https://apps.apple.com/us/app/arcade-city/id1082799882).
+**Now:** Arcade City, a peer-to-peer services app for Android and iOS. _(Removed from app stores 2021-09-04 while we refactor for v5.1)_
 
 **Soon:** The Arcade, an open peer-to-peer services ecosystem on Bitcoin.
 
@@ -32,6 +32,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - **components** - Shared components & functionality
 - **explorer** - Arcade transaction explorer
 - **island-mobile** - Bitcoin Island mobile app
+- **relay** - Arcade relay node
 - **wallet-web** - Experimental Bitcoin Lightning wallet with Impervious integration
 
 ## Tech stack
@@ -45,7 +46,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - [Storybook](https://storybook.js.org/) _(Component library)_
 - [MobX State Tree](https://github.com/mobxjs/mobx-state-tree) _(State management)_
 - [Magic](https://magic.link/) _(Authentication)_
-- [Ceramic](https://ceramic.network/) _(Data storage)_
+- [Hypercore](https://hypercore-protocol.org/) _(Data storage)_
 - [LND](https://github.com/lightningnetwork/lnd) via [LNDHub](https://github.com/BlueWallet/LndHub) _(Bitcoin Lightning integration - [see more](docs/bitcoinizing.md))_
 
 ## Contributing
