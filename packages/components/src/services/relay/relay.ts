@@ -1,5 +1,5 @@
 import { display } from 'lib'
-import { relayPool } from 'nostr-tools'
+import { relayPool } from 'lib/nostr-tools'
 
 export class Relay {
   pool: any
