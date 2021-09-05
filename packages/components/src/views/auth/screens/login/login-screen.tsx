@@ -15,10 +15,15 @@ import { styles } from './login-screen.styles'
 import { useNavigation } from '@react-navigation/native'
 import { getConstants } from 'lib'
 import { translate } from 'i18n'
+import { NostrDemo } from '../nostr-demo'
 
 export const LoginScreen = observer(() => {
   const { navigate } = useNavigation()
   const { authStore } = useStores()
+
+  // For now let's replace LoginScreen with NostrDemo
+  return <NostrDemo />
+
   return (
     <>
       {/* <Map /> */}
