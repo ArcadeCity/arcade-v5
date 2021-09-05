@@ -183,6 +183,10 @@ export const normalizeEvent = (event: any) => {
   const normalized: Event = EventModel.create({
     id: event.id,
     createdAt: event.created_at,
+    content: event.content,
+    sig: event.sig,
+    kind: event.kind,
+    pubkey: event.pubkey,
   })
   return normalized
 }
