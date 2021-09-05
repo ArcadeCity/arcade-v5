@@ -11,7 +11,7 @@ See the [main README](https://github.com/ArcadeCity/arcade/blob/main/README.md) 
 - Every user is identified by a public key and a playertag.
 - Playertags are also [Lightning Addresses](https://lightningaddress.com/) (@arcade.city or user-provided)
 - Pay anyone via Lightning Address or invoice
-- Semi-custodial Lightning wallet via our [Arcade relay](https://github.com/ArcadeCity/ArcadeHub) incorporating [LNDHub](https://bluewallet.io/lndhub/)
+- Semi-custodial Lightning wallet via our [Arcade relay](https://github.com/ArcadeCity/arcade/tree/main/packages/relay) incorporating [LNDHub](https://bluewallet.io/lndhub/)
 - Option to connect your own wallet
 - Option to run your own relay node
 - Profiles at arcade.city/[playertag]
