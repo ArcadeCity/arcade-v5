@@ -31,7 +31,6 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - **city-web** - Lightweight web app with subset of mobile functionality
 - **components** - Shared components & functionality
 - **explorer** - Arcade transaction explorer
-- **island-mobile** - Bitcoin Island mobile app
 - **relay** - Arcade relay node
 - **wallet-web** - Experimental Bitcoin Lightning wallet with Impervious integration
 

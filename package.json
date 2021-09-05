@@ -12,7 +12,6 @@
     "dev:city-mobile": "yarn workspace @arcadecity/city-mobile start",
     "dev:city-web": "yarn workspace @arcadecity/city-web start",
     "dev:explorer": "yarn workspace @arcadecity/explorer start",
-    "dev:island-mobile": "yarn workspace @arcadecity/island-mobile start",
     "dev:wallet": "yarn workspace @arcadecity/wallet-web start",
     "dev:arcade.city": "yarn workspace @arcadecity/arcade.city dev",
     "buildsite": "yarn workspace @arcadecity/arcade.city build",
