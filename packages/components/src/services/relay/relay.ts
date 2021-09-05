@@ -10,7 +10,7 @@ export class Relay {
     console.log('Created Relay with pool:', pool)
 
     // example callback function for a subscription
-    function onEvent(event, relay) {
+    function onEvent(event: any, relay: any) {
       relay && relay.url
         ? console.log(
             `got an event from ${relay.url} which is already validated.`,
