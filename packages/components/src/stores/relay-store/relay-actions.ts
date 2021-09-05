@@ -8,12 +8,11 @@ export const subscribeToUser = async (self: RelayStore, pubkey: string) => {
   })
 
   function onEvent(event: any, relay: any) {
-    relay && relay.url
-      ? console.log(
-          `got an event from ${relay.url} which is already validated.`,
-          event
-        )
-      : log(event)
+    display({
+      name: 'Relay onEvent',
+      preview: `Received event ${event.id ?? ''}`,
+      value: { event, relay },
+    })
   }
 
   self.env.relay.pool.sub({
