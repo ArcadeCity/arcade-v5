@@ -66,6 +66,10 @@ See the [main README](https://github.com/ArcadeCity/arcade/blob/main/README.md) 
 - [Etleneum](https://etleneum.com/)/[RGB](https://www.rgbfaq.com/)/[OmniBolt](https://omnilab.online/omnibolt/) (?)
   - Smart contracts on Lightning
 
+#### A Bitcoin-Powered Metaverse
+
+See [Arcade City as Metaverse](metaverse.md).
+
 #### Feedback, ideas, insults?
 
 Please [email](mailto:cityhall@arcade.city) or [tweet at us](https://twitter.com/ArcadeCityHall)
