@@ -15,7 +15,7 @@ export const NostrDemo = () => {
       'e5b6b45fbe40c891de636679cf71c00d26f95a9c9a093c78adf760ef265d42f5'
     )
   }, [])
-  const eventsArray = values(relayStore.events)
+  const eventsArray = relayStore.events ? values(relayStore.events) : []
   return (
     <View
       style={{
