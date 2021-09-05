@@ -27,7 +27,7 @@ export const NostrDemo = () => {
         backgroundColor: palette.haiti,
       }}
     >
-      {eventsArray.map((eventItem: any, index: number) => (
+      {eventsArray.reverse().map((eventItem: any, index: number) => (
         <Message
           preset={
             eventItem.pubkey ===
