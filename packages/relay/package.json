@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Arcade relay node",
   "main": "index.js",
+  "type": "module",
   "license": "AGPL-3.0",
   "dependencies": {
     "express": "^4.17.1",
