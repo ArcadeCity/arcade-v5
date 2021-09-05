@@ -1,3 +1,4 @@
+import { display } from 'lib'
 import { relayPool } from 'nostr-tools'
 
 export class Relay {
@@ -14,7 +15,7 @@ export class Relay {
       write: true,
     })
     this.pool = pool
-    console.tron.display({
+    display({
       name: 'Relay',
       preview: 'Setup Relay with pool:',
       value: pool,

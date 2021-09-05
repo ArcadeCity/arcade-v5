@@ -10,8 +10,8 @@ export const RelayStoreModel = types
   .extend(withEnvironment)
   .extend(withRootStore)
   .actions((self) => ({
-    hello: async (): Promise<boolean> =>
-      await actions.hello(self as RelayStore),
+    subscribeToUser: async (pubkey: string): Promise<boolean> =>
+      await actions.subscribeToUser(self as RelayStore, pubkey),
   }))
 
 type RelayStoreType = Instance<typeof RelayStoreModel>
