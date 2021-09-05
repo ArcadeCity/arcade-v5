@@ -44,7 +44,9 @@ export class Environment {
       await this.reactotron.setup()
     }
     this.api.setup()
+    // TODO: change this to promise.all?
     await this.ceramic.setup()
+    await this.relay.setup()
     // await this.solana.setup()
   }
 
