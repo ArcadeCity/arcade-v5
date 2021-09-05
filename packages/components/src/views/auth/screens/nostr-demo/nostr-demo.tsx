@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { View } from 'react-native'
-import { log } from 'lib'
+import { values } from 'mobx'
 import { useStores } from 'stores'
+import { Text } from 'views/shared'
 import { palette } from 'views/theme'
 
 export const NostrDemo = () => {
@@ -14,5 +15,19 @@ export const NostrDemo = () => {
       'e5b6b45fbe40c891de636679cf71c00d26f95a9c9a093c78adf760ef265d42f5'
     )
   }, [])
-  return <View style={{ flex: 1, backgroundColor: palette.haiti }}></View>
+  const eventsArray = values(relayStore.events)
+  return (
+    <View
+      style={{
+        flex: 1,
+        paddingVertical: 70,
+        paddingHorizontal: 20,
+        backgroundColor: palette.haiti,
+      }}
+    >
+      {eventsArray.map((eventItem: any) => (
+        <Text text={eventItem.id} style={{ marginVertical: 10 }} />
+      ))}
+    </View>
+  )
 }
