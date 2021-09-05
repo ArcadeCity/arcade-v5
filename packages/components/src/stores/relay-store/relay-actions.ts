@@ -1,4 +1,6 @@
-import { display, log } from 'lib'
+import { display } from 'lib'
+import { normalizeEvent } from 'services/api'
+import { Event, EventModel } from './relay-models'
 import { RelayStore } from './relay-store'
 
 export const subscribeToUser = async (self: RelayStore, pubkey: string) => {
@@ -7,13 +9,14 @@ export const subscribeToUser = async (self: RelayStore, pubkey: string) => {
     preview: `Subscribing to ${pubkey}`,
   })
 
-  function onEvent(event: any, relay: any) {
-    relay && relay.url
-      ? console.log(
-          `got an event from ${relay.url} which is already validated.`,
-          event
-        )
-      : log(event)
+  const onEvent = (event: any, relay: any) => {
+    display({
+      name: 'Relay onEvent',
+      preview: `Received event ${event.id ?? ''}`,
+      value: { event, relay },
+    })
+    const eventToSave: Event = normalizeEvent(event)
+    self.setEvent(eventToSave)
   }
 
   self.env.relay.pool.sub({

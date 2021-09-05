@@ -26,7 +26,7 @@ export const Message: React.FC<Props> = ({ message, preset }) => {
 
   const delivered = true
   const messagePreset: any = messagePresets[preset]
-  const deliveryTime = moment(date).fromNow()
+  const deliveryTime = moment.unix(date).fromNow() //  // (date)
 
   return (
     <View key={`${deliveryTime}-${authStore?.locale}`}>
