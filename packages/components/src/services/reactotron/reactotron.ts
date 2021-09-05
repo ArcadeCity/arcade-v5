@@ -126,6 +126,7 @@ export class Reactotron {
       Tron.configure({
         name: this.config.name || require('../../../package.json').name,
         host: this.config.host,
+        port: 9001,
       })
 
       // hookup middleware
