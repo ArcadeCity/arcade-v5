@@ -13,12 +13,17 @@ storiesOf('Guilds - GuildProfile', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildProfile' usage='' noPad>
-        <GuildProfile />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildProfile renders a screen that displays the GuildSummary, link to the GuildRosterDetail, and other features depending if user is a guild member or not. Data is provided by the guildStore and chatStore rather than props.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildProfile' usage='' noPad>
+          <GuildProfile />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildProfile renders a screen that displays the GuildSummary, link to the GuildRosterDetail, and other features depending if user is a guild member or not. Data is provided by the guildStore and chatStore rather than props.',
+    }
+  )

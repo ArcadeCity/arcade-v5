@@ -30,12 +30,17 @@ storiesOf('Service - RequestFeed', module)
   ))
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Request feed' usage='' noPad>
-        <RequestFeed />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'RequestFeed renders a View containing a list of RequestDetail components. Data is provided by the serviceStore rather than props.'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Request feed' usage='' noPad>
+          <RequestFeed />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'RequestFeed renders a View containing a list of RequestDetail components. Data is provided by the serviceStore rather than props.',
+    }
+  )

@@ -14,12 +14,17 @@ storiesOf('Guilds - GuildMemberDetail', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildMemberDetail' usage='' noPad>
-        <GuildMemberDetail forOnPress={() => {}} player={player1} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildMemberDetail returns a TouchableOpacity that can direct to the guild member profile on press. Accepts forOnPress function as a prop as well as player prop of type Player'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildMemberDetail' usage='' noPad>
+          <GuildMemberDetail forOnPress={() => {}} player={player1} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildMemberDetail returns a TouchableOpacity that can direct to the guild member profile on press. Accepts forOnPress function as a prop as well as player prop of type Player',
+    }
+  )

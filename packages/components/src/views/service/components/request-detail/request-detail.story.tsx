@@ -31,21 +31,26 @@ storiesOf('Service - RequestDetail', module)
   ))
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Ride request - unclaimed' usage='' noPad>
-        <RequestDetail request={requestUnclaimed} />
-      </UseCase>
-      <UseCase text='Ride request - claimed' usage='' noPad>
-        <RequestDetail request={requestClaimed} />
-      </UseCase>
-      <UseCase text='Ride request - resolved by rider' usage='' noPad>
-        <RequestDetail request={requestResolvedByRider} />
-      </UseCase>
-      <UseCase text='Ride request - cancelled by rider' usage='' noPad>
-        <RequestDetail request={requestCancelledByRider} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'RequestDetail renders a TouchableOpacity displaying information on the requested service and service requester. On press will navigate to the request chat screen for the service request. Data is provided by the authStore and serviceStore rather than props.'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Ride request - unclaimed' usage='' noPad>
+          <RequestDetail request={requestUnclaimed} />
+        </UseCase>
+        <UseCase text='Ride request - claimed' usage='' noPad>
+          <RequestDetail request={requestClaimed} />
+        </UseCase>
+        <UseCase text='Ride request - resolved by rider' usage='' noPad>
+          <RequestDetail request={requestResolvedByRider} />
+        </UseCase>
+        <UseCase text='Ride request - cancelled by rider' usage='' noPad>
+          <RequestDetail request={requestCancelledByRider} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'RequestDetail renders a TouchableOpacity displaying information on the requested service and service requester. On press will navigate to the request chat screen for the service request. Data is provided by the authStore and serviceStore rather than props.',
+    }
+  )

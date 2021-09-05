@@ -7,12 +7,17 @@ import { reactNavigationDecorator } from 'storybook/navigation-decorator'
 storiesOf('Guilds - CharterView', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='CharterView' usage='example charter screen' noPad>
-        <CharterView />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'CharterView renders a screen explaining the concept of a charter and with a Button that links to the guilds charter.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='CharterView' usage='example charter screen' noPad>
+          <CharterView />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'CharterView renders a screen explaining the concept of a charter and with a Button that links to the guilds charter.',
+    }
+  )

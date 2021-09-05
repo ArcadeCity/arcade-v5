@@ -126,6 +126,7 @@ export class Reactotron {
       Tron.configure({
         name: this.config.name || require('../../../package.json').name,
         host: this.config.host,
+        port: 9001,
       })
 
       // hookup middleware
@@ -155,6 +156,7 @@ export class Reactotron {
 
       // connect to the app
       Tron.connect()
+      Tron.clear()
 
       // Register Custom Commands
       // Tron.onCustomCommand({
@@ -188,9 +190,9 @@ export class Reactotron {
       // })
 
       // clear if we should
-      if (this.config.clearOnLoad) {
-        Tron.clear()
-      }
+      // if (this.config.clearOnLoad) {
+      //   Tron.clear()
+      // }
     }
   }
 }

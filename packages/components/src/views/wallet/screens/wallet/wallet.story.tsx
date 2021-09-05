@@ -40,5 +40,6 @@ storiesOf('Wallet - Wallet screen', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .add('Standalone', () => <Wallet />, {
-    notes: 'Wallet renders a Screen containing the user Balances and Transactions. Data is received from walletStore rather than props.'
+    notes:
+      'Wallet renders a Screen containing the user Balances and Transactions. Data is received from walletStore rather than props.',
   })

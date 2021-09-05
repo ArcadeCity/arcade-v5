@@ -29,21 +29,26 @@ storiesOf('Service - RequestDetailSimple', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Ride request - unclaimed' usage='' noPad>
-        <RequestDetailSimple request={requestUnclaimed} />
-      </UseCase>
-      <UseCase text='Ride request - claimed' usage='' noPad>
-        <RequestDetailSimple request={requestClaimed} />
-      </UseCase>
-      <UseCase text='Ride request - resolved by rider' usage='' noPad>
-        <RequestDetailSimple request={requestResolvedByRider} />
-      </UseCase>
-      <UseCase text='Ride request - cancelled by rider' usage='' noPad>
-        <RequestDetailSimple request={requestCancelledByRider} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'RequestDetailSimple renders a TouchableOpacity displaying information on the requested service and service requester. On press will navigate to the request chat screen for the service request. Data is provided by the authStore and serviceStore rather than props.'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Ride request - unclaimed' usage='' noPad>
+          <RequestDetailSimple request={requestUnclaimed} />
+        </UseCase>
+        <UseCase text='Ride request - claimed' usage='' noPad>
+          <RequestDetailSimple request={requestClaimed} />
+        </UseCase>
+        <UseCase text='Ride request - resolved by rider' usage='' noPad>
+          <RequestDetailSimple request={requestResolvedByRider} />
+        </UseCase>
+        <UseCase text='Ride request - cancelled by rider' usage='' noPad>
+          <RequestDetailSimple request={requestCancelledByRider} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'RequestDetailSimple renders a TouchableOpacity displaying information on the requested service and service requester. On press will navigate to the request chat screen for the service request. Data is provided by the authStore and serviceStore rather than props.',
+    }
+  )

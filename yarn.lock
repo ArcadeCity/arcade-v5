@@ -9263,7 +9263,7 @@ dns-packet@^1.3.1:
     ip "^1.1.0"
     safe-buffer "^5.0.1"
 
-dns-packet@^5.2.2, dns-packet@^5.2.4:
+dns-packet@^5.2.2, dns-packet@^5.2.4, dns-packet@^5.3.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/dns-packet/-/dns-packet-5.3.0.tgz#9a0f66118d3be176b828b911a842b0b1a4bdfd4f"
   integrity sha512-Nce7YLu6YCgWRvOmDBsJMo9M5/jV3lEZ5vUWnWXYmwURvPylHvq7nkDWhNmk1ZQoZZOP7oQh/S0lSxbisKOfHg==
@@ -16026,7 +16026,7 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-noble-secp256k1@^1.1.1:
+noble-secp256k1@^1.1.1, noble-secp256k1@^1.2.9:
   version "1.2.9"
   resolved "https://registry.npmjs.org/noble-secp256k1/-/noble-secp256k1-1.2.9.tgz#9cbbed8b53f972453a7117a648076bdf173d6cdb"
   integrity sha512-H4ygD9EDh0Ajm0xStA9ZwLKCBCS3MD7cZwGWftp3GdWPYot9NpOQ5Ludbi4zyi0w+aODDynXOwdghIJNs9Yyzg==

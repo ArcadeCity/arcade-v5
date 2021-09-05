@@ -20,7 +20,10 @@ export const ProfileEdit: React.FC<{}> = observer(() => {
   const username = authStore.username
 
   return (
-    <Screen key={`${username}-${profession}-${authStore?.locale}`} preset='scrollStack'>
+    <Screen
+      key={`${username}-${profession}-${authStore?.locale}`}
+      preset='scrollStack'
+    >
       <MenuButton
         image={images.profile}
         titleTx='social.changeUsername'

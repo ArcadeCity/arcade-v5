@@ -34,5 +34,6 @@ storiesOf('Service - RequestBegin', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
   .add('Standalone', () => <RequestBegin />, {
-    notes: 'RequestBegin renders a screen containing an input for the start address and end address. Data is provided by the serviceStore rather than props.'
+    notes:
+      'RequestBegin renders a screen containing an input for the start address and end address. Data is provided by the serviceStore rather than props.',
   })

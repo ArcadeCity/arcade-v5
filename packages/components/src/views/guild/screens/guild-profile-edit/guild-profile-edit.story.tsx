@@ -13,12 +13,17 @@ storiesOf('Guilds - GuildProfileEdit', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildProfileEdit' usage='example charter screen' noPad>
-        <GuildProfileEdit />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildProfileEdit renders a Screen where user can edit the guild mission statement and save'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildProfileEdit' usage='example charter screen' noPad>
+          <GuildProfileEdit />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildProfileEdit renders a Screen where user can edit the guild mission statement and save',
+    }
+  )

@@ -29,7 +29,7 @@ export const Message: React.FC<Props> = ({ message, preset }) => {
   const deliveryTime = moment(date).fromNow()
 
   return (
-    <View key={`${deliveryTime}-${authStore?.locale}`} >
+    <View key={`${deliveryTime}-${authStore?.locale}`}>
       <View style={messagePreset.container}>
         <View style={messagePreset.textBubble}>
           <Text style={messagePreset.textContent} text={text} />

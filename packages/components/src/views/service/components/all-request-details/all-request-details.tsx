@@ -146,9 +146,7 @@ export const AllRequestDetails: React.FC<{}> = observer(() => {
               flex: 1,
             }}
             onPress={() =>
-              Alert.alert(
-                translate('service.placeholderPayments')
-              )
+              Alert.alert(translate('service.placeholderPayments'))
             }
           >
             <View style={{ flexDirection: 'row' }}>
@@ -176,7 +174,9 @@ export const AllRequestDetails: React.FC<{}> = observer(() => {
             <Text
               preset='bold'
               text={
-                details && details.length > 0 ? details : translate('service.detailsTapToAdd')
+                details && details.length > 0
+                  ? details
+                  : translate('service.detailsTapToAdd')
               }
             />
           </View>

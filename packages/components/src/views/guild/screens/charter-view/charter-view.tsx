@@ -9,7 +9,7 @@ export const CharterView = observer(() => {
       <Text
         preset='description'
         tx='guild.viewCharterFor'
-        txOptions={{ guild: 'Super Demo Guild '}}
+        txOptions={{ guild: 'Super Demo Guild ' }}
       />
       <Text
         preset='description'

@@ -15,11 +15,8 @@ export const CharterAdd = () => {
   const { navigate } = useNavigation()
   return (
     <Screen preset='scrollStack' dock={dock}>
-      <Text preset='title' tx='guild.guildCharter' /> 
-      <Text
-        preset='description'
-        tx='guild.charterAdd'
-      />
+      <Text preset='title' tx='guild.guildCharter' />
+      <Text preset='description' tx='guild.charterAdd' />
       <View style={[LONGDIVIDER, { marginTop: 3, marginBottom: 3 }]} />
       <MenuButton
         titleTx='guild.viewExampleCharter'

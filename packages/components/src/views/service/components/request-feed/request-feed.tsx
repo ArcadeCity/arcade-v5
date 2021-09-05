@@ -19,11 +19,15 @@ export const RequestFeed: React.FC<{}> = observer(() => {
 
   // Data
   const { loadedAllPlayers } = usePlayerResolver({ requests })
-  if (!loadedAllPlayers) return <Loading message={translate('common.loading')} />
+  if (!loadedAllPlayers)
+    return <Loading message={translate('common.loading')} />
   if (requests.length === 0) return <Loading message={noneMessage} />
 
   return (
-    <View key={`${noneMessage}-${authStore?.locale}`} style={{ paddingHorizontal: spacing[3] }}>
+    <View
+      key={`${noneMessage}-${authStore?.locale}`}
+      style={{ paddingHorizontal: spacing[3] }}
+    >
       <FlatList
         data={requests}
         initialNumToRender={25}

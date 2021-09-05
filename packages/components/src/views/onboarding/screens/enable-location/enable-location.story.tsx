@@ -18,5 +18,6 @@ storiesOf('Onboarding - EnableLocation screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <EnableLocation />, {
-    notes: 'EnableLocation renders a Screen containing an explanation on why location data is needed and how it is used, along with a button to enable. Data is received from the authStore rather than props'
+    notes:
+      'EnableLocation renders a Screen containing an explanation on why location data is needed and how it is used, along with a button to enable. Data is received from the authStore rather than props',
   })

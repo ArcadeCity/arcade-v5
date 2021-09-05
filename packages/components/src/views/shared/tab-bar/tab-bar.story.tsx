@@ -5,21 +5,21 @@ import { StoryScreen, Story, UseCase } from 'storybook/views'
 import { TabBar } from './tab-bar'
 
 const state = {
-    routes: [
-      { name: 'map' },
-      { name: 'service' },
-      { name: 'inbox', routeName: 'inbox' },
-      { name: 'guild' },
-      { name: 'menu' },
-    ],
-  }
+  routes: [
+    { name: 'map' },
+    { name: 'service' },
+    { name: 'inbox', routeName: 'inbox' },
+    { name: 'guild' },
+    { name: 'menu' },
+  ],
+}
 
 const props = {
   activeTintColor: 'white',
   inactiveTintColor: 'white',
   position: new Animated.Value(0),
   navigation: {},
-  state
+  state,
 }
 
 // @TODO define props of TabBar and Tab components and document story

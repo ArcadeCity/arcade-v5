@@ -15,12 +15,17 @@ storiesOf('ProfileEdit', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='ProfileEdit' usage='' noPad>
-        <ProfileEdit />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'ProfileEdit renders a Screen displaying the options to change username, change bio, and change profession. Each button navigates to the respective page. Data is provided by authStore rather than props.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='ProfileEdit' usage='' noPad>
+          <ProfileEdit />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'ProfileEdit renders a Screen displaying the options to change username, change bio, and change profession. Each button navigates to the respective page. Data is provided by authStore rather than props.',
+    }
+  )

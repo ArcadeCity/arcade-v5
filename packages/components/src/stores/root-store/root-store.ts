@@ -4,6 +4,7 @@ import { ChatStoreModel } from '../chat-store'
 import { GuildStoreModel } from '../guild-store'
 import { ModalStoreModel } from '../modal-store'
 import { PlayerStoreModel } from '../player-store'
+import { RelayStoreModel } from 'stores/relay-store'
 import { ServiceStoreModel } from '../service-store'
 import { WalletStoreModel } from '../wallet-store'
 
@@ -18,6 +19,7 @@ export const RootStoreModel = types
     guildStore: types.optional(GuildStoreModel, {} as any),
     modalStore: types.optional(ModalStoreModel, {} as any),
     playerStore: types.optional(PlayerStoreModel, {} as any),
+    relayStore: types.optional(RelayStoreModel, {} as any),
     serviceStore: types.optional(ServiceStoreModel, {} as any),
     walletStore: types.optional(WalletStoreModel, {} as any),
   })

@@ -18,5 +18,6 @@ storiesOf('Onboarding - EnableNotifications screen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <EnableNotifications />, {
-    notes: 'EnableNotifications renders a Screen containing an explanation on why to enable push notifications along with a button to enable. Data is received from the authStore rather than props'
+    notes:
+      'EnableNotifications renders a Screen containing an explanation on why to enable push notifications along with a button to enable. Data is received from the authStore rather than props',
   })

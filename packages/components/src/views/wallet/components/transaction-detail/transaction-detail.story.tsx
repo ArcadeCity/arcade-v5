@@ -14,12 +14,17 @@ const tx: Transaction = {
 
 storiesOf('Wallet - TransactionDetail', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='TransactionDetail' usage='' noPad>
-        <TransactionDetail tx={tx} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'TransactionDetail renders a View containing information about a transaction such as time since execution, amount, description, and type of transaction. Data is passed in as props: tx of type Transaction.'
-  })
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='TransactionDetail' usage='' noPad>
+          <TransactionDetail tx={tx} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'TransactionDetail renders a View containing information about a transaction such as time since execution, amount, description, and type of transaction. Data is passed in as props: tx of type Transaction.',
+    }
+  )

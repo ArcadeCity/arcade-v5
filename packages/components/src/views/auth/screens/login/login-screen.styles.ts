@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { spacing } from 'views/theme'
+import { palette, spacing } from 'views/theme'
 
 export const styles = StyleSheet.create({
   buttonSpacing: {
@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'transparent',
+    backgroundColor: palette.haiti,
   },
   containerContent: {
     marginTop: -40,

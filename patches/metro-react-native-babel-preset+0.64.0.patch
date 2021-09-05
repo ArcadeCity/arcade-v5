@@ -1,0 +1,30 @@
+diff --git a/node_modules/metro-react-native-babel-preset/src/configs/main.js b/node_modules/metro-react-native-babel-preset/src/configs/main.js
+index 0421d99..bdd2da6 100644
+--- a/node_modules/metro-react-native-babel-preset/src/configs/main.js
++++ b/node_modules/metro-react-native-babel-preset/src/configs/main.js
+@@ -157,9 +157,9 @@ const es2015TemplateLiterals = [
+     loose: true
+   } // dont 'a'.concat('b'), just use 'a'+'b'
+ ];
+-const exponentiationOperator = [
+-  require("@babel/plugin-transform-exponentiation-operator")
+-];
++// const exponentiationOperator = [
++//   require("@babel/plugin-transform-exponentiation-operator")
++// ];
+ const shorthandProperties = [
+   require("@babel/plugin-transform-shorthand-properties")
+ ];
+@@ -250,9 +250,9 @@ const getPreset = (src, options) => {
+     extraPlugins.push(es2015TemplateLiterals);
+   }
+ 
+-  if (isNull || src.indexOf("**") !== -1) {
+-    extraPlugins.push(exponentiationOperator);
+-  }
++  // if (isNull || src.indexOf("**") !== -1) {
++  //   extraPlugins.push(exponentiationOperator);
++  // }
+ 
+   if (isNull || src.indexOf("Object.assign") !== -1) {
+     extraPlugins.push(objectAssign);

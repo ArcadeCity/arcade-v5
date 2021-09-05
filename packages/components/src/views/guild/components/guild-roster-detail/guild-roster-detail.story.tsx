@@ -16,12 +16,17 @@ storiesOf('Guilds - GuildRosterDetail', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildRosterDetail' usage='' noPad>
-        <GuildRosterDetail />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildRosterDetail renders a TouchableOpacity that lists guild members and navigates to the specific guild member on press. Data is provided by guildStore rather than props'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildRosterDetail' usage='' noPad>
+          <GuildRosterDetail />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildRosterDetail renders a TouchableOpacity that lists guild members and navigates to the specific guild member on press. Data is provided by guildStore rather than props',
+    }
+  )

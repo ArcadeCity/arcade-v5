@@ -8,20 +8,11 @@ export const CharterExample: React.FC<{}> = () => {
   return (
     <Screen preset='scrollStack'>
       <Text preset='bold' tx='guild.introduction' style={{ marginTop: 25 }} />
-      <Text
-        preset='description'
-        tx='guild.charterExplainer1'
-      />
+      <Text preset='description' tx='guild.charterExplainer1' />
 
-      <Text
-        preset='description'
-        tx='guild.charterExplainer2'
-      />
+      <Text preset='description' tx='guild.charterExplainer2' />
 
-      <Text
-        preset='description'
-        tx='guild.charterExplainer3'
-      />
+      <Text preset='description' tx='guild.charterExplainer3' />
 
       <Text
         style={{ textAlign: 'center' }}

@@ -36,32 +36,17 @@ export const Terms: React.FC<{}> = () => {
       <View style={CONTAINER}>
         <Text preset='title' tx='onboarding.terms' style={{ marginTop: 30 }} />
 
-        <Text
-          preset='description'
-          tx='onboarding.termsExplainer'
-        />
+        <Text preset='description' tx='onboarding.termsExplainer' />
 
         <Text preset='description' tx='onboarding.terms1' />
 
-        <Text
-          preset='description'
-          tx='onboarding.terms2'
-        />
+        <Text preset='description' tx='onboarding.terms2' />
 
-        <Text
-          preset='description'
-          tx='onboarding.terms3'
-        />
+        <Text preset='description' tx='onboarding.terms3' />
 
-        <Text
-          preset='description'
-          tx='onboarding.terms4'
-        />
+        <Text preset='description' tx='onboarding.terms4' />
 
-        <Text
-          preset='description'
-          tx='onboarding.termsWarn'
-        />
+        <Text preset='description' tx='onboarding.termsWarn' />
       </View>
     </Screen>
   )

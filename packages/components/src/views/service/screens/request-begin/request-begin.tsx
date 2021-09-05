@@ -115,11 +115,7 @@ export const RequestBegin: React.FC<{}> = observer(() => {
         />
       </View>
 
-      <Text
-        preset='sectionHeader'
-        tx={pickupTx}
-        style={{ marginTop: 10 }}
-      />
+      <Text preset='sectionHeader' tx={pickupTx} style={{ marginTop: 10 }} />
       <TextField
         defaultValue={activeRequest?.pickup?.prettyName}
         selectTextOnFocus={true}
@@ -134,11 +130,7 @@ export const RequestBegin: React.FC<{}> = observer(() => {
         }}
       />
 
-      <Text
-        preset='sectionHeader'
-        tx={dropoffTx}
-        style={{ marginTop: 10 }}
-      />
+      <Text preset='sectionHeader' tx={dropoffTx} style={{ marginTop: 10 }} />
       <TextField
         defaultValue={activeRequest?.drop?.prettyName}
         selectTextOnFocus={true}

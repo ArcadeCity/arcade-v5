@@ -12,15 +12,20 @@ storiesOf('Social - Message', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Presets received & sent', () => (
-    <Story>
-      <UseCase text='Message Received' usage='' noPad>
-        <Message preset='received' message={message} />
-      </UseCase>
-      <UseCase text='Message Sent' usage='' noPad>
-        <Message preset='sent' message={message} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'Message renders a View displaying the message contents, sender avatar, and delivery time. Data is passed in as props: message of type Message and preset of type "sent" or "received"'
-  })
+  .add(
+    'Presets received & sent',
+    () => (
+      <Story>
+        <UseCase text='Message Received' usage='' noPad>
+          <Message preset='received' message={message} />
+        </UseCase>
+        <UseCase text='Message Sent' usage='' noPad>
+          <Message preset='sent' message={message} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'Message renders a View displaying the message contents, sender avatar, and delivery time. Data is passed in as props: message of type Message and preset of type "sent" or "received"',
+    }
+  )

@@ -40,11 +40,18 @@ export const ServiceOverlay = observer(() => {
   }, [show])
 
   return show ? (
-    <Animated.View style={{ ...s.DRIVEROVERLAY, opacity: overlayOpacity }} key={authStore?.locale} >
+    <Animated.View
+      style={{ ...s.DRIVEROVERLAY, opacity: overlayOpacity }}
+      key={authStore?.locale}
+    >
       <TouchableOpacity style={s.CLOSEBTN} onPress={() => setShow(false)}>
         <Icon name='close' />
       </TouchableOpacity>
-      <Text preset='descriptionSlim' tx={'common.welcomeUser'} txOptions={{ username }} />
+      <Text
+        preset='descriptionSlim'
+        tx={'common.welcomeUser'}
+        txOptions={{ username }}
+      />
       <Text
         preset='title3'
         tx='map.howCanWeHelp'
@@ -78,7 +85,10 @@ export const ServiceOverlay = observer(() => {
       />
     </Animated.View>
   ) : (
-    <Animated.View style={{ ...s.OPENBTN, opacity: toggleOpacity }} key={authStore?.locale} >
+    <Animated.View
+      style={{ ...s.OPENBTN, opacity: toggleOpacity }}
+      key={authStore?.locale}
+    >
       <Button
         text={capitalize(translate('common.open'))}
         preset='purpleglow'

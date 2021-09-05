@@ -80,7 +80,9 @@ export const RequestStatusBar = observer(({ request }: Props) => {
       backgroundColor = color.palette.haiti
       break
     case ServiceRequestStatus.CLAIMED:
-      statusText = `${translate('service.driver')}: ${request.playerClaiming?.username}`
+      statusText = `${translate('service.driver')}: ${
+        request.playerClaiming?.username
+      }`
       backgroundColor = color.palette.electricViolet // TODO: if its these folks
       break
     case ServiceRequestStatus.RESOLVED_BY_RIDER:

@@ -15,12 +15,12 @@ const CONTAINER: ViewStyle = {
 
 export const ChangeLanguage = observer(() => {
   const { navigate, setOptions } = useNavigation()
-  setOptions({ title: translate('comms.changeLanguage')})
+  setOptions({ title: translate('comms.changeLanguage') })
   const { authStore } = useStores()
   const { locale } = authStore
   const isCurrentLocaleEnglish = locale.includes('en')
   const isCurrentLocaleSpanish = locale.includes('es')
-  const isCurrentLocalePortuguese = locale.includes('pt')  
+  const isCurrentLocalePortuguese = locale.includes('pt')
   const handleLanguageChange = (locale: string) => {
     changeLanguage(locale)
     authStore.setLocale(locale)
@@ -28,40 +28,56 @@ export const ChangeLanguage = observer(() => {
   }
 
   const handleConfirm = (locale: string) => {
-    Alert.alert(translate('comms.changeLanguage'), translate(`common.languages.${locale}`), [
-      {
-        text: capitalize(translate('common.no')),
-        style: 'cancel',
-      },
-      {
-        text: capitalize(translate('common.yes')),
-        style: 'destructive',
-        onPress: () => handleLanguageChange(locale),
-      },
-    ])
+    Alert.alert(
+      translate('comms.changeLanguage'),
+      translate(`common.languages.${locale}`),
+      [
+        {
+          text: capitalize(translate('common.no')),
+          style: 'cancel',
+        },
+        {
+          text: capitalize(translate('common.yes')),
+          style: 'destructive',
+          onPress: () => handleLanguageChange(locale),
+        },
+      ]
+    )
   }
 
   return (
-    <Screen preset='scrollStack' >
+    <Screen preset='scrollStack'>
       <View style={CONTAINER}>
         <Text preset='title' tx='comms.changeLanguage' />
         <MenuButton
           disabled={isCurrentLocaleEnglish}
           title='English'
-          description={isCurrentLocaleEnglish ? capitalize(translate('common.current')) : translate('common.languages.en')}
+          description={
+            isCurrentLocaleEnglish
+              ? capitalize(translate('common.current'))
+              : translate('common.languages.en')
+          }
           onPress={() => handleConfirm('en')}
         />
         <MenuButton
           key='pt-br'
           disabled={isCurrentLocalePortuguese}
           title='Português (Brasil)'
-          description={isCurrentLocalePortuguese ? capitalize(translate('common.current')) : translate('common.languages.pt-br')}
+          description={
+            isCurrentLocalePortuguese
+              ? capitalize(translate('common.current'))
+              : translate('common.languages.pt-br')
+          }
           onPress={() => handleConfirm('pt-br')}
         />
         <MenuButton
           disabled={isCurrentLocaleSpanish}
           title='Español'
-          description={isCurrentLocaleSpanish ? capitalize(translate('common.current')) : translate('common.languages.es')}
+          description={
+            isCurrentLocaleSpanish
+              ? capitalize(translate('common.current'))
+              : translate('common.languages.es')
+          }
           onPress={() => handleConfirm('es')}
         />
       </View>

@@ -33,5 +33,6 @@ storiesOf('Service - ServiceHome', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
   .add('Standalone', () => <ServiceHome />, {
-    notes: 'ServiceHome renders a Screen containing a RequestFeed component. Data is provided by serviceStore rather than props.'
+    notes:
+      'ServiceHome renders a Screen containing a RequestFeed component. Data is provided by serviceStore rather than props.',
   })

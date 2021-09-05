@@ -25,5 +25,6 @@ storiesOf('Service - RequestOverlay', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
   .addDecorator(reactNavigationDecorator)
   .add('Standalone', () => <RequestOverlay />, {
-    notes: 'RequestOverlay renders a View with information relavant to the service request. Data is provided by the serviceStore rather than'
+    notes:
+      'RequestOverlay renders a View with information relavant to the service request. Data is provided by the serviceStore rather than',
   })

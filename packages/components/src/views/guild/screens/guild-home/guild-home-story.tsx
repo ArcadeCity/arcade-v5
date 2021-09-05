@@ -12,12 +12,17 @@ storiesOf('Guilds - GuildHome', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildHome' usage='example charter screen' noPad>
-        <GuildHome />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildHome renders a screen that explains the concept of guilds and links to the example charter and create guild screen'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildHome' usage='example charter screen' noPad>
+          <GuildHome />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildHome renders a screen that explains the concept of guilds and links to the example charter and create guild screen',
+    }
+  )

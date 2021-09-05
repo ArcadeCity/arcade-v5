@@ -13,9 +13,15 @@ export const MapHome: React.FC<{}> = observer(() => {
   const hasActiveServiceRequest = serviceStore.hasActiveServiceRequest
 
   // Nav
-  const title = hasActiveServiceRequest ? translate('service.yourRequest') : acGeo
+  const title = hasActiveServiceRequest
+    ? translate('service.yourRequest')
+    : acGeo
   const { setOptions } = useNavigation()
   setOptions({ title })
 
-  return hasActiveServiceRequest ? <RequestActive key={authStore?.locale} /> : <MapIdle key={authStore?.locale} />
+  return hasActiveServiceRequest ? (
+    <RequestActive key={authStore?.locale} />
+  ) : (
+    <MapIdle key={authStore?.locale} />
+  )
 })

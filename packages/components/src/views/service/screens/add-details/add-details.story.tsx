@@ -12,12 +12,17 @@ storiesOf('Service - AddDetails', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='AddDetails' usage='example charter screen' noPad>
-        <AddDetails />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'AddDetails renders a Screen containing a form for user to enter additional service request details. Data is provided by the service store rather than props.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='AddDetails' usage='example charter screen' noPad>
+          <AddDetails />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'AddDetails renders a Screen containing a form for user to enter additional service request details. Data is provided by the service store rather than props.',
+    }
+  )

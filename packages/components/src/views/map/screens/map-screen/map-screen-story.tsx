@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { reactNavigationDecorator } from 'storybook/navigation-decorator'
-import { StoryScreen, } from 'storybook/views'
+import { StoryScreen } from 'storybook/views'
 import { MapScreen } from './map-screen'
 import { RootStoreProvider } from 'stores'
 import { rootStore } from 'storybook/demo-data'
@@ -14,5 +14,6 @@ storiesOf('Map - MapScreen', module)
   ))
   .addDecorator(reactNavigationDecorator)
   .add('Default', () => <MapScreen />, {
-    notes: 'MapScreen renders a Screen including a Map and NearbyReport. No props are accepted.'
-  }) 
+    notes:
+      'MapScreen renders a Screen including a Map and NearbyReport. No props are accepted.',
+  })

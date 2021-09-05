@@ -5,13 +5,17 @@ import { Updater } from '../updater'
 
 storiesOf('Updater', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='Updater' usage='The updater' noPad>
-        <Updater />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'Updater renders a View displaying that the app is updating. No props are accepted.'
-  })
-
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='Updater' usage='The updater' noPad>
+          <Updater />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'Updater renders a View displaying that the app is updating. No props are accepted.',
+    }
+  )

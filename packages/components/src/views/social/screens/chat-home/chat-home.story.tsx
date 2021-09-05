@@ -15,12 +15,17 @@ storiesOf('ChatHome', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='ChatHome' usage='' noPad>
-        <ChatHome />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'ChatHome renders a Screen with a list of chatrooms. Clicking a chatroom will navigate to the specific chatroom. Will display loading screen if unable to load players. Data is provided by chatStore rather than props.'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='ChatHome' usage='' noPad>
+          <ChatHome />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'ChatHome renders a Screen with a list of chatrooms. Clicking a chatroom will navigate to the specific chatroom. Will display loading screen if unable to load players. Data is provided by chatStore rather than props.',
+    }
+  )

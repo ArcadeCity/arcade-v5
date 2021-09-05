@@ -34,7 +34,9 @@ export const RequestDetailSimple = observer(
         backgroundColor = color.palette.haiti
         break
       case ServiceRequestStatus.CLAIMED:
-        statusText = `${translate('service.driver')}: ${request.playerClaiming?.username}`
+        statusText = `${translate('service.driver')}: ${
+          request.playerClaiming?.username
+        }`
         break
       case ServiceRequestStatus.RESOLVED_BY_RIDER:
         statusText = translate('service.resolvedByRider')
@@ -80,7 +82,12 @@ export const RequestDetailSimple = observer(
       >
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'column' }}>
-            <Text text={`${capitalize(request.type)} ${translate('service.request')}`} preset='bold' />
+            <Text
+              text={`${capitalize(request.type)} ${translate(
+                'service.request'
+              )}`}
+              preset='bold'
+            />
             <Text text={fromNow} preset='descriptionSlim' />
           </View>
 
@@ -92,7 +99,9 @@ export const RequestDetailSimple = observer(
           >
             <Text text={`${statusText}`} preset='bold' />
             <Text
-              text={`${request?.chatroom?.messages.length ?? 0} ${translate('service.comments')}`}
+              text={`${request?.chatroom?.messages.length ?? 0} ${translate(
+                'service.comments'
+              )}`}
               preset='descriptionSlim'
             />
           </View>

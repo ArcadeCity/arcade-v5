@@ -14,12 +14,17 @@ storiesOf('Guilds - GuildInvited', module)
     <RootStoreProvider value={rootStore}>{fn()}</RootStoreProvider>
   ))
   .addDecorator(reactNavigationDecorator)
-  .add('Default', () => (
-    <Story>
-      <UseCase text='GuildInvited' usage='example charter screen' noPad>
-        <GuildInvited />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'GuildInvited renders a screen that displays the name of the guild with Buttons to join or ignore'
-  })
+  .add(
+    'Default',
+    () => (
+      <Story>
+        <UseCase text='GuildInvited' usage='example charter screen' noPad>
+          <GuildInvited />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'GuildInvited renders a screen that displays the name of the guild with Buttons to join or ignore',
+    }
+  )

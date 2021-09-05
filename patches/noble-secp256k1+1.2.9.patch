@@ -1,0 +1,18 @@
+diff --git a/node_modules/noble-secp256k1/index.js b/node_modules/noble-secp256k1/index.js
+index 9b91136..5c8d125 100644
+--- a/node_modules/noble-secp256k1/index.js
++++ b/node_modules/noble-secp256k1/index.js
+@@ -895,7 +895,12 @@ exports.utils = {
+             return Uint8Array.from(createHash('sha256').update(message).digest());
+         }
+         else {
+-            throw new Error("The environment doesn't have sha256 function");
++            try {
++                const createHash = require('create-hash')
++                return Uint8Array.from(createHash('sha256').update(message).digest());
++            } catch (e) {
++                throw new Error(`Sha256 error: ${e.message}`);
++            }
+         }
+     },
+     hmacSha256: async (key, ...messages) => {

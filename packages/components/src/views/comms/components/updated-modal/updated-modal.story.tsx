@@ -10,13 +10,17 @@ const props = {
 
 storiesOf('UpdatedModal', module)
   .addDecorator((fn) => <StoryScreen>{fn()}</StoryScreen>)
-  .add('In UseCase', () => (
-    <Story>
-      <UseCase text='UpdatedModal' usage='The updated modal' noPad>
-        <UpdatedModal {...props} />
-      </UseCase>
-    </Story>
-  ), {
-    notes: 'UpdatedModal renders a View displaying a customizeable headline and text. Data is passed in as props: headline of type string and text of type string.'
-  })
-
+  .add(
+    'In UseCase',
+    () => (
+      <Story>
+        <UseCase text='UpdatedModal' usage='The updated modal' noPad>
+          <UpdatedModal {...props} />
+        </UseCase>
+      </Story>
+    ),
+    {
+      notes:
+        'UpdatedModal renders a View displaying a customizeable headline and text. Data is passed in as props: headline of type string and text of type string.',
+    }
+  )
