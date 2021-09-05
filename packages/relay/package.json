@@ -1,0 +1,7 @@
+{
+  "name": "@arcadecity/relay",
+  "version": "0.1.0",
+  "description": "Arcade relay node",
+  "main": "index.js",
+  "license": "MIT"
+}
