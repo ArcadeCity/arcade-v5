@@ -5,7 +5,6 @@ import { Lightning } from '../services/lightning'
 import { Magic } from '../services/magic'
 import { Mapbox } from '../services/mapbox'
 import { Relay } from '../services/relay'
-// import { Solana } from '../services/solana'
 
 let ReactotronDev
 if (__DEV__) {
@@ -35,7 +34,6 @@ export class Environment {
       baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places/',
     })
     this.relay = new Relay()
-    // this.solana = new Solana()
   }
 
   async setup() {
@@ -47,7 +45,6 @@ export class Environment {
     // TODO: change this to promise.all?
     await this.ceramic.setup()
     await this.relay.setup()
-    // await this.solana.setup()
   }
 
   /**
@@ -89,9 +86,4 @@ export class Environment {
    * Relay
    */
   relay: Relay
-
-  /**
-   * Solana blockchain
-   */
-  // solana: Solana
 }
