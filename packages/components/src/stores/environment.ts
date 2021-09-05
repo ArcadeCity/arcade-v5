@@ -4,6 +4,7 @@ import { Ceramic } from '../services/ceramic'
 import { Lightning } from '../services/lightning'
 import { Magic } from '../services/magic'
 import { Mapbox } from '../services/mapbox'
+import { Relay } from '../services/relay'
 // import { Solana } from '../services/solana'
 
 let ReactotronDev
@@ -33,6 +34,7 @@ export class Environment {
         'pk.eyJ1IjoiYWNsaW9ucyIsImEiOiJjamVhMmNtY2swaXNtMnBsbnB2aDVqNTBiIn0.gM_i1jhawFz2EpKBX4VmwQ',
       baseUrl: 'https://api.mapbox.com/geocoding/v5/mapbox.places/',
     })
+    this.relay = new Relay()
     // this.solana = new Solana()
   }
 
@@ -80,6 +82,11 @@ export class Environment {
    * Mapbox
    */
   mapbox: Mapbox
+
+  /**
+   * Relay
+   */
+  relay: Relay
 
   /**
    * Solana blockchain
