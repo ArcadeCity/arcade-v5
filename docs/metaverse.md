@@ -2,7 +2,7 @@
 
 **_Uber meets Pokémon Go_**
 
-![](https://pbs.twimg.com/profile_banners/4636602981/1615733117/600x200)
+![](https://i.ibb.co/3s0mYRg/jane.png)
 
 _Example 3D avatar on a map of downtown Austin, rendered in JavaScript via [harp.gl](https://www.harp.gl/) and [three.js](https://threejs.org/)._
 
