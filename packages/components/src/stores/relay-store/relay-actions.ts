@@ -1,6 +1,6 @@
 import { display } from 'lib'
 import { normalizeEvent } from 'services/api'
-import { EventModel } from './relay-models'
+import { Event, EventModel } from './relay-models'
 import { RelayStore } from './relay-store'
 
 export const subscribeToUser = async (self: RelayStore, pubkey: string) => {
@@ -15,9 +15,8 @@ export const subscribeToUser = async (self: RelayStore, pubkey: string) => {
       preview: `Received event ${event.id ?? ''}`,
       value: { event, relay },
     })
-    const eventToSave = normalizeEvent(event)
-    console.log(eventToSave)
-    // self.setEvent(eventToSave)
+    const eventToSave: Event = normalizeEvent(event)
+    self.setEvent(eventToSave)
   }
 
   self.env.relay.pool.sub({

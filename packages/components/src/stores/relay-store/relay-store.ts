@@ -1,7 +1,7 @@
 import { Instance, SnapshotOut, types } from 'mobx-state-tree'
 import { withEnvironment, withRootStore } from 'stores/_extensions'
 import * as actions from './relay-actions'
-import { EventModel } from './relay-models'
+import { Event, EventModel } from './relay-models'
 
 export const RelayStoreModel = types
   .model('RelayStore')
@@ -14,6 +14,9 @@ export const RelayStoreModel = types
   .actions((self) => ({
     subscribeToUser: async (pubkey: string): Promise<boolean> =>
       await actions.subscribeToUser(self as RelayStore, pubkey),
+    setEvent(event: Event) {
+      self.events?.put(event)
+    },
   }))
 
 type RelayStoreType = Instance<typeof RelayStoreModel>
