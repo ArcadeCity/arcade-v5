@@ -8,7 +8,9 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 **Soon:** The Arcade, an open peer-to-peer services ecosystem on Bitcoin.
 
-See [Bitcoinizing Arcade City](docs/bitcoinizing.md) for current thoughts on Bitcoin/Lightning architecture and the [Lightning MVP spec](docs/mvp.md).
+See [Bitcoinizing Arcade City](docs/bitcoinizing.md) for current thoughts on Bitcoin/Lightning architecture.
+
+See the [Lightning MVP spec](docs/mvp.md) for what we're working on now.
 
 See also [Arcade City as Metaverse](docs/metaverse.md).
 
