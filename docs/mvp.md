@@ -7,24 +7,32 @@ Initial steps toward broader plan of [Bitcoinizing Arcade City](bitcoinizing.md)
 ### Objectives
 
 1. Get a userbase of primarily non-technical gig economy users (drivers and riders) interacting meaningfully with Bitcoin on Lightning as soon as possible.
-2. Allow users to begin earning sats immediately
+2. Allow users to begin earning Bitcoin immediately.
 
-### No relay nodes
+### Initial featureset
+
+1. Allow users to send Bitcoin peer-to-peer via Lightning
+2. Allow users to earn Bitcoin for user referrals
+
+### Relay nodes?
 
 The [Bitcoinizing doc](bitcoinizing.md) describes a broader architecture including Arcade relay nodes.
 
 We don't need relay nodes for an MVP. Let's see how far we can get without them.
 
+For the MVP we prioritize rapid iteration over decentralization.
+
 ### Tech Stack
 
 - React Native, specifically the [stack](https://github.com/ArcadeCity/arcade#tech-stack) from our v5 mobile app
-- LNBits as Lightning backend
+- [LNBits](https://lnbits.com/) as Lightning backend
+- [Supabase](https://supabase.io/) as everything else backend
 
 ### Why LNBits
 
-For a backend service we'll use LNBits. Advantages:
+Advantages:
 
-- Account system works with our user auth model
+- Account system works well with our user auth model
 - Can develop quickly using the hosted version at lnbits.com
 - Open-source - can run our own instance
 - Works with various funding sources: CLightning, LND, LNbits, LNPay, lntxbot, OpenNode
