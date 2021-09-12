@@ -20,6 +20,6 @@ For a backend service we'll use LNBits. Advantages:
 * Account system works with our user auth model
 * Can develop quickly using the hosted version at lnbits.com
 * Open-source - can run our own instance 
-* Works with various funding sources
+* Works with various funding sources: CLightning, LND, LNbits, LNPay, lntxbot, OpenNode
 * Lots of cool extensions including plans for [BUber](https://twitter.com/arcbtc/status/1434255551312060419) which can be [interoperable with Arcade City](https://twitter.com/arcbtc/status/1434259197596684294)
 * Plays nicely with [Nostr](https://github.com/fiatjaf/nostr) which we [want to use](https://twitter.com/ArcadeCityHall/status/1434574141756264452)
