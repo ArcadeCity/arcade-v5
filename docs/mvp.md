@@ -51,4 +51,6 @@ Code will be 100% open-source (GPL3) in [this repo](https://github.com/ArcadeCit
 
 ### Timeline
 
-Sometime this year. To accelerate development, do please send us [sats for coffee](bitcoin:bc1qddhm743jfv5ecn602pzutpfyk0kkpf9qk7vgxwjcj4j2qclzvgesfqtlw3) :)
+Sometime this year. To accelerate development, do please send us sats for coffee :)
+
+BTC: bc1qddhm743jfv5ecn602pzutpfyk0kkpf9qk7vgxwjcj4j2qclzvgesfqtlw3
