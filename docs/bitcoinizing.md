@@ -4,6 +4,8 @@ Thoughts on Bitcoin/Lightning integration.
 
 See the [main README](https://github.com/ArcadeCity/arcade/blob/main/README.md) for our project overview.
 
+See also the [Lightning MVP spec](docs/mvp.md).
+
 #### Features we want to include
 
 - Stream sats to service providers (eg. rideshare drivers)
