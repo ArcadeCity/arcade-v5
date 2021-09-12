@@ -26,7 +26,7 @@ For the MVP we prioritize rapid iteration over decentralization.
 
 - React Native, specifically the [stack](https://github.com/ArcadeCity/arcade#tech-stack) from our v5 mobile app
 - [LNBits](https://lnbits.com/) as Lightning backend
-- [Supabase](https://supabase.io/) as everything else backend
+- [Supabase](https://supabase.io/) as auth/storage backend
 
 ### Why LNBits
 
@@ -44,3 +44,7 @@ Advantages:
 This will be released as a regular update ("v5.1") to the main Arcade City mobile app which is currently at v5.0.
 
 App will be available globally.
+
+### Codebase
+
+Code will be 100% open-source (GPL3) in [this repo](https://github.com/ArcadeCity/arcade), specifically the [city-mobile package](https://github.com/ArcadeCity/arcade/tree/main/packages/city-mobile).
