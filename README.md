@@ -10,6 +10,8 @@ We are open-sourcing our active codebases and consolidating into one monorepo.
 
 See [Bitcoinizing Arcade City](docs/bitcoinizing.md) for current thoughts on Bitcoin/Lightning architecture.
 
+See the [Lightning MVP spec](docs/mvp.md) for what we're working on now.
+
 See also [Arcade City as Metaverse](docs/metaverse.md).
 
 ## Why
