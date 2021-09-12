@@ -41,7 +41,7 @@ Advantages:
 
 ### Go-to-Market Strategy
 
-This will be released as a regular update ("v5.1") to the main Arcade City mobile app which is currently at v5.0.
+This will be released as a regular update ("v5.1") to the main Arcade City mobile app which is currently at v5.0. (Removed from app stores while we pivot to Lightning)
 
 App will be available globally for Android and iOS.
 
