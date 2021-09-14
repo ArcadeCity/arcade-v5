@@ -39,3 +39,7 @@ Contrasting the Oasis from Ready Player One with the Arcade:
 | Emphasis  | Escapism           | Real-world empowerment |
 | Code      | Closed-source      | Open-source            |
 | Currency  | Corporate shitcoin | Bitcoin                |
+
+## See also
+
+- [Arcade City: Metaverse Musings](musings.md) (guest author)
