@@ -18,3 +18,9 @@ Service providers, content creators and local groups can organize in a mixed rea
 * Arcade City: Metaverse has characters accessible through public beacon mini-games, in Arcade City or adopted assets in personal rooms. The main characters represent the basic academic genre of society that teaches children, noobs, and plebs the evolved curriculum we all deserve access to. (Bitcoin Bull teaches aquarian finances, Medicine Woman teaches herbal remedies, etc.)
 * Chat with nearby players/guilds, private correspondence shows up as chosen 3d form in personal room, 3d objects can also represent group chats.
 
+## See also
+
+- [Arcade City as Metaverse](docs/metaverse.md)
+- [Bitcoinizing Arcade City](docs/bitcoinizing.md)
+- [Lightning MVP spec](docs/mvp.md) 
+
