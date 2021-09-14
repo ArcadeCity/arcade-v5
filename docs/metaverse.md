@@ -42,4 +42,4 @@ Contrasting the Oasis from Ready Player One with the Arcade:
 
 ## See also
 
-- [Arcade City: Metaverse Musings](metaverse.md) (guest author)
+- [Arcade City: Metaverse Musings](musings.md) (guest author)
