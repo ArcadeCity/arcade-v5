@@ -20,7 +20,7 @@ Service providers, content creators and local groups can organize in a mixed rea
 
 ## See also
 
-- [Arcade City as Metaverse](docs/metaverse.md)
-- [Bitcoinizing Arcade City](docs/bitcoinizing.md)
-- [Lightning MVP spec](docs/mvp.md) 
+- [Arcade City as Metaverse](metaverse.md)
+- [Bitcoinizing Arcade City](bitcoinizing.md)
+- [Lightning MVP spec](mvp.md) 
 
