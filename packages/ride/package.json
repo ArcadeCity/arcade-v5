@@ -18,6 +18,7 @@
     "@here/harp-map-theme": "0.16.0",
     "@here/harp-mapview": "0.16.0",
     "@here/harp-omv-datasource": "0.16.0",
+    "@supabase/supabase-js": "^1.22.6",
     "normalize.css": "8.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",

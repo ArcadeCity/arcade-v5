@@ -1,5 +1,6 @@
 import React from 'react'
+import Auth from './Auth'
 
 export const App = () => {
-  return <h1>sup</h1>
+  return <Auth />
 }
