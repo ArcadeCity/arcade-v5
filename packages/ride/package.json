@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "supports-color": "^9.0.2",
     "webpack-cli": "3.3.9"
   }
 }
