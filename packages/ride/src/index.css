@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+canvas {
+  position: absolute;
+  border: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.description,
+#copyright-notice {
+  position: absolute;
+  padding: 10px;
+  background: #272d37;
+  box-shadow: 0 1px 4px 0 rgba(15, 22, 33, 0.4);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 100;
+}
+
+.description {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#copyright-notice {
+  right: 15px;
+  bottom: 15px;
+}
+
+#copyright-notice a {
+  color: #fff4bf;
+}
+
+@media (max-width: 768px) {
+  .description,
+  #copyright-notice {
+    font-size: 0.6em;
+  }
+
+  .description {
+    left: 15px;
+    transform: none;
+  }
+}
