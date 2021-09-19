@@ -36,6 +36,7 @@ We believe networks of cooperatives with the right tools and incentives can repl
 - **components** - Shared components & functionality
 - **explorer** - Arcade transaction explorer
 - **relay** - Arcade relay node
+- **ride** - Rideshare web app (will implement [Lightning MVP spec](docs/mvp.md))
 - **wallet-web** - Experimental Bitcoin Lightning wallet with Impervious integration
 
 ## Tech stack
