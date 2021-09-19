@@ -7,7 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:harp-gl-decoder": "webpack -p --config ./harp-gl-decoder.config.js"
+    "build:harp-gl-decoder": "webpack -p --config ./harp-gl-decoder.config.js",
+    "format": "prettier --write '{.,src}/**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
     "@here/harp-datasource-protocol": "0.16.0",
