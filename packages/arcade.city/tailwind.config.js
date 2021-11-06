@@ -42,6 +42,12 @@ module.exports = {
             p: {
               fontSize: 20,
             },
+            th: {
+              fontSize: 20,
+            },
+            td: {
+              fontSize: 20,
+            },
             li: {
               fontSize: 20,
             },
