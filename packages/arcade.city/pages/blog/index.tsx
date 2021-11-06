@@ -41,8 +41,8 @@ const Blog: NextPage = () => {
                         <time dateTime='2021-11-11'>November 11, 2021</time>
                       </div>
                       <p className='mt-4 text-base text-gray-900'>
-                        Who should own the metaverse? Corporations, "crypto", or
-                        no one?
+                        Who should own the metaverse? Corporations,
+                        &quot;crypto&quot;, or no one?
                       </p>
                     </div>
                   </div>
