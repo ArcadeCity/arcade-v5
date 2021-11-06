@@ -3,6 +3,7 @@ import { Navbar } from '../../components/Navbar'
 import Link from 'next/link'
 import Image from 'next/image'
 import imgOnlysats from './onlysats/onlysats3.png'
+import imgMetaverse from './bitcoinizing-the-metaverse/janebitcoin.jpg'
 import imgBitcoin from './bitcoin-first/bitcoin.png'
 import image from './antidote/authoritarian2.png'
 
@@ -13,6 +14,42 @@ const Blog: NextPage = () => {
         <Navbar />
         <div className='mt-24 max-w-3xl mx-auto'>
           <div className='mt-12 w-lg max-w-lg mx-auto grid gap-8 lg:grid-cols-2 lg:max-w-none'>
+            <Link href='/blog/bitcoinizing-the-metaverse' passHref>
+              <div
+                style={{ minWidth: 500, maxWidth: 500 }}
+                className='shadow-xl cursor-pointer flex flex-col rounded-lg overflow-hidden border-2 border-white'
+              >
+                <div className='flex-shrink-0 bg-purple'>
+                  <div style={IMGCONTAINER}>
+                    <Image
+                      className='h-48 w-full object-cover object-center'
+                      src={imgMetaverse}
+                      alt=''
+                      layout='fill'
+                      objectFit='cover'
+                    />
+                  </div>
+                </div>
+
+                <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
+                  <div className='flex-1'>
+                    <div className='block mt-1'>
+                      <p className='text-xl font-semibold text-gray-900'>
+                        Bitcoinizing the Metaverse
+                      </p>
+                      <div className='mt-1 flex space-x-1 text-sm text-gray-900'>
+                        <time dateTime='2021-11-11'>November 11, 2021</time>
+                      </div>
+                      <p className='mt-4 text-base text-gray-900'>
+                        Who should own the metaverse? Corporations, "crypto", or
+                        no one?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
             <Link href='/blog/onlysats' passHref>
               <div
                 style={{ minWidth: 500, maxWidth: 500 }}
