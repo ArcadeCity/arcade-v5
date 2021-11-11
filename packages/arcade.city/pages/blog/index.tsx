@@ -3,7 +3,8 @@ import { Navbar } from '../../components/Navbar'
 import Link from 'next/link'
 import Image from 'next/image'
 import imgOnlysats from './onlysats/onlysats3.png'
-import imgMetaverse from './bitcoinizing-the-metaverse/janebitcoin.jpg'
+// import imgMetaverse from './bitcoinizing-the-metaverse/janebitcoin.jpg'
+import imgMetaverse from './bitcoinizing-the-metaverse/ride3d.jpg'
 import imgBitcoin from './bitcoin-first/bitcoin.png'
 import image from './antidote/authoritarian2.png'
 
@@ -22,7 +23,7 @@ const Blog: NextPage = () => {
                 <div className='flex-shrink-0 bg-purple'>
                   <div style={IMGCONTAINER}>
                     <Image
-                      className='h-48 w-full object-cover object-center'
+                      className='h-48 w-full object-cover object-top'
                       src={imgMetaverse}
                       alt=''
                       layout='fill'
@@ -42,7 +43,7 @@ const Blog: NextPage = () => {
                       </div>
                       <p className='mt-4 text-base text-gray-900'>
                         Who will own the metaverse? Corporations,
-                        &quot;crypto&quot;, or no one?
+                        &quot;crypto&quot;, or everyone?
                       </p>
                     </div>
                   </div>
